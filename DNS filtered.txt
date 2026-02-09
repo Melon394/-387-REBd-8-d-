@@ -162,6 +162,7 @@ vkcdnservice.appspot.com^
 |load.sst.
 ||thegreatesthits.
 |piwik.
+||datadog-log.clovergames.io
 ||log-v*-boot.capcutapi.com^
 ||logs.collector.*.cloud.solarwinds.com^
 ||agatha-log-service-*.a.run.app^
