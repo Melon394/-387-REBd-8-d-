@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.10.1
+! Version: 26.02.10.2
 
 !! Merged rules
 
@@ -30,6 +30,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224501
+felixmobile.com.au#$##__next [style*="filter:blur"] { filter: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224141
 @@||optimizely.com^$image,domain=marinco.navico.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/223686
@@ -5689,6 +5691,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! moz.de
+||moz.de^$cookie=/^spid/
 ! newspicks.com
 ||newspicks.com^$cookie=np_uuid
 ! kupibilet.ru
@@ -9204,6 +9208,12 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||techsolutions.com.tw/analytics.js
+moz.de#%#//scriptlet('set-local-storage-item', 'AvoInstallationId', '$remove$')
+moz.de#%#//scriptlet('set-local-storage-item', '/^snowplow/', '$remove$')
+||hrkgame.com/allstaticfiles/js/cookie.min.js
+||gate.com/api/web/v*/marketing-tools/growth-placement/record-view
+||apmplus.volces.com/monitor_web/
 ||horoskopy.cz/*/impress?
 ||horoskopy.cz/*?zoneId=
 ||horoskopy.cz/*/hit|
@@ -15469,6 +15479,7 @@ vkcdnservice.appspot.com^
 |load.sst.
 ||thegreatesthits.
 |piwik.
+||datadog-log.clovergames.io
 ||log-v*-boot.capcutapi.com^
 ||logs.collector.*.cloud.solarwinds.com^
 ||agatha-log-service-*.a.run.app^
