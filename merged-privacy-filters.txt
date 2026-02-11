@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.11.3
+! Version: 26.02.12.1
 
 !! Merged rules
 
@@ -14639,6 +14639,8 @@ gmarket.co.kr#%#//scriptlet('fingerprintjs2')
 !
 ! NOTE: Specific rules
 !
+! Google Analytics
+google-analytics.com%2Fcollect
 ! sendsay.ru
 read.sendsay.ru$image
 ! https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html
