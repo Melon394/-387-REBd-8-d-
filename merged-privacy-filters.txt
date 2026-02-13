@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.13.3
+! Version: 26.02.14.1
 
 !! Merged rules
 
@@ -30,6 +30,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224796
+@@||martech.condenastdigital.com/lib/martech.js$domain=wired.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224617
 @@||mc.yandex.ru/metrika/tag.js$domain=apteka22.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224501
@@ -9217,6 +9219,15 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||vidu.com/api/canary
+||awswaf.com/*/report|
+||filecrypt.cc/muh.php
+||filecrypt.cc/bla2.php
+||filecrypt.cc/surething.php
+||filecrypt.cc/api/site/tracking-config/
+||filecrypt.cc/api/track|
+||lenovo.com/portalpacks/web/js/AnalyticsServiceFactory*.js
+businessinsider.jp##div[class^="premiumRecommend_articles__"]
 ||s.turkiyegazetesi.com.tr/s/js/stats.js
 ||js.iplsc.com/inpl.log/
 ||lge.co.kr/lg5-common/js/common/googleHeader.js
@@ -20926,6 +20937,7 @@ omni.soundestlink.com$image
 ||eurogamer-uk.eurogamer.net^
 ||event-api.reverb.com^
 ||event-collector.moviesanywhere.com^
+||event-log-api-data-platform-data-lake-prod.gryphline.com^
 ||event-router.olympics.com^
 ||event.platform.autotrader.com.au^
 ||event.platform.tunein.com^
@@ -21564,6 +21576,7 @@ omni.soundestlink.com$image
 ||pay4fans.com/api/analytics
 ||paypal.com/credit-presentment/log
 ||paypal.com/platform/tealeaftarget
+||pb.ytmp3tube.com/js/script.js$domain=yt1s.com.co
 ||pcgamesn.com/cdn-cgi/trace
 ||pcmag.com/js/ga.js
 ||pcmag.com/js/z0WVjCBSEeGLoxIxOQVEwQ.min.js
@@ -22190,7 +22203,7 @@ omni.soundestlink.com$image
 ||tumblr.com/pop/js/modern/sentry-
 ||tumblr.com/services/bblog
 ||tunein.com/api/v1/log/
-||turbobit.net/js/analytics/
+||turbobit.net/js/analytics/fdUserFingerprintToken.js
 ||twitter.com/1.1/attribution
 ||twitter.com/1.1/jot
 ||twitter.com/9/measurement/
@@ -26085,7 +26098,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||hydro-ma-proxy.akamaized.net^
 ||hypercomments.com/widget/*/analytics.html
 ||i.compendium.com^
-||i.posthog.com^
+||i.posthog.com/*/?ip=
 ||i.s-microsoft.com/wedcs/ms.js
 ||i.viafoura.co^
 ||iabusprivacy.pmc.com^
@@ -26805,6 +26818,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||r.skimresources.com^
 ||r.stripe.com^$ping,script,xmlhttprequest
 ||r.wdfl.co/rw.js
+||r.winf.site^
 ||rackcdn.com/gate.js
 ||rackcdn.com/stf.js
 ||radiotime.com/Report.ashx?
