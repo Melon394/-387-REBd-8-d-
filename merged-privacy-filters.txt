@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.13.1
+! Version: 26.02.13.2
 
 !! Merged rules
 
@@ -5693,6 +5693,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! tracktollywood.com
+||tracktollywood.com^$cookie=uid-s
 ! moz.de
 ||moz.de^$cookie=/^spid/
 ! newspicks.com
@@ -7907,6 +7909,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||trkcliq.com^
 ||stats.norton.com^
 ||log1.cmpassport.com^
 ||bi-report.maxnapps.com^
@@ -9212,6 +9215,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||s.turkiyegazetesi.com.tr/s/js/stats.js
+||js.iplsc.com/inpl.log/
 ||lge.co.kr/lg5-common/js/common/googleHeader.js
 ||tvmaze.com/stats/
 ||static.tvmaze.com/js/paq.js
@@ -15490,6 +15495,7 @@ vkcdnservice.appspot.com^
 |load.sst.
 ||thegreatesthits.
 |piwik.
+-upaas.ucweb.com^
 ||datadog-log.clovergames.io
 ||log-v*-boot.capcutapi.com^
 ||logs.collector.*.cloud.solarwinds.com^
