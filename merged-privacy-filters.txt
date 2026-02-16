@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.16.2
+! Version: 26.02.16.3
 
 !! Merged rules
 
@@ -30,6 +30,9 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224867
+@@||feliz-web.data.tm-awx.com/smile-web.min.js$domain=examinerlive.co.uk
+@@||feliz.data.tm-awx.com/smile-web-v2/rootEvent$domain=examinerlive.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224796
 @@||martech.condenastdigital.com/lib/martech.js$domain=wired.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224617
@@ -9233,7 +9236,6 @@ businessinsider.jp##div[class^="premiumRecommend_articles__"]
 ||lge.co.kr/lg5-common/js/common/googleHeader.js
 ||tvmaze.com/stats/
 ||static.tvmaze.com/js/paq.js
-||adobe.com/marketingtech/
 ||cdn.sprig.com/shim.js
 ||proton.me/api/data/
 ||proton.me/api/feature/v2/frontend/client/metrics
