@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.17.1
+! Version: 26.02.17.2
 
 !! Merged rules
 
@@ -18794,6 +18794,7 @@ analytics-*.aasaam.com
 /post-views-counter-pro/js/crawler-detect.js
 /post-views-counter-pro/js/frontend.js
 /postcounter.php?
+/posthog-recorder.js
 /postlog?
 /postview.gif?
 /pp/micro.tag.min.js
@@ -22742,8 +22743,10 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||srf.ch/udp/tracking/
 ||ss.photospecialist.at^
 ||ss.photospecialist.de^
+||stat.rz.htw-berlin.de^
 ||statistic2.reichelt.de^
 ||statistics.riskommunal.net^
+||statistics.werkenntdenbesten.de^
 ||stats.autoscout24.ch^
 ||stats.rocketbeans.tv^
 ||stats.sumikai.com^
@@ -22783,6 +22786,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tracking.badeladies.de^
 ||tracking.behaarteladies.de^
 ||tracking.bizarrladies.de^
+||tracking.buhl.de^
 ||tracking.busenladies.de^
 ||tracking.deutscheladies.de^
 ||tracking.devoteladies.de^
@@ -22824,6 +22828,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||united.web.de/event?
 ||vfd2dyn.vodafone.de^
 ||vinted.de/relay/events
+||volksverpetzer.de/pl/v.js
 ||wa.gmx.ch^
 ||wa.gmx.net^
 ||wa.web.de^
@@ -28252,6 +28257,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||trck.spoteffects.net^
 ||trecker.aklamio.com^
 ||tw.reppublika.com^
+||umi.cloudful.de^
 ||uni-duesseldorf.de/cgi-bin/nph-count?
 ||united-infos.net/event?
 ||veeseo.com^*/url.gif?
