@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.19.3
+! Version: 26.02.20.1
 
 !! Merged rules
 
@@ -7238,7 +7238,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! dynaTrace Monitor
 /ruxitagentjs_
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/116388
+! countly.com
 /countly.js
 /countly.min.js
 !
@@ -8530,7 +8530,6 @@ d4?appid*type*
 ||cloudconf.fengkongcloud.com^
 ||tracker.fengkongcloud.com^
 ||dm.pstatp.com^
-||countly.globaldelight.net^
 ||log.game.qcplay.com^
 ||report-stats.ad.jiguang.cn^
 ||config.jpush.cn^
