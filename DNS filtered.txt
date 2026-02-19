@@ -160,6 +160,8 @@ vkcdnservice.appspot.com^
 |load.ss.
 |load.sst.
 ||thegreatesthits.
+||countly.
+||countly-
 |piwik.
 -upaas.ucweb.com^
 ||datadog-log.clovergames.io
