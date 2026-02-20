@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.20.1
+! Version: 26.02.20.2
 
 !! Merged rules
 
@@ -9219,6 +9219,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||easeus.com/default/js/adsystem/
+||easeus.com/default/js/sensorsdata/
+||easeus.com/default/js/marketing.js
+||easeus.com/proxydirectory/*/pageInfo
+||asset*.coupangcdn.com/customjs/coupang-web-log/*/web-log.umd.min.js$domain=login.coupang.com
 -service.newsifier.nl/api/v2/resource/article/*/visit
 ||music.apm-proxy.obs.mts.ru/eum/*/eum.min.js
 ||zvuk.com/api/v*/clickstream-web
@@ -15509,6 +15514,8 @@ vkcdnservice.appspot.com^
 |load.ss.
 |load.sst.
 ||thegreatesthits.
+||countly.
+||countly-
 |piwik.
 -upaas.ucweb.com^
 ||datadog-log.clovergames.io
