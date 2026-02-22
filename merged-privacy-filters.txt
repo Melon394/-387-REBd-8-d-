@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.22.1
+! Version: 26.02.22.2
 
 !! Merged rules
 
@@ -21488,7 +21488,6 @@ omni.soundestlink.com$image
 ||mtm.bondagevalley.cc^
 ||mx.eneba.com^
 ||myanimelist.net/static/logging.html
-||mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-
 ||myfreecams.com/php/tracking.php?
 ||mylocal.co.uk/api/trpc/analytics.
 ||myspace.com/beacon/
