@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.23.2
+! Version: 26.02.23.3
 
 !! Merged rules
 
@@ -9222,6 +9222,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||zocdoc.com/metrics/
 ||api.4lapy.ru/api/v*/events/
 4lapy.ru#%#//scriptlet('set-local-storage-item', 'marketing', '$remove$')
 4lapy.ru#%#//scriptlet('set-local-storage-item', 'client_id', '$remove$')
@@ -17070,6 +17071,7 @@ analytics-*.aasaam.com
 /?swift-performance-tracking
 /_/api/v2/analytics/?
 /_/lite/performance/*
+/__core/metrics.js
 /__imp_apg__/*
 /__rmn.gif?
 /__ssobj/core.js
@@ -18039,6 +18041,7 @@ analytics-*.aasaam.com
 /gc?refurl=
 /gcount.pl?
 /gd_tracker_events.js
+/gdm-user-insights.js
 /gemius.3.15.js
 /gemius.js
 /gen204/*
