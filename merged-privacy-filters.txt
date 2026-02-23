@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.23.1
+! Version: 26.02.23.2
 
 !! Merged rules
 
@@ -9222,6 +9222,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||api.4lapy.ru/api/v*/events/
+4lapy.ru#%#//scriptlet('set-local-storage-item', 'marketing', '$remove$')
+4lapy.ru#%#//scriptlet('set-local-storage-item', 'client_id', '$remove$')
 kanaloco.jp##.tab_wrap:has(> #recomm_tab1)
 ||tags.news.com.au/prod/
 ||tags.newscgp.com/prod/ncg/
