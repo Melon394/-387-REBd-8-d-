@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.24.1
+! Version: 26.02.24.2
 
 !! Merged rules
 
@@ -5697,6 +5697,17 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/225274
+||gmarket.co.kr^$cookie=sca
+||gmarket.co.kr^$cookie=cna
+! https://github.com/AdguardTeam/AdguardFilters/issues/225275
+||11st.co.kr^$cookie=PCID
+! theculturetrip.com
+||theculturetrip.com^$cookie=tct-real-user
+! webmd.com
+||webmd.com^$cookie=VisitorId
+! goodrx.com
+||goodrx.com^$cookie=grx_unique_id
 ! zvuk.com
 ||zvuk.com^$cookie=device_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224419
@@ -9223,6 +9234,16 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||alicdn.com/alilog/mlog/
+myhixel.com#%#//scriptlet('set-local-storage-item', 'ANONYMOUS_CUSTOMER_ID', '$remove$')
+myhixel.com#%#//scriptlet('set-local-storage-item', 'user_id', '$remove$')
+||app-api.vidjet.io/track-event
+||myhixel.com/apps/awin/
+||webmd.com/static/v/c?
+||img.lb.wbmdstatic.com/webmd_static_vue/file-explorer/webmd/js/mmtrack.js
+||img.lb.wbmdstatic.com/webmd_static_vue/file-explorer/webmd/global-metrics/
+thegentlemansjournal.com#%#//scriptlet('set-local-storage-item', '__anon_id', '$remove$')
+||glowing.com/unilog
 ||zocdoc.com/metrics/
 ||api.4lapy.ru/api/v*/events/
 4lapy.ru#%#//scriptlet('set-local-storage-item', 'marketing', '$remove$')
@@ -9797,7 +9818,7 @@ ici.radio-canada.ca#%#//scriptlet('set-local-storage-item', 'RC_PLAYER_USER_ID',
 ||udc.yahoo.com/v*/public/*&yhlClient=rapid*&yhlClientVer=$domain=yahoo.com
 ||goodcar.com/js/parts/fp.js
 2ndswing.com,goodcar.com#%#//scriptlet('set-local-storage-item', 'uw-uid', '$remove$')
-||11st.co.kr/js/rake/RakeData.js
+||11st.co.kr/js/*/RakeData.js
 epicurious.com#%#//scriptlet('set-cookie', 'FP_visitorID', '1', '/', 'epicurious.com')
 ||teraboxcdn.com/general-conf/fk/dfxaf3-*.js
 ||s-cdn.sportbox.ru/sites/all/libraries/design/*/js/user-tracking.global.js
@@ -10008,7 +10029,7 @@ baseballpost.jp###highschool-pickup
 berrykun.com##img[src*="a8.net/svt/"]
 ||xvp.imgix.net/assets/customer_tools/ip_checker-
 ||pub.pixels.ai/metrics-lib.js
-pitchfork.com,gq.com#%#//scriptlet('set-local-storage-item', '/^avoinspector/', '$remove$')
+allure.com,pitchfork.com,gq.com#%#//scriptlet('set-local-storage-item', '/^avoinspector/', '$remove$')
 ||affirm.com/api/chrono/*/collect
 ||jobkorea.co.kr/Net/AdBannerApi/AdBannerLog
 ||check24.*/assets/funnel-tracking.min.js
@@ -15468,6 +15489,7 @@ vkcdnservice.appspot.com^
 ||mediate-ios-*.hyprmx.com^
 ||production-adserver-*.amazonaws.com^
 ||rtbimp-loadbalancer-*.amazonaws.com^
+||cdn-*.gravityfield.ai^
 ||powa-ingest-prod-*.video-player.arcpublishing.com^
 ||collector-*.pxchk.net^
 ||matomo-demo-*.amazonaws.com^
@@ -18889,6 +18911,7 @@ analytics-*.aasaam.com
 /px?t=
 /px_trans.gif
 /pxf.gif?
+/pxid?k=
 /pxl.cgi?
 /pxl.gif?
 /pxl.png?
@@ -25177,6 +25200,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||appspot.com/stats?
 ||appspot.com/take?
 ||appspot.com/track-analytics-event
+||appvtexio.weni.ai/pixel.js
 ||aramuz.net/frontapi/*/analyticsEvent?
 ||arc.pub/clavis/training/events
 ||arclk.net/trax?
@@ -32325,6 +32349,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||rtrk.com^$third-party
 ||rttrk.com^$third-party
 ||ru4.com^$third-party
+||rubiconredirect.com^$third-party
 ||rudderlabs.com^$third-party
 ||rumanalytics.com^$third-party
 ||rumpelstiltskinhead.com^$third-party
