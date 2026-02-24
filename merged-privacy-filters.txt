@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.24.3
+! Version: 26.02.25.1
 
 !! Merged rules
 
@@ -9237,6 +9237,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||liberal.gr/modules/custom/liberal_advertising_tools/
 ||investinglive.com/api/set-device-id
 usmagazine.com#%#//scriptlet('set-local-storage-item', 'rl_anonymous_id', '$remove$')
 cnbctv18.com###postDetail > div[style][class^="jsx-"]:has(> .taboola_section)
@@ -22222,7 +22223,6 @@ omni.soundestlink.com$image
 ||tradingview-widget.com/static/bundles/embed/snowplow-embed-widget-tracker.$script
 ||tradingview.com/ping
 ||trafficid.brandwell.ai^
-||traveloka.com/api/v1/metrics
 ||traveloka.com/api/v1/tvlk/events
 ||trck.coomeet.com^
 ||trckng.dainese.com^
@@ -22294,7 +22294,6 @@ omni.soundestlink.com$image
 ||umami.spencerdevs.xyz^
 ||umami.vidfast.pro^
 ||umami.wakarimasen.moe^
-||unibling.com/eclytics/
 ||unity3d.com/v1/events
 ||unl1zvy2zuyn.franchiseplus.nl^
 ||unsplash.com/nmetrics
@@ -26694,7 +26693,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||partners.etoro.com^$script
 ||patreon.com/api/tracking
 ||payments-amazon.com^*/analytics.js
-||payments.amazon.com/cs/uedata
 ||paypal.com/credit-presentment/glog?
 ||paypal.com/ptrk/
 ||paypal.com/webapps/mch/cmd/?
@@ -30906,7 +30904,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||capturemedia.network^$third-party
 ||capturly.com^$third-party
 ||caramel.press^$third-party
-||carts.guru^$third-party
 ||cartstack.com^$third-party
 ||cashburners.com^$third-party
 ||cashcount.com^$third-party
