@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.25.2
+! Version: 26.02.25.3
 
 !! Merged rules
 
@@ -9240,6 +9240,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||mcsvc.samsung.com/statistics/
+||gsvs.org/monitoring
+||vivino.com/api/tracking_events
 ||tiktok.com/tiktok/popup/dispatch/
 ||tiktok.com/api/ad/tiktok_web/banner/
 ||liberal.gr/modules/custom/liberal_advertising_tools/
@@ -14474,6 +14477,7 @@ dreamprogs.net##td[width="88"][height="31"]
 !#if (!adguard_ext_chromium && !adguard_ext_opera && !adguard_ext_firefox && !adguard_ext_chromium && !adguard_ext_chromium_mv3)
 ||discord.com/api/v*/science
 !#else
+discord.com#%#//scriptlet('prevent-xhr', '/discord\.com\/api\/v[0-9]+\/science/')
 discord.com#%#//scriptlet('prevent-fetch', '/discord\.com\/api\/v[0-9]+\/science/')
 !#endif
 !#endif
