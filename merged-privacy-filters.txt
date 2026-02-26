@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.26.3
+! Version: 26.02.27.1
 
 !! Merged rules
 
@@ -30,6 +30,12 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/225445
+auto.cz#%#//scriptlet('prevent-element-src-loading', 'script', 'spir.hit.gemius.pl/gplayer.js')
+!+ PLATFORM(ios, ext_android_cb)
+@@||spir.hit.gemius.pl/gplayer.js$script,domain=auto.cz
+! https://github.com/AdguardTeam/AdguardFilters/issues/225689
+@@||cdn.optimizely.com/datafiles/*.json$domain=feverup.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225501
 @@||scdn.cxense.com/cx.js$domain=cdn.cxpublic.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225232
