@@ -1,3 +1,16 @@
+! Source: https://raw.githubusercontent.com/qcontinuum1/spying-extensions/main/README.md
+||184.72.115.35^$all,reason=Spyware
+||184.72.121.156^$all,reason=Spyware
+||34.29.32.249^$all,reason=Spyware
+||54.175.74.27^$all,reason=Spyware
+||54.209.60.63^$all,reason=Spyware
+||54.86.66.252^$all,reason=Spyware
+||54.92.107.92^$all,reason=Spyware
+||nat-service.aws.kontera.com^$all,reason=Spyware
+||nat-service1.aws.kontera.com^$all,reason=Spyware
+||nat-service3.aws.kontera.com^$all,reason=Spyware
+||nat-service4.aws.kontera.com^$all,reason=Spyware
+||nat.aws.kontera.com^$all,reason=Spyware
 ||chromewebstore.google.com/detail/aadbahhifnekkkcbapdfandpimaoacmj$all,reason=Spyware
 ||chromewebstore.google.com/detail/aahodnigalncogkhfolddkmkklijeoap$all,reason=Spyware
 ||chromewebstore.google.com/detail/aaiolimgbncdaldgbbjkidiijidchhjo$all,reason=Spyware
