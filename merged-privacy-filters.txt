@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.27.6
+! Version: 26.02.27.7
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/225720
+@@||googletagmanager.com/gtm.js$domain=puccini.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225726
 @@||vansprint.de/theme/*/js/storefront/google-analytics.plugin.$domain=vansprint.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225445
@@ -4859,6 +4861,8 @@ kizi.com#%#window.google_trackConversion = function() {};
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! salesmanago.pl
+$cookie=smuuid
 ! wovn.io
 $cookie=wovn_uuid
 ! anyclip.com
@@ -9251,6 +9255,12 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||matterport.com/nextjs-assets/scripts/aapl-campaign-tracking.js
+||matterport.com/nextjs-assets/scripts/migrate-utm.js
+||matterport.com/nextjs-assets/scripts/segment.js
+||matterport.com/nextjs-assets/scripts/vwo.js
+||js.qualified.com/packs/js/analytics-
+||salesmanago.pl/api/vs?
 ||bbstatic.pcmag.com/js/z0WVjCBSEeGLoxIxOQVEwQ.min.js
 ||ferienwohnungen.de/api/pxl
 ||ostrovok.ru/hotel/api/report-web-vitals/
@@ -16284,6 +16294,7 @@ analytics-*.aasaam.com
 @@||ipv4.seeip.org/jsonip$domain=empire-streaming.app
 @@||join.southerncross.co.nz/quote/_assets/js/sx/app/helpers/gtm.js
 @@||js-agent.newrelic.com^$domain=alliantcreditunion.com|giftcards.com|kapwing.com|live.griiip.com
+@@||js-cdn.dynatrace.com/jstag/$domain=fido.ca
 @@||js.datadome.co/tags.js$script,domain=monster.ca|sso.garena.com|thefork.at|thefork.be|thefork.ch|thefork.co.uk|thefork.com|thefork.de|thefork.es|thefork.fr|thefork.it|thefork.nl|thefork.pt|thefork.se|ugg.com
 @@||js.sentry-cdn.com^$script,domain=app.homebinder.com|bolt.new|book.dmm.com|etsy.com|interacty.me|jobs.ch|pizzahut.com.au
 @@||jsrdn.com/s/$script,domain=distro.tv
