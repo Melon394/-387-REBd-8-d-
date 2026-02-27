@@ -1,0 +1,110 @@
+name: Update Spyware Filter
+
+on:
+  schedule:
+    # 매일 한국 시간(KST) 오전 9시 (UTC 00:00)에 1회 실행
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  filter-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Spyware Filter
+        env:
+          TZ: 'Asia/Seoul'
+        run: |
+          TARGET_URL="https://raw.githubusercontent.com/qcontinuum1/spying-extensions/refs/heads/main/README.md"
+          OUTPUT_FILE="spyware_chromewebextension.txt"
+          
+          echo "Downloading README.md from target repository..."
+          curl -sL "$TARGET_URL" -o readme.md
+          
+          if [ ! -s readme.md ]; then
+            echo "CRITICAL_FAILURE=true" >> $GITHUB_ENV
+            echo "Download failed or file is empty. Exiting."
+            exit 1
+          fi
+
+          # 필터 파일 헤더 생성 (선택 사항이지만 관리상 권장)
+          echo "! Title: Spyware Chrome Extensions & IPs Filter" > "$OUTPUT_FILE"
+          echo "! Updated: $(date +'%Y-%m-%d %H:%M:%S') KST" >> "$OUTPUT_FILE"
+          echo "! Source: $TARGET_URL" >> "$OUTPUT_FILE"
+          echo "" >> "$OUTPUT_FILE"
+
+          echo "Extracting IPs from '## The Honeypot' section..."
+          # sed를 이용해 Honeypot부터 IoCs 전까지의 텍스트만 자른 뒤, IPv4 정규식으로 IP만 추출
+          sed -n '/## The Honeypot/,/### IoCs/p' readme.md | grep -oE '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b' | sort -u > ips.txt
+          
+          echo "Extracting Chrome Web Store URLs..."
+          # 크롬 확장 ID 고유 패턴(a-p 32자리)과 URL 조합을 추출
+          grep -oE 'chromewebstore\.google\.com/detail/[a-p]{32}' readme.md | sort -u > urls.txt
+
+          echo "Formatting AdBlock Rules..."
+          
+          # IP 규칙 추가 (형식: ||<IP>^$all,reason=Spyware)
+          while read -r ip; do
+            if [ -n "$ip" ]; then
+              # $all이 bash 변수로 인식되지 않도록 \$all 로 이스케이프 처리
+              echo "||${ip}^\$all,reason=Spyware" >> "$OUTPUT_FILE"
+            fi
+          done < ips.txt
+
+          # URL 규칙 추가 (형식: ||<URL>$all,reason=Spyware)
+          while read -r url; do
+            if [ -n "$url" ]; then
+              echo "||${url}\$all,reason=Spyware" >> "$OUTPUT_FILE"
+            fi
+          done < urls.txt
+
+          LINE_COUNT=$(grep -cve '^\s*$' "$OUTPUT_FILE" || true)
+          echo "Success: $LINE_COUNT lines generated."
+          
+          # 임시 파일 삭제
+          rm readme.md ips.txt urls.txt
+
+      - name: Deploy to Isolate Branch
+        if: always()
+        env:
+          TZ: 'Asia/Seoul'
+        run: |
+          if [ "$CRITICAL_FAILURE" == "true" ]; then
+             echo "Critical Download Failure Detected. Canceling Update."
+             exit 1
+          fi
+          
+          OUTPUT_FILE="spyware_chromewebextension.txt"
+          
+          mkdir -p /tmp/filter_output
+          mv "$OUTPUT_FILE" /tmp/filter_output/
+          
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git fetch origin Isolate || true
+          
+          if git show-ref --verify --quiet refs/remotes/origin/Isolate; then
+             git checkout Isolate
+             git pull origin Isolate --rebase
+          else
+             git checkout --orphan Isolate
+             git rm -rf .
+          fi
+          
+          mv /tmp/filter_output/"$OUTPUT_FILE" .
+          
+          git add "$OUTPUT_FILE"
+          
+          if git diff --staged --quiet; then
+            echo "No changes detected."
+          else
+            git commit -m "Auto update Spyware rules: $(date +'%Y-%m-%d %H:%M:%S') KST"
+            git push origin Isolate
+          fi
