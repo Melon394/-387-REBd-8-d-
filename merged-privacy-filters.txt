@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.27.7
+! Version: 26.02.28.1
 
 !! Merged rules
 
@@ -32,6 +32,11 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/225721
+@@||googletagmanager.com/gtm.js$script,domain=streetstyle24.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/225799
+!+ PLATFORM(ios, ext_safari)
+@@||officeapps.live.com^$domain=cloud.microsoft
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225720
 @@||googletagmanager.com/gtm.js$domain=puccini.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225726
@@ -7074,6 +7079,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/wp-content/plugins/burst-statistics/*
 /ad-site-i18n-sg/*$xmlhttprequest
 /wp-content/plugins/wp-analytify-pro/*
 /crm/tag/call.tracker.js
@@ -9255,6 +9261,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||app.posthog.com/static/array.js$third-party
+||burst-statistics.com/wp-content/uploads/burst/js/burst.min.js
 ||matterport.com/nextjs-assets/scripts/aapl-campaign-tracking.js
 ||matterport.com/nextjs-assets/scripts/migrate-utm.js
 ||matterport.com/nextjs-assets/scripts/segment.js
@@ -10896,7 +10904,6 @@ natuero-dougakan.com##.side-menu:has(script[src="//accaii.com/natuero/script.js"
 ||crank-in.net/assets/common/js/sendpv.js
 joinrs.com#%#//scriptlet('set-local-storage-item', 'TRACKING_EVENTS', '$remove$')
 ||goldapple.ru/front/api/search/analytics/
-||61medya.net/wp-content/plugins/burst-statistics/
 ||tabakhero.de/widgets/cbax/analytics/
 ||kts-tv.co.jp/common/js/analytics.js
 ||mgntrn.nl/api/event
