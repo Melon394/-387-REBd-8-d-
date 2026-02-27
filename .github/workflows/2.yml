@@ -113,11 +113,16 @@ jobs:
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt" "ag_mobile"
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile_allowlist.txt" "ag_mobile_allowlist"
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/specific.txt" "ag_specific"
-          download_filter "https://raw.githubusercontent.com/Melon394/-387-REBd-8-d-/Isolate/DNS%20filtered.txt" "ag_DNS_filtered"
 
           echo "" >> final_result.txt
           echo "##body" >> final_result.txt
-          echo "*#%#//scriptlet('prevent-canvas')" >> final_result.txt
+          echo "" >> final_result.txt
+          
+          download_filter "https://raw.githubusercontent.com/Melon394/-387-REBd-8-d-/Isolate/DNS%20filtered.txt" "ag_DNS_filtered"
+          download_filter "https://raw.githubusercontent.com/Melon394/-387-REBd-8-d-/Isolate/spyware_chromewebextension.txt" "spyware_filtered"
+
+          echo "" >> final_result.txt
+          echo "##body" >> final_result.txt
           echo "" >> final_result.txt
 
           download_filter "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_allowlist.txt" "ep_allowlist"
