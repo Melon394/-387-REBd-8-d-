@@ -30,9 +30,9 @@ jobs:
             exit 1
           fi
 
-          > "$OUTPUT_FILE"
+          echo "! Source: https://raw.githubusercontent.com/qcontinuum1/spying-extensions/main/README.md" > "$OUTPUT_FILE"
 
-          sed -n '/## The Honeypot/,/### IoCs/p' readme.md | grep -o '\`[^\`]*\`' | tr -d '\`' | sort -u > targets.txt
+          sed -n '/## The Honeypot/,/### IoCs/p' readme.md | grep -o '`[^`]*`' | tr -d '`' | sort -u > targets.txt
           
           grep -oE 'chromewebstore\.google\.com/detail/[a-p]{32}' readme.md | sort -u > urls.txt
 
