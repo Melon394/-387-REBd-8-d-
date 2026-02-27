@@ -1,14 +1,3 @@
-! Title: Spyware Chrome Extensions & IPs Filter
-! Updated: 2026-02-27 12:16:47 KST
-! Source: https://raw.githubusercontent.com/qcontinuum1/spying-extensions/refs/heads/main/README.md
-
-||184.72.115.35^$all,reason=Spyware
-||184.72.121.156^$all,reason=Spyware
-||34.29.32.249^$all,reason=Spyware
-||54.175.74.27^$all,reason=Spyware
-||54.209.60.63^$all,reason=Spyware
-||54.86.66.252^$all,reason=Spyware
-||54.92.107.92^$all,reason=Spyware
 ||chromewebstore.google.com/detail/aadbahhifnekkkcbapdfandpimaoacmj$all,reason=Spyware
 ||chromewebstore.google.com/detail/aahodnigalncogkhfolddkmkklijeoap$all,reason=Spyware
 ||chromewebstore.google.com/detail/aaiolimgbncdaldgbbjkidiijidchhjo$all,reason=Spyware
