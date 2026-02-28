@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.02.28.3
+! Version: 26.03.01.1
 
 !! Merged rules
 
@@ -20319,6 +20319,7 @@ _WebVitalsReporter_
 /email/open?
 /email_open_log_
 /emailopen?q=$image
+/emailtrack.offers-exchange.com/*$image
 /emimp/*$image
 /engage.indeed.com/*$image
 /eo?_t=$image
@@ -21970,6 +21971,7 @@ omni.soundestlink.com$image
 ||sp.ecosia.org^
 ||sp.justwatch.com^
 ||sp.pcoptimum.ca^
+||sp.pluto.tv^
 ||sp.welcometothejungle.com^
 ||spaning.creavite.co^
 ||spanishdict.com/page-view-metadata
@@ -25666,6 +25668,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||concert.io/lookup/
 ||conde.io/beacon
 ||condenastdigital.com/content?$third-party
+||conduit.redfast.com^
 ||confiant-integrations.global.ssl.fastly.net^
 ||config-security.com/event
 ||confirmit.com/wix/inline.aspx?
@@ -25833,6 +25836,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||doppiocdn.org/healthcheck
 ||doppler-beacon.cbsivideo.com^
 ||doppler-client-events.cbsivideo.com^
+||doppler-config.cbsivideo.com^
 ||doppler-reporting.cbsivideo.com^
 ||dotaudiences.com^$third-party
 ||drift.com/impressions/
@@ -27475,6 +27479,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tr.thecontentserver.com^
 ||tr.vitals.co^
 ||tr.webantenna.info^
+||tr6.snapchat.com^
 ||tra.scds.pmdstatic.net/sourcepoint/
 ||traccoon.intellectsoft.net^
 ||trace.swaven.com^
@@ -27783,6 +27788,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||vs4.com/impr.php?
 ||vst.sibnet.ru^
 ||vstat.borderlessbd.com^
+||vtrk.dv.tech^
 ||vuukle.com/bq-publish?
 ||vuukle.com/getGeo
 ||vvhp.net/read/view.gif
