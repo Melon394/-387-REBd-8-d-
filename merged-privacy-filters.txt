@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.02.1
+! Version: 26.03.02.2
 
 !! Merged rules
 
@@ -5265,6 +5265,8 @@ $cookie=external_referer
 ! Yahoo
 $cookie=axids
 $cookie=tbla_id
+! Yahoo JP
+$cookie=_yjsu_yjad
 ! Used in the targeting of relevant adverts and content on the Yahoo! platform
 ||yahoo.com^$cookie=APIDTS
 ! Yahoo Conversion Tracking
@@ -9261,6 +9263,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||indeed.com/m/rpc/dwell/log
+eiga.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 ||app.posthog.com/static/array.js$third-party
 ||burst-statistics.com/wp-content/uploads/burst/js/burst.min.js
 ||matterport.com/nextjs-assets/scripts/aapl-campaign-tracking.js
