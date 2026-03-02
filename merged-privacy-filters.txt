@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.02.2
+! Version: 26.03.02.3
 
 !! Merged rules
 
@@ -9263,6 +9263,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+times.abema.tv##.ad-taboola-mid-article-thumbnails
+||xn--pckua2a7gp15o89zb.com/api/t/v*/vit
 ||indeed.com/m/rpc/dwell/log
 eiga.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 ||app.posthog.com/static/array.js$third-party
@@ -16190,6 +16192,7 @@ analytics-*.aasaam.com
 @@||cdn.facil-iti.app/tags/faciliti-tag.min.js$script,domain=apec.fr|kyoto.travel
 @@||cdn.getblueshift.com/blueshift.js$script,domain=rentcafe.com
 @@||cdn.heapanalytics.com^$script,domain=libertymutual.com
+@@||cdn.intellimize.co/snippet/$script,domain=talkspace.com
 @@||cdn.jsdelivr.net^*/fp.min.js$script,domain=cuevana2.io
 @@||cdn.matomo.cloud/tekuchi.matomo.cloud/matomo.js$domain=berkeleygroup.digital
 @@||cdn.mxpnl.com/libs/$script,domain=get.pumpkin.care
@@ -19191,6 +19194,7 @@ analytics-*.aasaam.com
 /silveregg/js/cookie_lib.js
 /simple_reach.js
 /simtracker.min.js
+/site24x7rum-min.js
 /site_statistics.js
 /site_stats.js
 /site_stats/*
