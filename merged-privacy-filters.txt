@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.05.2
+! Version: 26.03.05.3
 
 !! Merged rules
 
@@ -6117,8 +6117,6 @@ $cookie=mosb,domain=womenshealthmag.com|bicycling.com|bestproducts.com|caranddri
 ||dropbox.com^$cookie=dbx_js_analytics_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194354
 ||my-best.com^$cookie=mybest_uuid
-! time.is
-||time.is^$cookie=c
 ! hulu.com
 ||hulu.com^$cookie=metrics_tracker_session_manager
 ! clarity.ms
@@ -9278,6 +9276,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||tongji.90dao.com^$ping
 ||cdn1.irontive.com/apps/ironpixel.js
 ||championat.com/api/unity-id/*/init
 ||cls.rambler.ru/api/*/events
