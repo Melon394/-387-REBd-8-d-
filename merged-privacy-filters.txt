@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.06.2
+! Version: 26.03.06.3
 
 !! Merged rules
 
@@ -32,6 +32,9 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/226381
+!+ PLATFORM(ios, ext_safari)
+@@||tags.news.com.au/prod/newskey/generator.html?origin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/226344
 @@||googletagmanager.com/gtm.js$domain=nowtv.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/226314
@@ -9288,6 +9291,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||unleash-edge-prod.penpencil.co/api/frontend/client/metrics
 ||videotools.ocdn.eu/plugins/fp/
 ||analytics-fe.digital-cloud-west.medallia.com^
 tv-tokyo.co.jp##.tbcms_plus-pickup
@@ -27179,6 +27183,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sftrack.searchforce.net^
 ||sgali-mcs.byteoversea.com^
 ||sgm-w.jd.com^
+||shallspark.com/athena/tracking/
 ||share-online.biz/affiliate/$third-party
 ||shareaholic.com/analytics_
 ||shareaholic.com/partners.js
