@@ -610,7 +610,6 @@ dlsdk.appsflyer.com^
 ||a*.chajiaotong.com^
 ||ac*.786ip.com^
 ||ac*.faxingchina.com^
-||ac*.pingguolv.com^
 ||at*.doubanio.com^
 ||bdcpro*.techweb.com.cn^
 ||bdlm*.hc360.com^
