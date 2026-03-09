@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.09.2
+! Version: 26.03.09.3
 
 !! Merged rules
 
@@ -32,6 +32,10 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/226518
+@@||cdn.cxense.com/cx.cce.js$domain=diamond.jp
+@@||cdn.cxense.com/cx.js$domain=diamond.jp
+@@||api.cxense.com/public/widget/data?json=$domain=diamond.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/226431
 @@||wurfl.io/wurfl.js$domain=login.smartcharts.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/226381
@@ -7107,6 +7111,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/digibox.gif?c=$image
 /wp-content/plugins/burst-statistics/*
 /wp-content/plugins/wp-analytify-pro/*
 /crm/tag/call.tracker.js
@@ -9293,6 +9298,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||tiles.wo-cloud.com/analytics
+cleverfit.fitness-konzepte.de#%#//scriptlet('set-local-storage-item', 'one_stats_metadata', '$remove$')
+||cleverfit.fitness-konzepte.de/_api/stats-service
 ||dribbble.com/client_app/events
 ||dribbble.com/shots/log_views
 ||privacyguides.org/public/ghost-stats.min.js
@@ -14816,6 +14824,9 @@ gmarket.co.kr#%#//scriptlet('fingerprintjs2')
 !
 ! NOTE: Specific rules
 !
+! mail.naver.com
+track-mmp.navercorp.com/received/*.gif$image
+track-mmp.navercorp.com%2Freceived%2F*.gif$image
 ! telegraph.co.uk
 mailer.eip.telegraph.co.uk$image
 ! Shopee
@@ -16648,11 +16659,11 @@ analytics-*.aasaam.com
 !! cxense.com/persisted/execute
 @@||cxense.com/persisted/execute$domain=nippon.com
 !! cxense.com/public/widget/
-@@||cxense.com/public/widget/$domain=bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cxpublic.com|cyclestyle.net|friday.gold|friday.kodansha.co.jp|handelsblatt.com|inquirer.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nippon.com|rikejo.jp|savonsanomat.fi|shueisha.co.jp|tn.com.ar|tvnet.lv|wsj.com
+@@||cxense.com/public/widget/$domain=bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cxpublic.com|cyclestyle.net|diamond.jp|friday.gold|friday.kodansha.co.jp|handelsblatt.com|inquirer.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nippon.com|rikejo.jp|savonsanomat.fi|shueisha.co.jp|tn.com.ar|tvnet.lv|wsj.com
 !! cxense.com/cx.cce.js
-@@||cxense.com/cx.cce.js$domain=bizjournals.com|businessinsider.de|cxpublic.com|handelsblatt.com|inquirer.com|mainichi.jp|marketwatch.com|shueisha.co.jp|tarzanweb.jp|tn.com.ar|tvnet.lv|wsj.com
+@@||cxense.com/cx.cce.js$domain=bizjournals.com|businessinsider.de|cxpublic.com|diamond.jp|handelsblatt.com|inquirer.com|mainichi.jp|marketwatch.com|shueisha.co.jp|tarzanweb.jp|tn.com.ar|tvnet.lv|wsj.com
 !! cxense.com/cx.js
-@@||cxense.com/cx.js$domain=13.cl|bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cyclestyle.net|handelsblatt.com|inquirer.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nikkansports.com|nippon.com|savonsanomat.fi|shueisha.co.jp|str.toyokeizai.net|tarzanweb.jp|tn.com.ar|tv-tokyo.co.jp|tvnet.lv|wsj.com
+@@||cxense.com/cx.js$domain=13.cl|bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cyclestyle.net|diamond.jp|handelsblatt.com|inquirer.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nikkansports.com|nippon.com|savonsanomat.fi|shueisha.co.jp|str.toyokeizai.net|tarzanweb.jp|tn.com.ar|tv-tokyo.co.jp|tvnet.lv|wsj.com
 !! collector.appconsent.io
 @@||collector.appconsent.io/hello$domain=lachainemeteo.com|lefigaro.fr
 !! imrworldwide.com/*ggc
