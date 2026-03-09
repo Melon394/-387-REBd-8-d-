@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.09.1
+! Version: 26.03.09.2
 
 !! Merged rules
 
@@ -11364,7 +11364,7 @@ thehindu.com###sectiondivicymi
 ||gitlab.com/assets/webpack/analytics.*.js
 ||static.jobrapido.com/public/tracking/
 ||panasonic.jp/etc/designs/panasonic/standardpage-clientlibs/ec-tracker.js
-||scv-game.io.naver.com/jackpotlog/*/logs|$xmlhttprequest
+||scv-*.io.naver.com/jackpotlog/*/logs|$xmlhttprequest
 ||realtor.com/rdc_user_check/init.js
 ||rzd-partner.ru/events/
 ||nextech.sk/site/visitStore/
@@ -16555,7 +16555,6 @@ analytics-*.aasaam.com
 @@||tm.regions.com/tags.js$~third-party
 @@||tms.oracle.com/main/prod/utag.sync.js$~third-party
 @@||tntdrama.com/modules/custom/ten_video/js/analytics_v2.js$~third-party
-@@||tokbox.com/prod/logging/ClientEvent$domain=examroom.ai
 @@||tools.pinpoll.com^$script,subdocument,domain=iframely.net
 @@||toyota.com/recall/static/js/custom/facebookPixel.js$~third-party
 @@||traceparts.com/lib/piano-analytics/piano-analytics.js$script,~third-party
@@ -18579,7 +18578,6 @@ analytics-*.aasaam.com
 /logger.ashx?
 /logger.dll/*
 /logger/?referer=
-/logging/ClientEvent
 /logging/log.do
 /logging/logjs
 /logging/pageView
@@ -25575,6 +25573,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||cdns.brsrvr.com^
 ||cdp.sph.com.sg/activation/activation.js
 ||ceros.com/a?data
+||cert.tryggehandel.net/ping
 ||cf-pixelfront-analytics.widencdn.net^
 ||cf.api.instant.one^
 ||cf.overblog.com^
