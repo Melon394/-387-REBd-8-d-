@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.10.3
+! Version: 26.03.11.1
 
 !! Merged rules
 
@@ -7990,11 +7990,13 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||bdtelemetry.amazon^
+||rum.us-east-1.amazonaws.com^
 ||log.sweepycleanplus.com^
 ||log.photorecoverypicturerecovery.com^
 ||log.scanqrcodedesign.live^
 ||log.cleanerwish.live^
-||trace-v1.free-reels.com^
+||trace-*.free-reels.com^
 ||tracking.twelveapp.sh^
 ||trkcliq.com^
 ||stats.norton.com^
@@ -9301,6 +9303,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||infpol.ru/statistics.js
+||api-gateway-global.viu.com/api/audienceTargeting/
 ||careers.lilly.com/*/phenomtrack.min.js
 ||courses.monoprix.fr/events
 ||tiles.wo-cloud.com/analytics
