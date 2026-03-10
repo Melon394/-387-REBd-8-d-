@@ -103,6 +103,7 @@ vkcdnservice.appspot.com^
 ||mediate-ios-*.hyprmx.com^
 ||production-adserver-*.amazonaws.com^
 ||rtbimp-loadbalancer-*.amazonaws.com^
+||bapi-*.moengage.com^
 ||cdn-*.gravityfield.ai^
 ||powa-ingest-prod-*.video-player.arcpublishing.com^
 ||collector-*.pxchk.net^
@@ -313,6 +314,7 @@ dlsdk.appsflyersdk.com^
 ||*conversions.appsflyersdk.com^
 ||*register.appsflyersdk.com^
 dlsdk.appsflyer.com^
+||trace-*.free-reels.com^
 ||clarity.ms^|
 ||gbxreport-*.wf.com^
 ||tracking.geo.*.amazonaws.com^
