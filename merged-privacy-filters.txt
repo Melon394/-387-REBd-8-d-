@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.11.2
+! Version: 26.03.11.3
 
 !! Merged rules
 
@@ -5755,6 +5755,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! my.club
+||my.club^$cookie=my_club_guestId
+||my.club^$cookie=my_club_guestUuid
 ! https://www.tiktok.com/legal/page/global/tiktok-website-cookies-policy/en
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225183
 ||tiktok.com^$cookie=ttwid
@@ -21765,6 +21768,9 @@ omni.soundestlink.com$image
 ||p.controld.com^
 ||p.ctpost.com/article?
 ||p.hentaiforce.net^
+||p.mdb.tools^
+||p.midbound.click^
+||p.midbound.net^
 ||p.minds.com^
 ||p.ost2.fyi/courses/*/save_user_state
 ||p.ost2.fyi/event^
@@ -25479,6 +25485,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||bet365.de/Members/*&affiliate=$subdocument,third-party
 ||betano.de^*?btag=$subdocument,third-party
 ||bhphotovideo.com/imp/
+||bi-events-collector.spot.im^
 ||bi-metrics.aramuz.net^
 ||bi.heyloyalty.com^
 ||bi.medscape.com^
