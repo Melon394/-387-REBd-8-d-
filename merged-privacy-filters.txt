@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.16.2
+! Version: 26.03.16.3
 
 !! Merged rules
 
@@ -9317,6 +9317,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||mwed.jp/i/acs.gif?
+||sdk.rum.aliyuncs.com/v*/bl.js
 ||cimri.com/api/pixel
 ||api.k2s.cc/v1/analytics/
 ||jm-madeira.pt/html/js/iter-libraries/iter-statistics.js
@@ -11931,7 +11933,7 @@ markezine.jp##.carouselBlock > li[id^="cx_"].c-headlineindex_listitem
 ||cdn.nwl1.megaknihy.cz/tr.js
 ||amazon.*/*/track_framework_metrics?
 ||vicodes.com/tag/load-*.js
-||arms-retcode-sg.aliyuncs.com/r.png?
+||arms-retcode*.aliyuncs.com/r.png?
 ||app.turbobiyt.net/js/analytics/index.js
 ||revive-chat.io/js/tracking-min.js
 ||sp.vtex.com/event-api/
@@ -21057,6 +21059,7 @@ omni.soundestlink.com$image
 ||deliveroo.com^*/events
 ||deliveryrank.com/drapp070eb2deb1932e2101e6.js
 ||delta.com/datacollect
+||deno.com/i/
 ||deovr.com/api_logs/
 ||desmos.com/analytics/js/
 ||dev.to/fallback_activity_recorder
@@ -21467,8 +21470,6 @@ omni.soundestlink.com$image
 ||intent.pcworld.idg.com.au^
 ||intent.techadvisor.com^
 ||internal-analytics.odoo.com^
-||internal-e.posthog.com^
-||internal-t.posthog.com^
 ||internetslang.com/jass/
 ||intg.snapchat.com^
 ||intuit.com/static/scripts/cookie-sync/cookiesync-pixel.js
@@ -21888,6 +21889,10 @@ omni.soundestlink.com$image
 ||pornbox.com/stats/
 ||porzo.com/js/analytics
 ||poshmark.com/trck/
+||posthog.com/*/?ip=$xmlhttprequest
+||posthog.com/*/logs?$xmlhttprequest
+||posthog.com/api/homepage-hits
+||posthog.com/api/signup-count
 ||prairiedog.hashnode.com^
 ||pravda.com.ua/counter/
 ||prescouter.com/pd.js
@@ -25655,6 +25660,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||channelexco.com/ppx/
 ||chaport.com/api/public/v1/stats/
 ||chargebee.com/api/internal/track_info_error
+||chat.vica.gov.sg/api/v1/unleash/proxy/client/metrics
 ||check.ddos-guard.net^$third-party
 ||checkout.com/logger/
 ||checkout.com/logging
