@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.19.1
+! Version: 26.03.19.2
 
 !! Merged rules
 
@@ -16237,7 +16237,7 @@ analytics-*.aasaam.com
 @@||addthis.com/js/*/addthis_widget.js$script,domain=stagecoachbus.com
 @@||admin.corrata.com/console/dcconsolews/event-log?$~third-party
 @@||admin.memberspace.com/sites/*/analytics/views$~third-party
-@@||adobedc.demdex.net/ee/v1/identity/$xmlhttprequest,domain=cibc.com
+@@||adobedc.demdex.net/ee/v1/identity/$xmlhttprequest,domain=cibc.com|westjet.com
 @@||adobedtm.com/launch-$script,xmlhttprequest
 @@||adobedtm.com^*/launch-$script,xmlhttprequest
 @@||adobedtm.com^*/s-code-$script
