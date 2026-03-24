@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.24.1
+! Version: 26.03.24.2
 
 !! Merged rules
 
@@ -9323,6 +9323,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||apptimize.com^$domain=synchrony.com
 ||checkout.paze.com/api/v*/logging/logEvent
 ||sui.ssgcdn.com/ui/ssg/js/affiliate/wiselog_makePCookie.js
 ||adpay.ssg.com/adpayapi/pay/send.ssg
@@ -10583,8 +10584,8 @@ wowhead.com#%#//scriptlet('set-local-storage-item', 'zafusr', '$remove$')
 wowhead.com#%#//scriptlet('set-session-storage-item', 'zafusr', '$remove$')
 ||slack.com/clog/track/
 ||vault.gostatera.com/collect/rap
-||sooplive.co.kr/js/google.analytics.js
-||sooplive.co.kr/asset/service/common/common_analysis.js
+||sooplive.com/js/google.analytics.js
+||sooplive.com/asset/service/common/common_analysis.js
 ||kapang.com/api/stats|$xmlhttprequest
 ||fastpic.org/viewed.php?url=/*.html&ref=$xmlhttprequest
 ||box.com/data/ptm.gif/
@@ -11708,7 +11709,7 @@ newsweekjapan.jp##.taboola-below-article-thumbnails-desktop-2-wrap
 ||jav4tv.com/player/analytics
 nukigazo.com###text-2
 ||smart-bdash.com/receptions/action/impression
-||st.sooplive.co.kr/api/da_block_api.php
+||st.sooplive.com/api/da_block_api.php
 ||navitime.co.jp/*/common/nt_count.js
 ||navitime.co.jp/*/jquery.adcount.js
 ||navitime.co.jp/*/log/logger.js
@@ -12882,7 +12883,7 @@ sports.goo.ne.jp###taboola-below-sokuho-thumbnails
 ||locondo.jp/*/analysis/tracker.js
 ||wazzup.me/libs/track.js
 ||imstream.jp/analytics/js/
-||stbbs.sooplive.co.kr/api/*_log.php
+||stbbs.sooplive.com/api/*_log.php
 ||terabox.com/statistics^
 ||terabox.com/api/analytics
 ||video-library.showheroes.com/player/ad_tag?
@@ -14873,6 +14874,9 @@ gmarket.co.kr#%#//scriptlet('fingerprintjs2')
 !
 ! NOTE: Specific rules
 !
+! newegg.com
+newegg.com/mr/*.gif?r=
+newegg.com%2Fmr%2F*.gif%3Fr%3D
 ! digital-eliteboard.com
 digital-eliteboard.com/b/image.gif?p=
 digital-eliteboard.com%2Fb%2Fimage.gif%3Fp%3D
@@ -17544,6 +17548,7 @@ analytics-*.aasaam.com
 /api/pagevisits
 /api/pixel?
 /api/reqAnalytic/*
+/api/sentry/tunnel$xmlhttprequest
 /api/stat?
 /api/track?guid
 /api/trk?
@@ -18270,6 +18275,7 @@ analytics-*.aasaam.com
 /geoip_cc
 /geoLocationData/v1/*
 /geov2.js
+/get/live/web/_/*$script,~third-party
 /get_geoip?
 /get_site_data?requestUUID=
 /getbglog.js
@@ -20691,6 +20697,7 @@ omni.soundestlink.com$image
 ||ampltd.medal.tv^
 ||ampltd.top.gg^
 ||ampltd2.medal.tv^
+||anal.billingserv.com^
 ||anal.doubledouble.top^
 ||analytics-api.dvdfab.
 ||analytics-batch.blitz.gg^
@@ -20730,6 +20737,7 @@ omni.soundestlink.com$image
 ||analytics.ml.homedepot.ca^
 ||analytics.morphe.software^
 ||analytics.mouthshut.com^
+||analytics.netralex.com^
 ||analytics.nike.com^
 ||analytics.ovh.com^
 ||analytics.oyorooms.com^
@@ -22508,6 +22516,7 @@ omni.soundestlink.com$image
 ||two.cm.com^
 ||tyler-brown.com/api/stats?
 ||typepad.com/t/stats?
+||u.strike.bz^
 ||u1sdata.webullfintech.com^
 ||ua.financialexpress.com/api/capture
 ||ua.indianexpress.com^
@@ -26596,6 +26605,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||lightboxcdn.com/static/identity.html
 ||limbik.com/static/tracking-script.js
 ||lingows.appspot.com/page_data/?
+||link.bhvr.com^
 ||link.cosmopolitan.com^$image
 ||link.indiegogo.com/img/
 ||link.informer.com^
@@ -27051,6 +27061,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||play.adtonos.com^
 ||play.ht/views/
 ||player-metrics.instaread.co^
+||player.mangomolo.com/stats/
 ||player.ooyala.com/errors/report?
 ||player.target-video.com/player/build/plugins/googleanalytics/
 ||playhop.com/clck/
@@ -27242,6 +27253,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||run.app/metrics/
 ||run.app/track.js
 ||rw.marchex.io^
+||rybbit.sg-app.com^
 ||s-microsoft.com/mscc/$~stylesheet
 ||s.autopilotapp.com^
 ||s.axon.ai^
@@ -30139,6 +30151,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||modernus.is^$third-party
 ! Indonesian
 ||analytic.rocks^$third-party
+||meiro.io^$third-party
 ||props.id^$third-party
 ! Italian
 ||0stats.com^$third-party
