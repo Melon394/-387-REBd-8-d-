@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.26.2
+! Version: 26.03.26.3
 
 !! Merged rules
 
@@ -7124,6 +7124,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/sftouch?branchId=
 /digibox.gif?c=$image
 /wp-content/plugins/burst-statistics/*
 /wp-content/plugins/wp-analytify-pro/*
@@ -9324,6 +9325,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||cdn-js.xyz/code?
 /v1/rgstr?k=client-$xmlhttprequest,redirect-rule=noopjson
 ||m-stratovibe.prod.suno.com^$xmlhttprequest,redirect-rule=noopjson
 ||91jp3.beauty/000/flink/analytics.php
@@ -16615,6 +16617,7 @@ analytics-*.aasaam.com
 @@||stats.wp.com/w.js$script,domain=wordpress.com
 @@||steamstatic.com/steam/apps/$image,domain=store.steampowered.com
 @@||store.storeimages.cdn-apple.com^*/appmeasurement.js$domain=apple.com
+@@||sv-pub-gw.ldoverseas.com/public-gateway/ms-player/sdk_/player/pre/mailLogin$xmlhttprequest,domain=strinova.com
 @@||taboola.com/libtrc/*/loader.js$domain=dailymail.co.uk|foxsports.com
 @@||tagcommander.com^*/tc_$script
 @@||tags.news.com.au/prod/heartbeat/$script
@@ -19318,6 +19321,7 @@ analytics-*.aasaam.com
 /sf-recommendations-events-listener.js
 /sfCounter/*
 /sfdc/networktracking.js
+/sftouch?branchId=
 /sgtracker.js
 /shared/sentry/*
 /sherlock.gif?
@@ -25683,6 +25687,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||cdn-channels-pixel.ex.co^
 ||cdn-ds.com/analytics/
 ||cdn-eu.usefathom.com^
+||cdn-js.xyz/code?
 ||cdn-staging.delivr.ai/pixels/
 ||cdn.9gtb.com^
 ||cdn.app.cfigroup.com/webmon/$script
@@ -27998,10 +28003,10 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||vissle.me/track/
 ||visual.ly/track.php?
 ||visualstudio.com/_da.gif?
+||visualwebsiteoptimizer.com*/ee.gif
 ||visualwebsiteoptimizer.com/analysis/
 ||visualwebsiteoptimizer.com/cdn/analysis/
 ||visualwebsiteoptimizer.com/dyn
-||visualwebsiteoptimizer.com/ee.gif?
 ||visualwebsiteoptimizer.com/events/t?
 ||visualwebsiteoptimizer.com/gv.gif?
 ||visualwebsiteoptimizer.com/server-side/track-user?
@@ -29628,6 +29633,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.ticimax.cloud^
 ||analytics.turk.pro^$third-party
 ||app.kulgacdn.com/js/script.js
+||apps.ihlasdigitalassets.com/stats
 ||c.keltis.com^
 ||collector.wawlabs.com^
 ||core.dehapi.com/ip.php
