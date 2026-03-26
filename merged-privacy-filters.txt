@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.26.1
+! Version: 26.03.26.2
 
 !! Merged rules
 
@@ -27130,6 +27130,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||public.9gtb.com^
 ||public.cobrowse.oraclecloud.com/rely/storage/
 ||public.fbot.me/track/
+||public.profitwell.com^
 ||publicbroadcasting.net/analytics/
 ||pulse.ecmapps.com^
 ||pulse.shopflo.com^
@@ -28473,6 +28474,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||api.fanmatics.com/event
 ||api.nexx.cloud/*/session/
 ||api.tv.de/*/tracking/
+||app.elitedomains.de/js/service/statistics.service.js
 ||artemis-cdn.ocdn.eu^
 ||ats.otto.de^
 ||audimark.de/tracking/
@@ -28601,6 +28603,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||strongvpn.com/aff/
 ||suedtirol.live/slc.js
 ||t.cpurls.net^
+||t.elitedomains.de^
 ||t.etraveli.com^
 ||t.nativendo.de^
 ||t.quisma.com^
@@ -29639,6 +29642,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||statistics.daktilo.com^
 ||stats.vidyome.com^
 ||track.livasoft.com.tr^
+||tracker.adcluster.com.tr^
 ||traffic.wdc.center^
 ||web.tv/analytics/
 ! Ukranian
