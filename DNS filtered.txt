@@ -165,6 +165,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||ats.gmarket.co.kr
 -events-collector.spot.im^
 -upaas.ucweb.com^
 ||datadog-log.clovergames.io
@@ -180,6 +181,7 @@ vkcdnservice.appspot.com^
 ||mon*.tiktokv.us^
 ||orderana*.spankbang.com^
 ||logstash-*.radio-canada.ca^
+||analytics.vgtimes.
 ||beehiiv-adnetwork-production.s*.amazonaws.com^
 ||telemetry.*.pvp.net^
 ||analyzer*.fc2.com^
