@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.27.2
+! Version: 26.03.27.3
 
 !! Merged rules
 
@@ -6669,6 +6669,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/227878
+krakenfiles.com#%#//scriptlet('fingerprintjs3')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222154
 muylinux.com$$script:contains(isAmpDevMode)
 muylinux.com#%#//scriptlet('abort-current-inline-script', 'sessionStorage', 'isAmpDevMode')
@@ -9326,6 +9328,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||openpanel.velarium.cc/api/track|
+||mk-log.makeshop.co.kr/static/js/analytics.min.js
+||mk-log.makeshop.co.kr/analytics/events
 ||cdn.apifox.com/www/assets/js/apifox-app-event-tracking.min.js
 ||cdn-js.xyz/code?
 /v1/rgstr?k=client-$xmlhttprequest,redirect-rule=noopjson
