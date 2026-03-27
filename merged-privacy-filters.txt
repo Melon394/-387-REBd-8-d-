@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.27.3
+! Version: 26.03.28.1
 
 !! Merged rules
 
@@ -7126,6 +7126,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/nelio-ab-testing/assets/dist/js/visitor-type.js
 /elastic-apm-rum.umd.min.js
 /sftouch?branchId=
 /digibox.gif?c=$image
@@ -9328,6 +9329,10 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||aviasales.*-analytics.
+||aviasales.*/analytics_pv.
+||aviasales.*/sentry-replay.
+||us-central1-terrific-live.cloudfunctions.net/userEvents|
 ||openpanel.velarium.cc/api/track|
 ||mk-log.makeshop.co.kr/static/js/analytics.min.js
 ||mk-log.makeshop.co.kr/analytics/events
@@ -18800,6 +18805,7 @@ analytics-*.aasaam.com
 /nb-collector|
 /ncj-pixel.js
 /neilson.js
+/nelio-ab-testing/assets/dist/js/visitor-type.js
 /neoworx_tracker.php
 /netmining.js
 /netresults.js
@@ -20832,6 +20838,9 @@ omni.soundestlink.com$image
 ||autoblog.com/.api/admiral
 ||autotrader.com/*/pep?pixallId
 ||autotrader.com/pixall/
+||aviasales.*-analytics.
+||aviasales.*/analytics_pv.
+||aviasales.*/sentry-replay.
 ||avitop.com/aviation/hitlist.asp
 ||b2c-unleash-proxy.fresha.com^
 ||b629.electronicdesign.com^
