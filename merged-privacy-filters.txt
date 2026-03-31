@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.31.1
+! Version: 26.03.31.2
 
 !! Merged rules
 
@@ -9341,6 +9341,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||etsy.com/api/v*/ajax/public/recs-interactions
+||livemint.com/lm-img/js/lm-inp-tracker.js
 ||cdn.r10.net/modern/js/assets.js
 ||scheels.com/metrics/
 ||aviasales.*-analytics.
@@ -16734,7 +16736,7 @@ analytics-*.aasaam.com
 !! collect.igodigital.com/collect.js
 @@||collect.igodigital.com/collect.js$domain=berkley-fishing.com|enoteca.co.jp|goodwillfinds.com|samash.com|viajeguanabara.com.br|vitalsource.com|wilsonparking.com.au
 !! browser.sentry-cdn.com
-@@||browser.sentry-cdn.com^$domain=acustica-audio.com|alphaxiv.org|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|members.bifa.film|menshealth.com|ocado.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
+@@||browser.sentry-cdn.com^$domain=acustica-audio.com|alphaxiv.org|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|members.bifa.film|menshealth.com|ocado.com|pocketguard.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
 !! ||assets.adobedtm.com/extensions/*/AppMeasurement.min.js
 @@||assets.adobedtm.com/extensions/*/AppMeasurement.min.js$domain=bestbuy.ca|identity.healthsafe-id.com|nbc.com|subwy.com|tatamotors.com|usanetwork.com
 !! ||assets.adobedtm.com/extensions/*/AppMeasurement* (general)
@@ -19288,6 +19290,7 @@ analytics-*.aasaam.com
 /screencount?vcid=
 /scribd_events?
 /script.outbound-links.js
+/script.outbound-links.pageview-props.revenue.js
 /script.tagged-events.js
 /script/pixel.js
 /scriptAnalytics.js
@@ -25629,6 +25632,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||beacon.sftoaa.com^
 ||beacon.sojern.com^
 ||beacon.statful.com^
+||beacon.webpresence.work^
 ||beacons.mediamelon.com^
 ||beam.mjhlifesciences.com^
 ||beamanalytics.b-cdn.net^
