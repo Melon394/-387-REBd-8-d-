@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.31.2
+! Version: 26.03.31.3
 
 !! Merged rules
 
@@ -32,6 +32,10 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/228173
+@@||alicdn.com/alilog/mlog/aplus_v2.js$domain=qianwen.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/227924
+@@||edge.adobedc.net/ee/$xmlhttprequest,domain=vivo.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228000
 @@||cdn.optimizely.com/datafiles/*.json$domain=scheels.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/227915
@@ -9341,6 +9345,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+tourister.ru#%#//scriptlet('href-sanitizer', 'a[href*="/go?"]', '?url')
+||api.mercari.jp/client_events/
 ||etsy.com/api/v*/ajax/public/recs-interactions
 ||livemint.com/lm-img/js/lm-inp-tracker.js
 ||cdn.r10.net/modern/js/assets.js
@@ -24382,6 +24388,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analyzer.fc2.com^
 ||analyzer2.fc2.com^
 ||anyelse.com/stat^
+||api.mercari.jp/client_events/
 ||apps.nhk.jp/assets/dtm/
 ||askdoctors.jp/assets/packs/js/impression_tracker-
 ||astat.nikkei.com^
