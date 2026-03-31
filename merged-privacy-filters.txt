@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.03.31.3
+! Version: 26.04.01.1
 
 !! Merged rules
 
@@ -7173,6 +7173,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 /detroitchicago/reno.js
 /detroitchicago/overlandpark.js
 /script.tagged-events.js
+/script.tagged-events.outbound-links.js
 /_vercel/insights/script.js
 /_vercel/speed-insights/script.js
 /p/tm.js?
@@ -8017,6 +8018,9 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||telemetry.split.io^
+||events.split.io^
+||prod-ue1-metrics.hingeprod.net^
 ||api.event.appstack.tech^
 ||detailroi.com^
 ||detaillog-global-dual.coolgcloud.com^
@@ -9345,6 +9349,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||rainbet.com/api/ping
+lifehacker.jp###mainContent > div[class^="articles_pArticles_Title_"]:has(+ div[class^="displayhandler_"] > div > div[id^="cxMore"])
 tourister.ru#%#//scriptlet('href-sanitizer', 'a[href*="/go?"]', '?url')
 ||api.mercari.jp/client_events/
 ||etsy.com/api/v*/ajax/public/recs-interactions
@@ -14918,6 +14924,9 @@ gmarket.co.kr#%#//scriptlet('fingerprintjs2')
 !
 ! NOTE: Specific rules
 !
+! https://github.com/easylist/easylist/issues/23743
+hm-f.jp/ho.php?t=
+hm-f.jp%2Fho.php%3Ft=
 ! newegg.com
 newegg.com/mr/*.gif?r=
 newegg.com%2Fmr%2F*.gif%3Fr%3D
@@ -20529,6 +20538,7 @@ _WebVitalsReporter_
 /go.news.fly.io/e/o/*$image
 /gp/r.html?$image
 /gridinbound.blob.core.
+/ho.php?t=$image
 /i?aid=*&se_ac=open&$image
 /image.info.jr-odekake.net/lib/*$image
 /impression?mkevt=
@@ -22047,6 +22057,7 @@ omni.soundestlink.com$image
 ||rabbit.donald.cat^
 ||raenonx.cc/api/tag
 ||raenonx.cc/g/usage/
+||rainbet.com/api/ping
 ||raindrop.io/pb/api/event
 ||rakuten.com/rmsgjs/soj2.js
 ||ranker.com/api/px
