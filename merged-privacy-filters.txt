@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.01.1
+! Version: 26.04.01.2
 
 !! Merged rules
 
@@ -8018,6 +8018,8 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||mp-gb-sdklog.kurogames.net^
+-datareceiver.aki-game.net^
 ||telemetry.split.io^
 ||events.split.io^
 ||prod-ue1-metrics.hingeprod.net^
@@ -20759,7 +20761,7 @@ omni.soundestlink.com$image
 ||ampltd.medal.tv^
 ||ampltd.top.gg^
 ||ampltd2.medal.tv^
-||anal.billingserv.com^
+||anal.baseserv.com^
 ||anal.doubledouble.top^
 ||analytics-api.dvdfab.
 ||analytics-batch.blitz.gg^
@@ -29703,7 +29705,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||app.kulgacdn.com/js/script.js
 ||apps.ihlasdigitalassets.com/stats
 ||c.keltis.com^
-||collector.wawlabs.com^
 ||core.dehapi.com/ip.php
 ||daioncdn.net/events?
 ||eticaret.pro/pixel/
@@ -29718,6 +29719,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||track.livasoft.com.tr^
 ||tracker.adcluster.com.tr^
 ||traffic.wdc.center^
+||wa.wawlabs.com^
 ||web.tv/analytics/
 ! Ukranian
 ||informers.sinoptik.ua^
