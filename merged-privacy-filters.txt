@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.01.3
+! Version: 26.04.02.1
 
 !! Merged rules
 
@@ -5771,6 +5771,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! apkpure.com
+||apkpure.com^$cookie=_qimei
 ! expero.ru
 ||expero.ru^$cookie=deviceId
 ! my.club
@@ -8018,6 +8020,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||mixpanel-proxy-ivbdkvonca-uc.a.run.app^
 ||tc.zxcvbnml.com^
 ||fpconfig.net^
 ||ingest.databuckets.com^
@@ -8285,7 +8288,7 @@ dlsdk.appsflyer.com^
 ||usdiagnosis.icocofun.com^
 ||eats-ads-event-capture.coupang.com^
 ||trackchecker.ru/stat/
-||googletagmanager.com^$app=app.shinagawa.listentonovels.androidApp|com.edadeal.android|com.mysticsense.androidapp
+||googletagmanager.com^$app=app.shinagawa.listentonovels.androidApp|com.edadeal.android|com.mysticsense.androidapp|com.walla.wallasports
 ||mon*-misc.fqnovel.com^
 ||clientlog.perfectworldgames.com^
 ||log1.perfectworldgames.com^
@@ -9358,6 +9361,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||apkpure.com/static/script/device-*-min.js
+apkpure.com#%#//scriptlet('set-local-storage-item', '__BEACON_deviceId', '$remove$')
+apkpure.com#%#//scriptlet('remove-node-text', 'script', '/deviceId|__apkpureFirstInteractionType|fingerprintjs|pvid/i')
 decrypt.co#%#//scriptlet('set-local-storage-item', 'spindl_persistent_id', '$remove$')
 phys.org##.news-related
 ||rainbet.com/api/ping
@@ -21864,6 +21870,7 @@ omni.soundestlink.com$image
 ||nextdoor.com/events/
 ||nflshop.com/api/track
 ||ngds.sap.com^
+||nid.barrons.com/prod/sp/nid_sp.js
 ||nid.mansionglobal.com^
 ||nid.thesun.co.uk^
 ||nid.thetimes.com^
@@ -21940,6 +21947,7 @@ omni.soundestlink.com$image
 ||paypal.com/credit-presentment/log
 ||paypal.com/platform/tealeaftarget
 ||pb.ytmp3tube.com/js/script.js$domain=yt1s.com.co
+||pbc.barrons.com^
 ||pc-optimum.ada.support/api/business_events/track$domain=pcoptimum.ca
 ||pcgamesn.com/cdn-cgi/trace
 ||pcmag.com/js/ga.js
@@ -22410,6 +22418,7 @@ omni.soundestlink.com$image
 ||tags-event.woolworths.co.nz^
 ||tags.air1.com^
 ||tags.aljazeera.com^
+||tags.barrons.com^
 ||tags.johnlewis.com^
 ||tags.klove.com^
 ||tags.news.com.au^$script
