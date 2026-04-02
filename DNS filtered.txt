@@ -317,6 +317,8 @@ dlsdk.appsflyersdk.com^
 ||*conversions.appsflyersdk.com^
 ||*register.appsflyersdk.com^
 dlsdk.appsflyer.com^
+||log-*.isnssdk.com^
+||ping*.bidease.com^
 -datareceiver.aki-game.net^
 ||trace-*.free-reels.com^
 ||clarity.ms^|
