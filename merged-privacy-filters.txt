@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.03.2
+! Version: 26.04.03.3
 
 !! Merged rules
 
@@ -32,6 +32,9 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/227852
+!+ PLATFORM(ios, ext_safari)
+||belgium.wolterskluwer.com^$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228173
 @@||alicdn.com/alilog/mlog/aplus_v2.js$domain=qianwen.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/227924
@@ -8020,6 +8023,10 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||detaillog-global-dual.coolccloud.com^
+||analytics.prod.tophat.withbuddies.com^
+||beacon.ztgame.com^
+||api-log-upload.wenext.technology^
 ||events-noneu.truecaller.com^
 ||log-*.isnssdk.com^
 ||profiler-collector.dalyfeds.com^
@@ -9370,6 +9377,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||poocloud.in/api/event
+||s.tgrthaber.com/s/js/stats.js
 ||mpsp.mp.br/combo/?$script
 ||api.syg.ma/page_view
 ||ruwiki.ru/api/ruwiki/rest/metrics/
@@ -21459,7 +21468,6 @@ omni.soundestlink.com$image
 ||geoip.ifunny.co^
 ||geolocation.forbes.com^
 ||getadblock.com/js/log.js
-||getpocket.com/web-utilities/public/static/te.js
 ||gettapeads.com/stat/
 ||gettyimages.*/pulse$ping
 ||gg.asuracomic.net/api/views/collect
