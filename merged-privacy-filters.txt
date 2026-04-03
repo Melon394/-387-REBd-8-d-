@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.03.3
+! Version: 26.04.04.1
 
 !! Merged rules
 
@@ -32,6 +32,10 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/228420
+!#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_app_cli)
+@@||wetransfer.com/api/web-metrics$domain=wetransfer.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/227852
 !+ PLATFORM(ios, ext_safari)
 ||belgium.wolterskluwer.com^$badfilter
@@ -7872,7 +7876,9 @@ _tracking.php?b=
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/908
 /.*/$network,app=com.adups.fota.sysoper|com.adups.fota
 !
-! For specific apps
+! NOTE: Specific apps
+!
+||web.facebook.com^$app=com.teslacoilsw.launcher
 ||tracking.ibotta-classic.ipn-ops.net^$app=com.ibotta.android
 ||firebaselogging-pa.googleapis.com^$app=com.sampleapp
 ||ads-api.twitter.com^$app=com.twitter.android
@@ -8023,6 +8029,10 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||stats.sdk.banuba.net^
+||report.duetapp.net^
+||logretrieve.duetapp.net^
+||metrics.taimi.com^
 ||detaillog-global-dual.coolccloud.com^
 ||analytics.prod.tophat.withbuddies.com^
 ||beacon.ztgame.com^
@@ -16872,6 +16882,7 @@ analytics-*.aasaam.com
 @@||cbsi.map.fastly.net^
 @@||content.ingbank.pl^
 @@||ct.ddc.venmo.com.fpc.datadome.co^$domain=id.venmo.com
+@@||curiositystream.com.first-party-js.datadome.co^$script,domain=curiositystream.com
 @@||datadome.garena.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=auth.garena.com
 @@||dd.blackhawknetwork.com.first-party-js.datadome.co^$domain=redeem.rewardlink.com
 @@||dd.qa.moneygram.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=moneygram.com
@@ -26782,6 +26793,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||livestory.io/*/collect
 ||llama.fi/script.js
 ||lma.npaw.com^
+||lnk.to/~/tr/visit
 ||loader-cdn.azureedge.net^
 ||loader.mantis-intelligence.com^
 ||location3.com/analytics/
@@ -27501,6 +27513,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||smartertravel.com/ext/pixel/
 ||smarthint.co/Scripts/i/SmartHintTrack.Full.min.js
 ||smarthint.co/track/
+||smarturl.it/~/tr/visit
 ||smrt.as^
 ||snapkit.com/v1/sdk/metrics/
 ||snaps.vidiemi.com^$third-party
