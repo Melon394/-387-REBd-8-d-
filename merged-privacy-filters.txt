@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.05.3
+! Version: 26.04.06.1
 
 !! Merged rules
 
@@ -17428,6 +17428,8 @@ analytics-*.aasaam.com
 /_i?type=event&
 /_lib/ga.js
 /_mzblank.gif?
+/_nostra/batch
+/_nostra/identity/*
 /_owa.gif?
 /_servix/webid.aspx?$script
 /_sess/script.js
@@ -26237,6 +26239,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||era.easyvoyage.com^
 ||error-analytics-production.shopifysvc.com^
 ||error-analytics-sessions-production.shopifysvc.com^
+||error-tracker.pages.dev^
 ||errors.snackly.co^
 ||essential-apps-analytics.herokuapp.com^
 ||et.educationdynamics.com^
@@ -26711,7 +26714,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||klarnaservices.com^$image,third-party
 ||klaviyo.com/onsite/js/sentry.
 ||klaviyo.com/onsite/track-analytics?
-||klickly.com/track
+||klickly.com^$third-party
 ||kmib.co.kr/ref/
 ||kochava.com/track/$third-party
 ||kumo.network-n.com/configs/sites/
