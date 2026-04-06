@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.06.3
+! Version: 26.04.07.1
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/228578
+@@||googletagmanager.com/gtm.js?id=GTM$script,domain=braun.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228420
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_app_cli)
 @@||wetransfer.com/api/web-metrics$domain=wetransfer.com
@@ -8031,6 +8033,12 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||apm-native.redbascket.com^
+||apm-native.redbascket.com^
+||apm-fe.rnote.com^
+||lng.xiaohongshu.com^
+||t2.xiaohongshu.com^
+||log.qrscanner.live^
 ||stats.sdk.banuba.net^
 ||report.duetapp.net^
 ||logretrieve.duetapp.net^
@@ -9389,6 +9397,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||stat.tildaapi.com/event/
 ||static.qiota.com/assets/getQiota.js
 ||remarkable.com/api/proxy/marker
 ||poocloud.in/api/event
@@ -21824,6 +21833,7 @@ omni.soundestlink.com$image
 ||metrics.audius.co^
 ||metrics.bangbros.com^
 ||metrics.camsoda.com^
+||metrics.documentfoundation.org^
 ||metrics.freemake.com^
 ||metrics.hackerrank.com^
 ||metrics.hyperliquid.xyz^
