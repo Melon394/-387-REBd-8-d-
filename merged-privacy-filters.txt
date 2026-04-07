@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.07.1
+! Version: 26.04.07.2
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/228463
+@@||a.klaviyo.com/client/back-in-stock-subscriptions/?company_id=$xmlhttprequest,domain=bodylab24.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228578
 @@||googletagmanager.com/gtm.js?id=GTM$script,domain=braun.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228420
@@ -5780,6 +5782,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! spb.docdoc.ru
+||spb.docdoc.ru^$cookie=/^_sp_id\./
+||spb.docdoc.ru^$cookie=deviceId
 ! coinstats.app
 ||coinstats.app^$cookie=temp_uid
 ! apkpure.com
@@ -9397,6 +9402,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||web-api.napopravku.ru/api-internal/analytics/
+||c-date.*/customerm/
 ||stat.tildaapi.com/event/
 ||static.qiota.com/assets/getQiota.js
 ||remarkable.com/api/proxy/marker
