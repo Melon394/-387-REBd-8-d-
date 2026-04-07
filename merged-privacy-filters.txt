@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.07.3
+! Version: 26.04.08.1
 
 !! Merged rules
 
@@ -540,6 +540,10 @@ mail.yandex.*#@%#//scriptlet('set-constant', 'navigator.getBattery', 'noopPromis
 @@||f-tra.com^$script,domain=pokemoncenter-online.com
 ! https://github.com/uBlockOrigin/uAssets/issues/27502
 @@||snowplow.swm.digital/com.snowplowanalytics.snowplow/$domain=7plus.com.au
+! https://github.com/AdguardTeam/AdguardFilters/issues/228675
+||teenager365.to/player/stats.php?event=$image,redirect=1x1-transparent.gif,domain=teenager365.to
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||teenager365.to/player/stats.php?event=$image,domain=teenager365.to
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200349
 ||85po.com/player/stats.php?event=$image,redirect=1x1-transparent.gif,domain=85po.com|85po.net|85xo.com|85xo.com
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -8038,6 +8042,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||datasink.sensorsjourney.com^
 ||apm-native.redbascket.com^
 ||apm-native.redbascket.com^
 ||apm-fe.rnote.com^
@@ -9402,6 +9407,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||api.tezfiles.com/*/analytics/
+||tezfiles.com/log|
 ||cdns.ozon.ru/v*/mc|
 ||dev.ozon.ru/p-api/tracker/
 ||web-api.napopravku.ru/api-internal/analytics/
@@ -14343,6 +14350,9 @@ dreamprogs.net##td[width="88"][height="31"]
 ||amazon.com/empty.gif?
 ||amazon.com/follow/log-metrics^
 ||amazon.com^*/impress.html
+||m.media-amazon.com/images/G/*/msa/vowels/metrics
+||m.media-amazon.com/images/I/*.js?AUIClients/GWMMetricsJS
+||m.media-amazon.com/images/S/sash/*.js?csm_attribution=
 ||amazonaws.com/pixelpop/app/pixelpop-
 ||an.yandex.ru/count/
 ||aol.com/ping?
@@ -18929,6 +18939,7 @@ analytics-*.aasaam.com
 /neoworx_tracker.php
 /netmining.js
 /netresults.js
+/network-analytics.js
 /neustar.beacon.js
 /new-client/trackers.
 /new-relic.js
