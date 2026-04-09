@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.09.3
+! Version: 26.04.10.1
 
 !! Merged rules
 
@@ -570,9 +570,6 @@ mail.yandex.*#@%#//scriptlet('set-constant', 'navigator.getBattery', 'noopPromis
 @@||btt.community/assets/plugins/discourse-fingerprint-
 ! https://github.com/uBlockOrigin/uAssets/issues/27328
 @@||js.monitor.azure.com/scripts/c/ms.jsll-3.min.js$domain=contentsafety.cognitive.azure.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/199221
-elahmad.com#%#//scriptlet('prevent-fetch', 'pahtag.tech')
-elahmad.com##body > div[id^="ads"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199345
 @@||st-eu.dynamicyield.com/st$domain=amorelie.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199217
@@ -7166,6 +7163,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/api/ads-bff-client/*
 /nelio-ab-testing/assets/dist/js/visitor-type.js
 /elastic-apm-rum.umd.min.js
 /sftouch?branchId=
@@ -9413,6 +9411,15 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||aizhantj.com*/tjpv/?cc=
+||goto.startracking.ru/api/v1/impression?aff_id=
+||users.videasy.net/api/track
+||rs.kuper.ru/v*/track
+||rs.kuper.ru/v*/batch|
+||cpa.kuper.ru/api/tracker/
+||api.kuper.ru/v*/vendo/track/
+||ext.clickstream.sberbank.ru/metrics/
+||api.about.me/user/performance/record/views|
 ||dokkandb.com/analytics/
 afisha.ru#%#//scriptlet('set-local-storage-item', '/adtech_uid/', '$remove$')
 ||api.fboom.me/*/analytics/
@@ -17690,6 +17697,7 @@ analytics-*.aasaam.com
 /api-insights/log?
 /api/0/stats
 /api/adplogger/*
+/api/ads-bff-client/*
 /api/adtracking$xmlhttprequest
 /api/async.php?t=user&m=pagehits&
 /api/bfb_write_log
@@ -28959,6 +28967,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||66hao.cc^
 ||adv-sv-stat.focus.cn^
 ||aixifan.com/acsdk/log.min.js?
+||aizhantj.com*/tjpv/?cc=
 ||alicdn.com/tkapi/click.js
 ||alimama.cn/inf.js
 ||alipay.com/common/um/lsa.swf
