@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.09.1
+! Version: 26.04.09.2
 
 !! Merged rules
 
@@ -6522,6 +6522,7 @@ $cookie=ahoy_visitor,domain=instacart.ca|instacart.com
 ||championat.com^$cookie=top100_id
 ||championat.com^$cookie=rchainid
 $cookie=ruid,domain=afisha.ru|eda.ru|rambler.ru
+||afisha.ru^$cookie=adtech_uid
 ||afisha.ru^$cookie=_afuid
 ||afisha.ru^$cookie=_eggDeviceUUID
 ||afisha.ru^$cookie=_egguid
@@ -9412,6 +9413,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||dokkandb.com/analytics/
+afisha.ru#%#//scriptlet('set-local-storage-item', '/adtech_uid/', '$remove$')
 ||api.fboom.me/*/analytics/
 ||fboom.me/log|
 gol.ru#%#//scriptlet('set-local-storage-item', 'uniqueClientId', '$remove$')
