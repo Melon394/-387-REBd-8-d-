@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.11.3
+! Version: 26.04.12.1
 
 !! Merged rules
 
@@ -9418,6 +9418,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||nekoweb.org/.nekoweb-api/count-view
 ||mediagroupnetwork.com/js/ua.js
 ||yandex.ru/clck/counter/$image
 ||docs.amd.com/internal/api/webapp/events
@@ -21966,6 +21967,7 @@ omni.soundestlink.com$image
 ||neatorama.com/story/view/
 ||neeva.com/logql/log
 ||neighbourly.co.nz/event-tracking
+||nekoweb.org/.nekoweb-api/count-view
 ||neowin.net/ws/$websocket
 ||net.haier.com^
 ||netflix.com/ichnaea/log
