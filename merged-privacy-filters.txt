@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.12.1
+! Version: 26.04.12.2
 
 !! Merged rules
 
@@ -30900,7 +30900,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||45.32.105.134^
 ||77.162.125.199^
 ||a-calc.de^$third-party
-||acbp0020171456.page.tl^
 ||adless.io^
 ||adminer.com^
 ||altpool.pro^$third-party
