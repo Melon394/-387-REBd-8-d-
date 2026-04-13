@@ -34,6 +34,7 @@
 ||prebid-*.rubiconproject.com^
 ||pijama.*.elasticbeanstalk.com^
 ||pl.ua^$badfilter
+wykop.pl$badfilter
 .n.2.1.js^
 .n.2.1.l60.js^
 .1.1.1.l80.js^
@@ -58,6 +59,7 @@ vkcdnservice.appspot.com^
 ||adv0*.msa.cdn.mediaset.net^
 /^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
 /^(a|c)\.[0-9a-f]{56}\.com$/
+||adapi*.boomplaymusic.com^
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^
 ||ads*-normal*.zijieapi.com^
 ||ad*.zonaplus.tv^
@@ -318,6 +320,7 @@ dlsdk.appsflyersdk.com^
 ||*conversions.appsflyersdk.com^
 ||*register.appsflyersdk.com^
 dlsdk.appsflyer.com^
+||log*.boomplaymusic.com^
 ||log-*.isnssdk.com^
 ||ping*.bidease.com^
 -datareceiver.aki-game.net^
