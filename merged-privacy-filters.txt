@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.14.3
+! Version: 26.04.15.1
 
 !! Merged rules
 
@@ -20,6 +20,7 @@
 !
 !
 !### Temporary ###
+||inventorycache.com^$badfilter
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/5372
 @@||st-*.dynamicyield.com/st*&inHead=true&id=*&jsession=*scriptVersion=*&noConsent=
 !#################
@@ -8051,6 +8052,10 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||report-edge.rtesvc.com^
+||rakam-api.aptoide.com^
+||diagnostics.rakam.io^
+||tracker.a11.vega.aurion11.io^
 ||aptoide-rtb.aptoide.com^
 ||qbk1.com^
 ||log*.boomplaymusic.com^
@@ -9355,7 +9360,7 @@ d4?appid*type*
 !
 ! Tealium
 ! The site should be carefully checked when you add this rule
-||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com|qvc.jp|brother-usa.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|thesun.co.uk|anantara.com|iflscience.com|calvinklein.ca|taylor.com|news.com.au|agoda.com|vodafone.com.tr|huawei.com
+||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com|qvc.jp|brother-usa.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|thesun.co.uk|anantara.com|iflscience.com|calvinklein.ca|taylor.com|news.com.au|agoda.com|vodafone.com.tr|huawei.com|the-sun.com
 ||tags.tiqcdn.com/utag/*/utag.sync.js$domain=yousee.dk|sibreal.org|calvinklein.ca|hosteurope.de|news.com.au
 !
 !
@@ -9421,6 +9426,16 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||edge.sdk.awswaf.com/*/telemetry
+||eporner.com/beacon.php
+||spankbang.com/api/ab-test/tracking
+||spankbang.com/static/dist/ab_test_click_tracker
+||assets.sb-cd.com/static/dist/ab_test_click_tracker*.js$domain=spankbang.com
+||s.yimg.com/eh/prebid-config/$domain=aol.com
+||pbd.yahoo.com/data/logs/benji
+||api.picox.bendingspoons.com/v1/events
+||acapi.aol.com/v1/events
+||the-sun.com/assets/optimizely/
 ||varta1.com.ua/api/ads-analytics
 ||varta1.com.ua/api/analytics
 ||k2s.cc/log|
@@ -10120,7 +10135,7 @@ gala.com#%#//scriptlet('set-local-storage-item', '_gal1', '$remove$')
 ||arte.tv/log-player/
 ||static-cdn.arte.tv/static/analytics/
 ||event.arte.tv/api/server-side-tracking/
-nypost.com#%#//scriptlet('set-local-storage-item', 'ow/social-browser-storage', '$remove$')
+the-sun.com,nypost.com#%#//scriptlet('set-local-storage-item', 'ow/social-browser-storage', '$remove$')
 express.co.uk,iflscience.com,nypost.com#%#//scriptlet('set-local-storage-item', 'SPOTIM_DEVICE_UUID_V2', '$remove$')
 ||marketplace.geniusplus.ai/*/lre-events?cid=*&wid=
 ||yqzhishen.me/Statistics/statistics.
@@ -26228,6 +26243,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||data.woosmap.com^
 ||data2.gosquared.com^
 ||datadog-service.mvfglobal.com^
+||datadome00.id.me/tags.js
 ||datasign.co/js/opn.js
 ||datasphere-sbsvc.sharethis.com^
 ||daxab.com/logger/
@@ -28014,6 +28030,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tracker.jkstremum.xyz^
 ||tracker.keywordintent.com^
 ||tracker.marinsoftware.com^
+||tracker.metricool.com^
 ||tracker.mrpfd.com^
 ||tracker.myth.dev^
 ||tracker.myyschool.xyz^
@@ -32421,7 +32438,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||metarouter.io^$third-party
 ||meteorsolutions.com^$third-party
 ||metricode.com^$third-party
-||metricool.com^$third-party
 ||metrics0.com^$third-party
 ||metricsdirect.com^$third-party
 ||metricswave.com^$third-party
@@ -33133,6 +33149,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||statinside.com^$third-party
 ||statisfy.net^$third-party
 ||statistiche-web.com^$third-party
+||statlytic.net^$third-party
 ||statowl.com^$third-party
 ||statpipe.ru^$third-party
 ||stats2.com^$third-party
