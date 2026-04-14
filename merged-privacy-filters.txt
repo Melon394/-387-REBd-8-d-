@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.14.1
+! Version: 26.04.14.2
 
 !! Merged rules
 
@@ -9420,6 +9420,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||directory.cookieyes.com/api/v*/ip
+||api.redgifs.com/v*/metrics/
 ||doordash.com/iguazu-edge/
 ||nekoweb.org/.nekoweb-api/count-view
 ||mediagroupnetwork.com/js/ua.js
@@ -15786,6 +15788,7 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ||prebid-*.rubiconproject.com^
 ||pijama.*.elasticbeanstalk.com^
 ||pl.ua^$badfilter
+wykop.pl$badfilter
 .n.2.1.js^
 .n.2.1.l60.js^
 .1.1.1.l80.js^
@@ -15810,6 +15813,7 @@ vkcdnservice.appspot.com^
 ||adv0*.msa.cdn.mediaset.net^
 /^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
 /^(a|c)\.[0-9a-f]{56}\.com$/
+||adapi*.boomplaymusic.com^
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^
 ||ads*-normal*.zijieapi.com^
 ||ad*.zonaplus.tv^
@@ -16070,6 +16074,7 @@ dlsdk.appsflyersdk.com^
 ||*conversions.appsflyersdk.com^
 ||*register.appsflyersdk.com^
 dlsdk.appsflyer.com^
+||log*.boomplaymusic.com^
 ||log-*.isnssdk.com^
 ||ping*.bidease.com^
 -datareceiver.aki-game.net^
