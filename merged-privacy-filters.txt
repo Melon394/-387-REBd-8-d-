@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.15.1
+! Version: 26.04.15.2
 
 !! Merged rules
 
@@ -9426,6 +9426,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||content.powerapps.com/resource/powerappsportal/dist/client-telemetry*.js$domain=sante.quebec
+||sante.quebec/dist/client-telemetry*.js
 ||edge.sdk.awswaf.com/*/telemetry
 ||eporner.com/beacon.php
 ||spankbang.com/api/ab-test/tracking
@@ -26735,6 +26737,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||infusionsoft.com^*/getTrackingCode?
 ||ingest.make.rvapps.io^
 ||ingesteer.services-prod.nsvcs.net^
+||ingress.rebelboost.com/_ingest-rbst-stats?
 ||ingress.trendii.com^
 ||inmobi.com/?log
 ||inmoment.com.au/intercept/$third-party
