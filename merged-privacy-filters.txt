@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.16.2
+! Version: 26.04.16.3
 
 !! Merged rules
 
@@ -20,7 +20,6 @@
 !
 !
 !### Temporary ###
-||inventorycache.com^$badfilter
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/5372
 @@||st-*.dynamicyield.com/st*&inHead=true&id=*&jsession=*scriptVersion=*&noConsent=
 !#################
@@ -5787,6 +5786,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/229275
+||invb.ru^$cookie=/^pa_/
 ! https://ridibooks.com/webtoon/recommendation
 ||ridibooks.com$cookie=ruid
 ||ridibooks.com$cookie=/^AMP/
@@ -8084,7 +8085,7 @@ dlsdk.appsflyer.com^
 ||track.hily.com^
 ||ping*.bidease.com^
 ||ntus.bidease.com^
-||thinkingdata.cn^
+||global-receiver-ta.thinkingdata.cn^
 ||mixpanel-proxy-ivbdkvonca-uc.a.run.app^
 ||tc.zxcvbnml.com^
 ||fpconfig.net^
@@ -9426,6 +9427,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+/rptracker.js$domain=rshb.ru
 burger-king.by#%#//scriptlet('set-local-storage-item', 'mindboxDeviceUUID', '$remove$')
 ||ubisoft.com/*/global/tracking/
 ||content.powerapps.com/resource/powerappsportal/dist/client-telemetry*.js$domain=sante.quebec
@@ -13504,7 +13506,7 @@ viva.ua,beauty.ua##.footer-counters
 ctvnews.ca##img[alt="comscorebeacon"]
 ||s.pixfs.net/visitor.pixplug.in/
 ||s.aimg.sk/livemonitor/js/aztracker.js
-||vidazoo.com/aggregate?
+||vidazoo.com/aggregate
 ||vidazoo.com/event/
 ||asadcdn.com/bt^
 ||merkur.de/_cua.html
@@ -22155,6 +22157,7 @@ omni.soundestlink.com$image
 ||plausible.tubemagic.com^
 ||player-cdn.com/cdn-cgi/trace
 ||player-telemetry.vimeo.com^
+||player.instaread.co/js/inarticle-metrics.js
 ||player.javboys.cam/cdn-cgi/trace
 ||playvideohd.com/cdn-cgi/trace
 ||plenty.vidio.com^
