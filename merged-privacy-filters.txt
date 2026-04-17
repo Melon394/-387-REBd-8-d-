@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.17.3
+! Version: 26.04.18.1
 
 !! Merged rules
 
@@ -32,6 +32,9 @@
 !
 !
 !
+! https://github.com/easylist/easylist/issues/23935
+@@||go.ezodn.com/ezvideo/$stylesheet,domain=open.video
+@@||open.video/ezais/analytics$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228689
 @@||googletagmanager.com/gtm.js$domain=creator.fronius.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228463
@@ -9430,6 +9433,10 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||s-cdn.anthropic.com/s.js
+||claude.ai/api/event_logging/
+||avito.ru/clickstream/events/
+||mon.avito.ru^
 ||cdn.amplitude.com/engagement-browser/
 ||www.history.com/editorial/vendor/
 ||static.rebelboost.com/tracking/
@@ -16730,6 +16737,7 @@ analytics-*.aasaam.com
 @@||onenote.com^*/aria-web-telemetry
 @@||online-metrix.net/fp/tags.js$domain=donorschoose.org
 @@||onlinebanking.usbank.com/TUX/public/libs/adobe/appmeasurement.js$script,~third-party
+@@||open.video/ezais/analytics?$~third-party
 @@||openfpcdn.io/botd/v1$script,domain=collinsdictionary.com
 @@||opex.xplan.iress.com.au/js/xiled/util/pageview.js$~third-party
 @@||optimove.net^$domain=app.touchnote.com
@@ -22298,6 +22306,7 @@ omni.soundestlink.com$image
 ||rta2.newzit.com^
 ||rtds.progressive.com^
 ||rum.api.intuit.com^
+||rum.battle.net^
 ||rum.cdnpure.com^
 ||rum.condenastdigital.com^
 ||rumble.com/l/
@@ -25932,6 +25941,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||castify-trk.playitviral.com^
 ||cbsaavideo.com/measurements/
 ||cbsivideo.com/measurements/
+||cbso.uk.net^
 ||cc.swiftype.com^
 ||cca-lite.coinbase.com/amp
 ||cca-lite.coinbase.com/metrics
@@ -26309,6 +26319,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||doppler-config.cbsivideo.com^
 ||doppler-reporting.cbsivideo.com^
 ||dotaudiences.com^$third-party
+||doubleclick.uk.net^
 ||drift.com/impressions/
 ||drift.com/targeting/evaluate_with_log
 ||drift.com/track
@@ -27508,6 +27519,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||roomvo.com/services/event/
 ||route.com/collect
 ||routeapp.io/route-analytics/
+||rp.mustreadnew.com^
 ||rs.sinajs.cn^
 ||rt.flix360.com^
 ||rtb.prod.carbonatixaudio.com^
@@ -28315,6 +28327,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||web1.51.la^
 ||webcare.byside.com/agent/usert_agent.php
 ||webedia.fr/js/gs.js
+||webevents.kayzen.io^
 ||webeyo.com/ipinfo
 ||webgames.io/imp/
 ||webmasters.ksalsocial.online/pixel/
@@ -30681,6 +30694,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||way2traffic.com^$third-party
 ! Portuguese
 ||ad5track.com^$third-party
+||afilio.com.br^$third-party
 ||bob-recs.com^$third-party
 ||btg360.com.br^$third-party
 ||clearsale.com.br^$third-party
@@ -30694,6 +30708,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||goadopt.io^$third-party
 ||hariken.co^$third-party
 ||lomadee.com^$third-party
+||mailinbox.com.br^$third-party
 ||marktest.pt^$third-party
 ||percycle.com^$third-party
 ||pmweb.com.br^$third-party
@@ -31206,6 +31221,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||adsave.co^$third-party
 ||adsensedetective.com^$third-party
 ||adsmatcher.com^$third-party
+||adssistem.com^$third-party
 ||adtarget.me^$third-party
 ||adtector.com^$third-party
 ||adtelligence.de^$third-party
@@ -31400,6 +31416,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||best-top.de^$third-party
 ||bestcontactform.com^$~image,third-party
 ||betarget.com^$third-party
+||betsmart.media^$third-party
 ||bettermeter.com^$third-party
 ||beusable.net^$third-party
 ||bfoleyinteractive.com^$third-party
@@ -32109,6 +32126,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||hotjar.io^$third-party
 ||hotlog.ru^$third-party
 ||hscta.net^$third-party
+||hubdigitalads.com^$third-party
 ||hubvisor.io^$third-party
 ||hum.works^$third-party
 ||humanclick.com^$third-party
@@ -32434,6 +32452,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||media.net^$third-party
 ||media01.eu^$third-party
 ||mediaarmor.com^$third-party
+||mediaconvertly.com^$third-party
 ||mediaforgews.com^$third-party
 ||mediagauge.com^$third-party
 ||mediaglacier.com^$third-party
@@ -33540,6 +33559,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||webtrendslive.com^$third-party
 ||webtuna.com^$third-party
 ||wecantrack.com^$third-party
+||wewomedia.com^$third-party
 ||wgsas.com^$third-party
 ||whale.camera^$third-party
 ||wheredoyoucomefrom.ovh^$third-party
