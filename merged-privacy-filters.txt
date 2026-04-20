@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.20.2
+! Version: 26.04.20.3
 
 !! Merged rules
 
@@ -20,6 +20,8 @@
 !
 !
 !### Temporary ###
+||kindhush.com^$redirect=noopjson,xmlhttprequest,badfilter
+||kindhush.com^$~xmlhttprequest,badfilter
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/5372
 @@||st-*.dynamicyield.com/st*&inHead=true&id=*&jsession=*scriptVersion=*&noConsent=
 !#################
@@ -9433,6 +9435,15 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||ducttapeai.com/api/tracking/event
+||moneywise.com/scottie/api/cdp/v1/event|
+||fileditchfiles.me/api/plausible
+/https:\/\/www\.fakt\.pl\/[a-zA-Z0-9_]{40,200}/$xmlhttprequest,~third-party,match-case,domain=fakt.pl
+play.xumo.com#%#//scriptlet('set-local-storage-item', 'com.kochava.tracker.EventQueue', '$remove$')
+play.xumo.com#%#//scriptlet('set-local-storage-item', 'com.kochava.tracker.DeviceId', '$remove$')
+play.xumo.com#%#//scriptlet('set-local-storage-item', '_xumo_omnitureDeviceId', '$remove$')
+play.xumo.com#%#//scriptlet('set-local-storage-item', '_xumo_xumoDeviceId', '$remove$')
+play.xumo.com#%#//scriptlet('set-local-storage-item', '_xumo_ifaId', '$remove$')
 ||civitai.*/api/page-view
 ||civitai.*/api/trpc/track.addView
 ||jobs.hanes.com/*/phenomtrack.min.js
