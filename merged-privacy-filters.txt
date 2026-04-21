@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.21.2
+! Version: 26.04.21.3
 
 !! Merged rules
 
@@ -8060,6 +8060,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||analytics.pocketfm.com^
 ||otel-collector.reliability.smartnews.net^
 ||report-edge.rtesvc.com^
 ||rakam-api.aptoide.com^
@@ -9437,6 +9438,13 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||chatgpt.com/backend-api/beacons/
+||chatgpt.com/backend-api/sentinel/ping
+||lg-chatbot.com/chatbot/v*/api/client_logger
+||cv-library.co.uk/assets/js/ext/amplitude-
+||cv-library.co.uk/assets/js/ext/clickstream.
+||cv-library.co.uk/assets/js/experiments-amplitude-
+||cv-library.co.uk/assets/js/clickstream
 ||gobankingrates.com/wp-content/themes/rockefeller-lite/assets/build/event-tracking.js
 ||gobankingrates.com/et/
 ||dce-frontoffice.imggaming.com/api/v2/event/
