@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.22.1
+! Version: 26.04.22.2
 
 !! Merged rules
 
@@ -4566,7 +4566,6 @@ kizi.com#%#window.google_trackConversion = function() {};
 @@||musicvideogenome.com/javascripts/stats.js
 @@||muzu.tv/flash/*tracking
 @@||mybuys.com/webrec/wr.do?
-@@||mycokerewards.com^*/webtrends/mcr3-webtrends_POST_$script
 @@||mycommunitynow.com/includes/JI_trafficTracking.js$domain=mycommunitynow.com
 @@||nationwide.co.uk/_/js/webAnalytics.js
 @@||ncbi.nlm.nih.gov/stat?
@@ -4669,7 +4668,6 @@ kizi.com#%#window.google_trackConversion = function() {};
 @@||walmartimages.com/webanalytics/wmStat/wmStat.jsp$domain=walmart.com
 @@||wbshop.com/fcgi-bin/iipsrv.fcgi?
 @@||webtrack.dhlglobalmail.com^
-@@||webtrends.com^*/events.svc$subdocument,domain=mycokerewards.com
 @@||webtrendslive.com^*/wtid.js?$domain=att.yahoo.com
 @@||westelm.com^*/bloomreach.js
 @@||westjet.com/js/webstats.js
@@ -5792,6 +5790,10 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/229676
+! https://github.com/AdguardTeam/AdguardFilters/issues/229485
+||money.ca^$cookie=suid
+||moneywise.com^$cookie=suid
 ! gobankingrates.com
 ||gobankingrates.com^$cookie=visitor_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/229275
@@ -9441,6 +9443,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||rudderstack.com/v1/track|
+||rudderstack.com/v1/identify|
+||rudderstack.com/v1/batch?writeKey=
+||simplywall.st/backend/flags/proxy/client/metrics
+||doofinder.com/api/v*/stats/
 ||chatgpt.com/backend-api/beacons/
 ||chatgpt.com/backend-api/sentinel/ping
 ||lg-chatbot.com/chatbot/v*/api/client_logger
@@ -9453,7 +9460,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 ||dce-frontoffice.imggaming.com/api/v2/event/
 ||hls-beacons-us.xumo.com/hlsstream/v*/beacon?
 ||ducttapeai.com/api/tracking/event
-||moneywise.com/scottie/api/cdp/v1/event|
+/scottie/api/cdp/v1/event|$domain=moneywise.com|money.ca
+/js/adobe-analytics.js$domain=moneywise.com|money.ca
 ||fileditchfiles.me/api/plausible
 /https:\/\/www\.fakt\.pl\/[a-zA-Z0-9_]{40,200}/$xmlhttprequest,~third-party,match-case,domain=fakt.pl
 play.xumo.com#%#//scriptlet('set-local-storage-item', 'com.kochava.tracker.EventQueue', '$remove$')
