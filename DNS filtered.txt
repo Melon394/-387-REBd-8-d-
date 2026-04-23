@@ -221,6 +221,7 @@ prd.api.bleacherreport.com^
 ||faro-collector-prod-*.grafana.net^
 ||*adapt-beacon.awsprodops.movetv.com^
 ||hn-ping*.hashnode.com^
+||analytics-v*.eip.telegraph.co.uk^
 ||ana*.inews24.com^
 ||analytics.streamfab.
 ||mcs-*.tiktok.com^
