@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.23.3
+! Version: 26.04.24.1
 
 !! Merged rules
 
@@ -32,6 +32,10 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/229788
+@@||tag.aticdn.net/piano-analytics.js$domain=rte.ie
+! https://github.com/AdguardTeam/AdguardFilters/issues/229729
+@@||blob.core.windows.net/comed/src/js/google-analytics.js$domain=comed.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/229733
 @@||trackdesk.com/sign-in$domain=dashboard.naughtyaffiliates.com
 @@||trackdesk.com/api/node/settings/$domain=dashboard.naughtyaffiliates.com
@@ -7286,7 +7290,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 /com.snowplowanalytics.$domain=~snowplowanalytics.com
 .com.br/tracking.set^|
 .com.br/cliente/trackRemote^|
-!
+! Rybbit
+/api/site/tracking-config/*
+/api/track|$third-party,xmlhttprequest
 ! VOE - popup ads tracking
 /sftouch?branchId=
 ! HubSpot performance monitoring
@@ -9446,6 +9452,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||reports.sdiapi.com/service/viceEvent
+||online-partners.lenta.com/api/tracker/sdk.js
+||sitecdn.api.domlenta.ru/assets-dom/scripts/yandex-metrika.js
 ||sitereport.netcraft.com/wbtx/
 ||forbiddenbodyjewelry.com/wp-json/pys-*/event
 ||viduro.top/api/heartbeat
@@ -26903,6 +26912,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||kumo.network-n.com/configs/sites/
 ||kununu.com^*/tracking/
 ||kustomerapp.com/c/v1/tracking/
+||kwizly.com/api/log/
 ||kxcdn.com/actor/$third-party
 ||kxcdn.com/assets/js/script.js
 ||kxcdn.com/prj/
