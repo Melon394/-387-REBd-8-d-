@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.23.1
+! Version: 26.04.23.2
 
 !! Merged rules
 
@@ -35,6 +35,9 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/229733
+@@||trackdesk.com/sign-in$domain=dashboard.naughtyaffiliates.com
+@@||trackdesk.com/api/node/settings/$domain=dashboard.naughtyaffiliates.com
 ! https://github.com/easylist/easylist/issues/23935
 @@||go.ezodn.com/ezvideo/$stylesheet,domain=open.video
 @@||open.video/ezais/analytics$~third-party
@@ -9446,6 +9449,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||sitereport.netcraft.com/wbtx/
 ||forbiddenbodyjewelry.com/wp-json/pys-*/event
 ||viduro.top/api/heartbeat
 ||fluxor-wrapper.api.emerios.com/api/v1/tracking/event/track
@@ -12093,7 +12097,7 @@ jiji.com##.RecommendUnderlayer
 ||flipboard.com/api/v2/reporting/datadog
 ||you.com/api/recordEvent
 ||lego.com/api/dl-event-ingest
-||performance.radar.cloudflare.com/beacon.js
+||performance.radar.cloudflare.com/beacon.js$domain=~cloudflare.com
 /news-portlet/html/counter-portlet/*$domain=eluniversal.com.co|elcolombiano.com|vanguardia.com.mx
 /html/js/iter-libraries/iter-statistics.js*$domain=eluniversal.com.co|elcolombiano.com|vanguardia.com.mx
 ||so-zou.jp/js/ga.js
