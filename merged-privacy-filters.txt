@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.24.1
+! Version: 26.04.24.2
 
 !! Merged rules
 
@@ -9452,6 +9452,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||share.9cdn.net/share/*/js/tracking/
 ||reports.sdiapi.com/service/viceEvent
 ||online-partners.lenta.com/api/tracker/sdk.js
 ||sitecdn.api.domlenta.ru/assets-dom/scripts/yandex-metrika.js
@@ -16072,6 +16073,7 @@ prd.api.bleacherreport.com^
 ||faro-collector-prod-*.grafana.net^
 ||*adapt-beacon.awsprodops.movetv.com^
 ||hn-ping*.hashnode.com^
+||analytics-v*.eip.telegraph.co.uk^
 ||ana*.inews24.com^
 ||analytics.streamfab.
 ||mcs-*.tiktok.com^
@@ -22828,6 +22830,7 @@ omni.soundestlink.com$image
 ||tumblr.com/services/bblog
 ||tunein.com/api/v1/log/
 ||turbobit.net/js/analytics/fdUserFingerprintToken.js
+||tweaktown.com/cms/mp3_track.php
 ||twitter.com/1.1/attribution
 ||twitter.com/1.1/jot
 ||twitter.com/9/measurement/
