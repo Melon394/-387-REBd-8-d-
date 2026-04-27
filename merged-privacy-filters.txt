@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.27.2
+! Version: 26.04.27.3
 
 !! Merged rules
 
@@ -4863,8 +4863,10 @@ kizi.com#%#window.google_trackConversion = function() {};
 @@||scrapbox.io^$cookie=connect.sid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211274
 @@||play.history.com^$cookie=/^AMCVS?_.*AdobeOrg/
+! https://github.com/AdguardTeam/AdguardFilters/issues/229893
 ! https://github.com/AdguardTeam/AdguardFilters/issues/215550
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210553
+@@||play.fyi.tv^$cookie=/^AMCVS?_.*AdobeOrg/
 @@||play.mylifetime.com^$cookie=/^AMCVS?_.*AdobeOrg/
 @@||play.aetv.com^$cookie=/^AMCVS?_.*AdobeOrg/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207126
@@ -8458,7 +8460,6 @@ d4?appid*type*
 /d?id=*type*
 /d?dn=*&id&type=*
 ||cnlogs.umengcloud.com^
-||grs.dbankcloud.
 ||logservice.dbankcloud.cn
 ||103.41.167.237/v2/resolv?host=
 ||logs.nebulahoroscope.com^
@@ -21968,6 +21969,7 @@ omni.soundestlink.com$image
 ||mangadex.org/p.js
 ||mangakoma.net/ajax/manga/view
 ||manomano.*/api/v1/sp-tracking/
+||manscaped.com/rud-dataplane/
 ||manua.ls/g/collect?
 ||manua.ls/gtag
 ||mapcarta.com/logs
@@ -29729,6 +29731,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||arena.im/v2/collect
 ||b2w.io/event/
 ||biggylabs.com.br/track-api/v2/track/site?
+||cdn.pmweb.com.br/df/tag.js
 ||collect.chaordicsystems.com^
 ||events.chaordicsystems.com^
 ||eventsourcing.ms.harmo.me^
@@ -30797,7 +30800,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||mailinbox.com.br^$third-party
 ||marktest.pt^$third-party
 ||percycle.com^$third-party
-||pmweb.com.br^$third-party
 ||retargeter.com.br^$third-party
 ||sambaads.com^$third-party
 ||shoptarget.com.br^$third-party
