@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.27.3
+! Version: 26.04.28.1
 
 !! Merged rules
 
@@ -9454,6 +9454,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||roomie.tw/metrics
+||safefileku.com/events.js
+||safefileku.com/download/*/event|
 ||fittingbox.com/analytics/
 ||count.bg/js/script.js
 ||share.9cdn.net/share/*/js/tracking/
@@ -21882,6 +21885,8 @@ omni.soundestlink.com$image
 ||klm.us/CWZUvc/
 ||kloth.net/images/pixel.gif
 ||knewz.com/api/event
+||knowunity.com/events^
+||knowunity.com/pixels/
 ||kobo.com/TrackClicks
 ||kohls.com/mtFndb/
 ||kohls.com/test_rum_nv?
@@ -25163,6 +25168,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||harvester.cms.markiza.sk^
 ! Slovene
 ||24ur.com/bin/player/?mod=statistics&
+||analitika.derp.si^
 ||dnevnik.si/tracker/
 ||go-usertrack-importer.pub.24ur.si^
 ||ninja.data.olxcdn.com/ninja-olxba.js
@@ -30511,6 +30517,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ! Dutch
 ||active24stats.nl^$third-party
 ||istats.nl^$third-party
+||leadsandmore.go2cloud.org^
 ||mtrack.nl^$third-party
 ||mystats.nl^$third-party
 ||onlinesucces.nl^$third-party
