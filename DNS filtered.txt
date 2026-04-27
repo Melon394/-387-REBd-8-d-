@@ -348,7 +348,6 @@ dlsdk.appsflyer.com^
 ||tnc16-*.hypic.com^
 ||discovery-ios-*.ertelecom.ru^
 ||ulog*.gifshow.com^
-||grs.dbankcloud.
 ||logservice.dbankcloud.cn
 ||use-trk*.bluevoox.com^
 ||t*.playdigo.live^
