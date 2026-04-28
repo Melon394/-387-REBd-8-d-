@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.28.2
+! Version: 26.04.28.3
 
 !! Merged rules
 
@@ -9453,6 +9453,10 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||us*-prod-direct.*.com/events/$domain=tlc.com|discovery.com
+||misc.udn.com/record/pageview/
+||p.udn.com.tw/upf/static/common/udn-fingerprint.umd.js
+||relatorios.prportais.com.br/storage/cdn-adi/news-tracker-min.js
 ||forums.hardwarezone.com.sg/js/hwz/hwz_permutive.js
 ||forums.hardwarezone.com.sg/js/hwz/neuron.js
 ||roomie.tw/metrics
@@ -13568,7 +13572,7 @@ animespirit.*###CollapsiblePanel_Statistics
 setafi.com##.footer_bl-3
 ||gamejolt.com/tick/
 ||chaturbate.com/api/adblocker/
-||cdn.evgnet.com/beacon/homedepotofcainc/engage/scripts/evergage.min.js$script,redirect=noopjs
+||cdn.evgnet.com/beacon/*/scripts/evergage.min.js$script,redirect=noopjs
 ||51nongyao.net/js/analytics.js
 kanobu.ru##a[href^="https://www.liveinternet.ru/click"]
 ||a24.biz/pixel/
