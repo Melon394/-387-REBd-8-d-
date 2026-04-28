@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.28.1
+! Version: 26.04.28.2
 
 !! Merged rules
 
@@ -8090,7 +8090,6 @@ dlsdk.appsflyer.com^
 ||log.documentreaderapp.com^
 ||datasink.sensorsjourney.com^
 ||apm-native.redbascket.com^
-||apm-native.redbascket.com^
 ||apm-fe.rnote.com^
 ||lng.xiaohongshu.com^
 ||t2.xiaohongshu.com^
@@ -9454,6 +9453,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||forums.hardwarezone.com.sg/js/hwz/hwz_permutive.js
+||forums.hardwarezone.com.sg/js/hwz/neuron.js
 ||roomie.tw/metrics
 ||safefileku.com/events.js
 ||safefileku.com/download/*/event|
@@ -9861,7 +9862,6 @@ businessinsider.com#%#//scriptlet('set-local-storage-item', 'universal_id', '$re
 ||chatgpt.com/ces/v1/p|$xmlhttprequest,redirect=noopjson
 ||chatgpt.com/ces/statsc/$xmlhttprequest,redirect=noopjson
 /v1/rgstr?k=client-$xmlhttprequest,redirect=noopjson,domain=chatgpt.com
-||contents.kyobobook.co.kr/resources/lib/kbb-js/kbb.stats.js
 ||full-count.jp/ssc.min.js
 ||d.line-scdn.net/n/line_tag/$domain=full-count.jp
 /_api/tag-manager/api/*/tags/sites/*$xmlhttprequest,domain=boraware.kr
@@ -14497,7 +14497,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||amazon.com/follow/log-metrics^
 ||amazon.com^*/impress.html
 ||m.media-amazon.com/images/G/*/msa/vowels/metrics
-||m.media-amazon.com/images/I/*.js?AUIClients/GWMMetricsJS
 ||m.media-amazon.com/images/S/sash/*.js?csm_attribution=
 ||amazonaws.com/pixelpop/app/pixelpop-
 ||an.yandex.ru/count/
@@ -16207,7 +16206,6 @@ dlsdk.appsflyer.com^
 ||tnc16-*.hypic.com^
 ||discovery-ios-*.ertelecom.ru^
 ||ulog*.gifshow.com^
-||grs.dbankcloud.
 ||logservice.dbankcloud.cn
 ||use-trk*.bluevoox.com^
 ||t*.playdigo.live^
@@ -25769,6 +25767,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||api.axept.io/v1/analytics/evts
 ||api.bit.ly/*/clicks?$third-party
 ||api.blink.net/a/
+||api.bluecore.app/api/track/
 ||api.collarity.com/cws/*http
 ||api.config-security.com/first
 ||api.country.is^$third-party
@@ -27295,6 +27294,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||onet.pl/eclk/
 ||onet.pl^*/tags?
 ||onetrust.com^$ping
+||onsitestats.bluecore.com^
 ||onsugar.com/static/ck.php?
 ||ontraport.com/track.php
 ||ontraport.com/tracking.js
@@ -31542,7 +31542,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||blogreaderproject.com^$third-party
 ||bluecava.com^$third-party
 ||blueconic.net^$third-party
-||bluecore.com^$third-party
 ||blueknow.com^$third-party
 ||blvdstatus.com^$third-party
 ||bm23.com^$third-party
