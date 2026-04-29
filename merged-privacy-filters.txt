@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.04.29.3
+! Version: 26.04.30.1
 
 !! Merged rules
 
@@ -8079,6 +8079,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||sensors.dito.ph^
 ||mon11-misc-lq.fqnovel.com^
 ||tnc3-alisc1.bytedance.com^
 ||upc.zztfly.com^
@@ -15168,6 +15169,9 @@ gmarket.co.kr#%#//scriptlet('fingerprintjs2')
 !
 ! NOTE: Specific rules
 !
+! conquerclub.com subscriptions
+conquerclub.com/stat.php?type=$image
+conquerclub.com%2Fstat.php%3Ftype%3D$image
 ! https://github.com/easylist/easylist/issues/23743
 hm-f.jp/ho.php?t=
 hm-f.jp%2Fho.php%3Ft=
@@ -25609,6 +25613,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics-cms.whitebeard.me^
 ||analytics-consent-manager-v2-prod.azureedge.net^
 ||analytics-fe.digital-cloud-prem.medallia.com^
+||analytics-fe.digital-cloud.medallia.ca^
 ||analytics-fe.digital-cloud.medallia.com^
 ||analytics-ipv6.tiktokw.us^
 ||analytics-prd.aws.wehaa.net^
@@ -26009,7 +26014,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||byteoversea.com/captcha/report
 ||byteoversea.com/monitor_browser/
 ||bzpics.com/jslib/st.js?
-||bzrcdn.openai.com/sdk/oaiq.min.js
+||bzr.openai.com^
+||bzrcdn.openai.com^
 ||c-date.com/pixel/
 ||c.albss.com^
 ||c.amazinglybrilliant.com.au^
