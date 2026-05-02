@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.02.3
+! Version: 26.05.03.1
 
 !! Merged rules
 
@@ -32,6 +32,9 @@
 !
 !
 !
+!#if (ext_ublock)
+@@||dxp.optimizely.com^$domain=suse.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230245
 @@||adobedc.demdex.net/*/identity/acquire?$domain=westjet.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/229972
@@ -24584,6 +24587,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||t.bukalapak.com^
 ||ta.tokopedia.com/promo/v1/views
 ||tokopedia.com/helios-client/client-log
+||tracker-beam.tempo.co^
 ! Italian
 /~shared/do/~/count/?$image
 ||adnkronos.com/akTracking_isf.js
@@ -29408,6 +29412,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||oval.id/tracker/
 ||parsley.detik.com^
 ||tracker.oval.id^
+||un.kumparan.com^
 ! Italian
 ||alice.it/cnt/
 ||analytics.competitoor.com^
