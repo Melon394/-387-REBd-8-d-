@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.04.2
+! Version: 26.05.04.3
 
 !! Merged rules
 
@@ -32,6 +32,9 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/230186
+@@||api2.branch.io^$app=net.booksy.customer
+! https://github.com/AdguardTeam/AdguardFilters/issues/230135
 !#if (ext_ublock)
 @@||dxp.optimizely.com^$domain=suse.com
 !#endif
@@ -7936,7 +7939,8 @@ _tracking.php?b=
 ||web.facebook.com^$app=com.teslacoilsw.launcher
 ||tracking.ibotta-classic.ipn-ops.net^$app=com.ibotta.android
 ||firebaselogging-pa.googleapis.com^$app=com.sampleapp
-||ads-api.twitter.com^$app=com.twitter.android
+||ads-api.x.com^
+||ads-api.twitter.com^
 ||tags.tiqcdn.com^$app=uk.co.thetimes|com.hulu.plus|com.booking
 ||ljc.coupang.com^$app=com.coupang.mobile
 ||api-track.linke.ai^$app=com.aigc.ushow.ichat
@@ -8324,7 +8328,6 @@ dlsdk.appsflyer.com^
 ||gid.tapapis.cn^
 ||dlog-config.uu.cc^
 ||ms-report.uu.cc^
-||ads-api.x.com^
 ||t.usermaven.com/lib.js$script,redirect=noopjs,domain=revisemsra.com
 ||log.hiapkdownload.com^
 ||experiment.pixverse.ai^
