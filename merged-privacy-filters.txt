@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.04.3
+! Version: 26.05.05.1
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/230374
+@@||try.abtasty.com/39d783b9bc0b6b495e430e140bd1eedc.js$domain=tickpick.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230186
 @@||api2.branch.io^$app=net.booksy.customer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230135
@@ -5809,6 +5811,10 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! mexc.com
+||mexc.com^$cookie=sensorsdata2015jssdkcross
+||mexc.com^$cookie=sajssdk_2015_cross_new_user
+||mexc.com^$cookie=mxc_home_advertising_redhot_isclick
 ! abc.net.au
 ||abc.net.au^$cookie=/^ABC_Snowplow_id/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/229676
@@ -6729,11 +6735,6 @@ traicy.com,hoyme.jp,collinsdictionary.com,pashplus.jp,freemcserver.net,oxfordlea
 traicy.com,hoyme.jp,collinsdictionary.com,pashplus.jp,freemcserver.net,oxfordlearnersdictionaries.com,nosv.org,niketalk.com,motor-talk.de,aucfree.com,muragon.com,373news.com,fxstreet.*,fxstreet-id.com,fxstreet.es,easyhindityping.com,relevantmagazine.com,dictionnaire.lerobert.com,footballtransfer.ru,thatgossip.com,donbalon.com,dropgame.jp,ufret.jp,gardeningsoul.com,si.com,niice-woker.com,blogmura.com,minkou.jp,lifehacker.jp,kinmaweb.jp,reptilesmagazine.com,buzzfeednews.com,lakeshowlife.com,thefreebieguy.com,autofrage.net,computerfrage.net,cocokara-next.com,cinetrafic.fr,malaymail.com,kyoteibiyori.com,chanto.jp.net,nana-press.com,kurashiru.com,samsungmagazine.eu,jablickar.cz,dailydot.com,watchdocumentaries.com,mariowiki.com,kompasiana.com,watchdocumentaries.com,j-cast.com,bg-mania.jp,j-town.net,ap7am.com,giornalone.it,convertcase.net,gloria.hr,slobodnadalmacija.hr,loawa.com,ygosu.com,sportalkorea.com,edaily.co.kr,economist.co.kr,etoday.co.kr,isplus.com,hometownstation.com,honkailab.com,genshinlab.com,thestockmarketwatch.com,thephoblographer.com,issuya.com,worldhistory.org,etnews.com,iusm.co.kr,dogdrip.net,etoland.co.kr,picrew.me,text-compare.com,fntimes.com,lamire.jp,bamgosu.site,etnewskorea.com,gadgets360.com,automobile-catalog.com,maketecheasier.com,thesaurus.net,wfmz.com,thestar.co.uk,yorkshirepost.co.uk,mydaily.co.kr,raenonx.cc,ndtvprofit.com,badmouth1.com,logicieleducatif.fr,taxguru.in,islamicfinder.org,aikatu.jp,secure-signup.net,globalrph.com,sportsrec.com,reportera.co.kr,carscoops.com,slobodnadalmacija.hr,flatpanelshd.com,videogamemods.com#%#//scriptlet('set-local-storage-item', '/_fa_Y2FjaGVfaXNfYmxvY2tpbmdfYWNjZXB0YWJsZV9hZHM=$/', '$remove$')
 traicy.com,hoyme.jp,collinsdictionary.com,pashplus.jp,freemcserver.net,oxfordlearnersdictionaries.com,nosv.org,niketalk.com,motor-talk.de,aucfree.com,muragon.com,373news.com,fxstreet.*,fxstreet-id.com,fxstreet.es,easyhindityping.com,relevantmagazine.com,dictionnaire.lerobert.com,footballtransfer.ru,thatgossip.com,donbalon.com,dropgame.jp,ufret.jp,gardeningsoul.com,si.com,niice-woker.com,blogmura.com,minkou.jp,lifehacker.jp,kinmaweb.jp,reptilesmagazine.com,buzzfeednews.com,lakeshowlife.com,thefreebieguy.com,autofrage.net,computerfrage.net,cocokara-next.com,cinetrafic.fr,malaymail.com,kyoteibiyori.com,chanto.jp.net,nana-press.com,kurashiru.com,samsungmagazine.eu,jablickar.cz,dailydot.com,watchdocumentaries.com,mariowiki.com,kompasiana.com,watchdocumentaries.com,j-cast.com,bg-mania.jp,j-town.net,ap7am.com,giornalone.it,convertcase.net,gloria.hr,slobodnadalmacija.hr,loawa.com,ygosu.com,sportalkorea.com,edaily.co.kr,economist.co.kr,etoday.co.kr,isplus.com,hometownstation.com,honkailab.com,genshinlab.com,thestockmarketwatch.com,thephoblographer.com,issuya.com,worldhistory.org,etnews.com,iusm.co.kr,dogdrip.net,etoland.co.kr,picrew.me,text-compare.com,fntimes.com,lamire.jp,bamgosu.site,etnewskorea.com,gadgets360.com,automobile-catalog.com,maketecheasier.com,thesaurus.net,wfmz.com,thestar.co.uk,yorkshirepost.co.uk,mydaily.co.kr,raenonx.cc,ndtvprofit.com,badmouth1.com,logicieleducatif.fr,taxguru.in,islamicfinder.org,aikatu.jp,secure-signup.net,globalrph.com,sportsrec.com,reportera.co.kr,carscoops.com,slobodnadalmacija.hr,flatpanelshd.com,videogamemods.com#%#//scriptlet('set-local-storage-item', '/_fa_Y2FjaGVfaXNfYmxvY2tpbmdfYWRz$/', '$remove$')
 traicy.com,hoyme.jp,collinsdictionary.com,pashplus.jp,freemcserver.net,oxfordlearnersdictionaries.com,nosv.org,niketalk.com,motor-talk.de,aucfree.com,muragon.com,373news.com,fxstreet.*,fxstreet-id.com,fxstreet.es,easyhindityping.com,relevantmagazine.com,dictionnaire.lerobert.com,footballtransfer.ru,thatgossip.com,donbalon.com,dropgame.jp,ufret.jp,gardeningsoul.com,si.com,niice-woker.com,blogmura.com,minkou.jp,lifehacker.jp,kinmaweb.jp,reptilesmagazine.com,buzzfeednews.com,lakeshowlife.com,thefreebieguy.com,autofrage.net,computerfrage.net,cocokara-next.com,cinetrafic.fr,malaymail.com,kyoteibiyori.com,chanto.jp.net,nana-press.com,kurashiru.com,samsungmagazine.eu,jablickar.cz,dailydot.com,watchdocumentaries.com,mariowiki.com,kompasiana.com,watchdocumentaries.com,j-cast.com,bg-mania.jp,j-town.net,ap7am.com,giornalone.it,convertcase.net,gloria.hr,slobodnadalmacija.hr,loawa.com,ygosu.com,sportalkorea.com,edaily.co.kr,economist.co.kr,etoday.co.kr,isplus.com,hometownstation.com,honkailab.com,genshinlab.com,thestockmarketwatch.com,thephoblographer.com,issuya.com,worldhistory.org,etnews.com,iusm.co.kr,dogdrip.net,etoland.co.kr,picrew.me,text-compare.com,fntimes.com,lamire.jp,bamgosu.site,etnewskorea.com,gadgets360.com,automobile-catalog.com,maketecheasier.com,thesaurus.net,wfmz.com,thestar.co.uk,yorkshirepost.co.uk,mydaily.co.kr,raenonx.cc,ndtvprofit.com,badmouth1.com,logicieleducatif.fr,taxguru.in,islamicfinder.org,aikatu.jp,secure-signup.net,globalrph.com,sportsrec.com,reportera.co.kr,carscoops.com,slobodnadalmacija.hr,flatpanelshd.com,videogamemods.com#%#//scriptlet('set-local-storage-item', '/_fa_Y2FjaGVfYWRibG9ja19jaXJjdW12ZW50X3Njb3Jl$/', '$remove$')
-!
-! Yandex.Metrika
-spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
-! AdRiver
-spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204065
@@ -8088,6 +8089,9 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||log1.pwsdk.com^
+||log2.pwsdk.com^
+||cxlog.shinhansec.com^
 ||sensors.dito.ph^
 ||mon11-misc-lq.fqnovel.com^
 ||tnc3-alisc1.bytedance.com^
@@ -9421,6 +9425,10 @@ d4?appid*type*
 ! Reduce lifetime for a cookie that is used to store persistent user ID
 $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
+! Yandex.Metrika
+mexc.com,2gis.*,spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
+mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
+!
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/3973
 ! Probably caused by overriding "dataLayer.push" function
 ||google-analytics.com/analytics.js$script,redirect=google-analytics,domain=~olx.*|~banki.ru|~bigc.co.th|~sonos.com|~hepsiburada.com
@@ -9471,6 +9479,15 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||static.mocortech.com/mx-fingerprintjs/
+||static.mocortech.com/mx-remote-packages/mxc-web-remote-script/lib/tag_ww.js
+||static.mocortech.com/mx-remote-packages/mxc-web-remote-script/lib/ytag.js
+||mexc.com/staticjs/tag.js
+mexc.com#%#//scriptlet('set-local-storage-item', 'mexc_local_fingerprint_visitorId', '$remove$')
+mexc.com#%#//scriptlet('set-local-storage-item', 'mexc_local_fingerprint', '$remove$')
+mexc.com#%#//scriptlet('set-local-storage-item', 'mexc_local_fingerprint_sys_info', '$remove$')
+mexc.com#%#//scriptlet('set-local-storage-item', 'mexc_fingerprint_all_config_init_time', '$remove$')
+mexc.com#%#//scriptlet('set-local-storage-item', '__watchman_anonymous_id$$_', '$remove$')
 ||static.fd.nl/assets/fdmg-tag-manager/
 ||pd5sngsre3.net/g/hn.js
 ||m.media-amazon.com/images/I/*/BotCXMetricsCollectionJSAsset
@@ -11210,7 +11227,6 @@ arstechnica.com###story-recommendations
 ||ieq-systems.de/includes/piwikQ.js
 ||player.ivideosmart.com/ivsplayer/*/moat-tracker.js
 ||nexon.com/nxlog-collect/
-2gis.*#%#//scriptlet('set-local-storage-item', '/_ym/', '$remove$')
 ||tags.stepstone.com/utag/*/prod/utag.js
 ||static.posta.com.tr/scripts/tracking/dailymotion-event.min.js
 ||afkgaming.com/scooby/api/v1/log/event|
@@ -13858,8 +13874,8 @@ abp?type=js&session$domain=prosieben.de|sat1.de|kabeleins.de|sixx.de|prosiebenma
 ||scripts.hepsiburada.net/assets/analytics/analytics.*.js
 ||airbnb.*/tracking/
 ||googleadservices.com/pagead/conversion_async.js
-||analytics.twitter.com/i/adsct?
-||t.co/i/adsct?
+||analytics.twitter.com/*/adsct?
+||t.co/*/adsct?
 ||linkedin.com/*/rum-track?
 ||media.licdn.com/cdo/rum/id?
 ||sendsay.ru/js/target/tracking.js
@@ -14936,6 +14952,8 @@ dreamprogs.net##td[width="88"][height="31"]
 ||ztat.net/*/webtrekk.min.js^
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
+! AdRiver
+spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !#if (!ext_ublock)
 !#if (!adguard_ext_chromium && !adguard_ext_opera && !adguard_ext_firefox && !adguard_ext_chromium && !adguard_ext_chromium_mv3)
