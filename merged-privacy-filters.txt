@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.05.3
+! Version: 26.05.06.1
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/229265
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=parade.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230374
 @@||try.abtasty.com/39d783b9bc0b6b495e430e140bd1eedc.js$domain=tickpick.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230186
@@ -5429,6 +5431,9 @@ $cookie=lms_ads
 $cookie=anj
 !
 ! Google
+! GTM (serverside)
+$cookie=FPLC
+$cookie=FPID
 ! Used for advertising, including serving and rendering ads, personalizing ads
 $cookie=FCNEC
 ! Google - https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage
@@ -9484,6 +9489,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||podiums.link/event
 nhnieuws.nl#%#//scriptlet('set-local-storage-item', 'udid', '$remove$')
 nhnieuws.nl#%#//scriptlet('set-local-storage-item', 'cs_fpid', '$remove$')
 ||regfiles.net/0/|$script
