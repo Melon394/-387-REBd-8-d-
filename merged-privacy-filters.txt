@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.05.2
+! Version: 26.05.05.3
 
 !! Merged rules
 
@@ -4955,6 +4955,11 @@ kizi.com#%#window.google_trackConversion = function() {};
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! Comscore
+$cookie=cs_fpid
+! Contentinsights
+$cookie=_ain_uid
+$cookie=_ain_cid
 ! salesmanago.pl
 $cookie=smuuid
 ! wovn.io
@@ -9443,7 +9448,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 ! fix https://golf.com/news/tour-confidential-match-play-concession-augusta-womens-am/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152328
 !+ NOT_OPTIMIZED
-||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=~golf.com|~today.line.me|~inmuebles24.com|~inside.com.tw|~investing.com|~olx.com.eg|~eksisozluk.com|~heycar.co.uk|~gizmodo.jp|~dexerto.com|~makorrishon.co.il
+||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=~golf.com|~today.line.me|~inmuebles24.com|~inside.com.tw|~investing.com|~olx.com.eg|~eksisozluk.com|~heycar.co.uk|~gizmodo.jp|~dexerto.com|~makorrishon.co.il|~mensjournal.com
 ! When Base filter breaks website and an exclusion has to be added to Base
 !+ NOT_OPTIMIZED
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,important,domain=turbo.pt
@@ -9479,6 +9484,9 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+nhnieuws.nl#%#//scriptlet('set-local-storage-item', 'udid', '$remove$')
+nhnieuws.nl#%#//scriptlet('set-local-storage-item', 'cs_fpid', '$remove$')
+||regfiles.net/0/|$script
 ||static.mocortech.com/mx-fingerprintjs/
 ||static.mocortech.com/mx-remote-packages/mxc-web-remote-script/lib/tag_ww.js
 ||static.mocortech.com/mx-remote-packages/mxc-web-remote-script/lib/ytag.js
