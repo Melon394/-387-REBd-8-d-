@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.08.1
+! Version: 26.05.08.2
 
 !! Merged rules
 
@@ -9492,6 +9492,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||autoguide.com/api/posts/*/impressions
 ||global.one.yomiuri.co.jp/ssc-ym-client.v*.js
 ||247wallst.com/b66d/|$script
 ||247wallst.com/wp-content/plugins/fwp-247-analytics-old/js/dist/fwp-analytics-main.js
@@ -11651,7 +11652,6 @@ thehindu.com###sectiondivicymi
 ||static.lefigaro.fr/figanalytics/
 ||community.theta360.guide/assets/google-universal-analytics-v4
 ||dpg.danawa.com/*/rest/*getStampEvent
-||www-direct.upgradedhome.com/eventStream
 ||fap.bar/a.js
 ||cue.search.naver.com/api/*/log/
 ||roadster.com/roadster_dealer_analytics
@@ -11847,8 +11847,7 @@ lto.de##img[src^="https://ssl-wolterskluwer.met.vgwort.de/"]
 ||computerbase.de/analytics
 ||rec1.smt.docomo.ne.jp/bcn_access_log/
 ||kccsrecommend.site/torimochi_log/
-||www-direct.motorcycle.com/eventStream
-||www-direct.autoguide.com/eventStream
+/eventStream|$domain=autoguide.com|motorcycle.com|upgradedhome.com
 ||hub.fromdoppler.com/public/dhtrack.js
 ||kick.com/*&loaderVersion=
 ||connatix.com/scripts/hotjar.js
@@ -32671,7 +32670,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||minewhat.com^$third-party
 ||minkatu.com^$third-party
 ||mirabelsmarketingmanager.com^$third-party
-||mirakl.net^$third-party
 ||mixi.mn^$third-party
 ||mixpanel.com^$third-party
 ||mkt3261.com^$third-party
@@ -33446,6 +33444,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||taplytics.com^$third-party
 ||taps.io^$third-party
 ||tapstream.com^$third-party
+||target2sell.mirakl.net^$third-party
 ||targetfuel.com^$third-party
 ||taskanalytics.com^$third-party
 ||tcactivity.net^$third-party
