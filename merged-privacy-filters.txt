@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.12.2
+! Version: 26.05.12.3
 
 !! Merged rules
 
@@ -3727,8 +3727,6 @@ kizi.com#%#window.google_trackConversion = function() {};
 @@||rscdn.cxense.com/cx-test.js$domain=wsj.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21231
 @@||comcastresidentialservices.tt.omtrdc.net/m2/comcastresidentialservices^$domain=xfinity.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/21326
-@@||googletagmanager.com/gtm.js^$domain=boyner.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21175
 @@||sb.scorecardresearch.com/beacon.js$domain=motorcyclenews.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21125
@@ -9495,6 +9493,9 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||thebell.io/o4e1/
+||boyner.com.tr/1eus/
+||test-api.ajansspor.xyz/analytics/
 ||glassesusa.com/scripts/|
 ||glassesusa.com/bff/dynamicYield/pageview
 ||sfchronicle.com/api/client-logs
