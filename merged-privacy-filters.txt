@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.13.1
+! Version: 26.05.13.2
 
 !! Merged rules
 
@@ -5827,6 +5827,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! detector404.ru
+||detector404.$cookie=tag
 ! mexc.com
 ||mexc.com^$cookie=sensorsdata2015jssdkcross
 ||mexc.com^$cookie=sajssdk_2015_cross_new_user
@@ -13057,7 +13059,6 @@ tourister.ru##.nt-foot-item[style="overflow:hidden;"]
 ||trk.mail.ru^$image,ping
 ||push.m.youku.com/collect-api/
 ||cast.imp.joins.com/persona.js
-||imptrack.intoday.in/impression_tracker.php
 ||tosshub.com/sites/common/resources/trackdata/min/itgdtrack*.js
 ||api2.bybit.com/v2/public/metrics
 ||api.*.com/p/report?$domain=bybit.com
