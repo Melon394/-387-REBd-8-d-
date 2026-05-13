@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.13.3
+! Version: 26.05.14.1
 
 !! Merged rules
 
@@ -32,6 +32,9 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/230906
+@@||cdn.cquotient.com/js/*/gretel.min.js$domain=jp.drmartens.com
+@@||e.cquotient.com/recs/blgg-DoctorMartens/$domain=jp.drmartens.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231168
 @@||faq-widget.nakanohito.jp/faqwidget.js$domain=keio-passport.co.jp
 @@||support-beacon.nakanohito.jp/widget/faqview$domain=keio-passport.co.jp
@@ -9508,6 +9511,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||shop-apotheke.com/te/
 ||slate.com/analytics?
 ||thebell.io/o4e1/
 ||boyner.com.tr/1eus/
@@ -20902,7 +20906,6 @@ _WebVitalsReporter_
 /link.pbtech.co.nz/mo/*$image
 /link.theatlantic.com/img/*
 /link.thrillist.com/img/*$image
-/links.gitlab.com/s/eo/*$image
 /links1.strava.com/*$image
 /lzdmailer.letter.open?
 /m-email/t.png?
@@ -20982,7 +20985,7 @@ _WebVitalsReporter_
 ://email.*/o/$image
 ://emailtracking.$image
 ://i.*@groovehq.com.gif$image
-://links.flickr.com/s/eo/$image
+://links.*/s/eo/$image
 ://links.paypal.*/eos/$image
 ://mail01.monex.co.jp/bin/checker?
 ://mailmag.hhcross.hankyu-hanshin.jp/c/*.gif
