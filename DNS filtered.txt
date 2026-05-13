@@ -46,6 +46,7 @@ vkcdnservice.appspot.com^
 ||freecontent.date
 ||freecontent.stream
 ||s*.skencituer.com^
+||daleelerah.info
 ||get-me-wow.
 /(https?:\/\/)213\.32\.115\..{100,}/
 /(https?:\/\/)217\.182\.11\..{100,}/
@@ -570,6 +571,7 @@ dlsdk.appsflyer.com^
 -iklan789-
 -ikln.
 -720x90-
+-728-x-90-
 -728x90a.
 .1080.x.90.
 !@@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
