@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.15.3
+! Version: 26.05.16.1
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/231336
+@@||ssl.kaptcha.com/collect/$domain=app.airtm.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230901
 @@||edge.adobedc.net/*/identity/acquire?$domain=goldmansachs.com
 goldmansachs.com#%#//scriptlet('prevent-fetch', 'edge.adobedc.net')
@@ -4892,6 +4894,8 @@ kizi.com#%#window.google_trackConversion = function() {};
 ! Bad:  example.org#@##cookie
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/231330
+@@||m.happymh.com^$cookie=/^_ga_/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222085
 @@||hood.de^$cookie=DSID
 ! https://x.com/Tightnaven/status/1974739387994030253
@@ -20874,6 +20878,8 @@ omni.soundestlink.com$image
 ||et.nytimes.com^
 ||et.tidal.com^
 ||eta.animenewsnetwork.com^
+||etfstream.com/api/analytics/
+||etfstream.com/api/proxy/get-search-sponsor
 ||etracker.noon.com^
 ||etsy.com/bcn/beacon
 ||etsy.com/clientlog
