@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.21.2
+! Version: 26.05.21.3
 
 !! Merged rules
 
@@ -8135,6 +8135,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||dc.oppomobile.com^
 ||aki-gb-sdklog.kurogames.net^
 ||log1.pwsdk.com^
 ||log2.pwsdk.com^
@@ -8398,7 +8399,6 @@ dlsdk.appsflyer.com^
 ||apptics.zoho.in^
 ||analytics.oliveapp.net^
 ||rplogs.itpub.cc^
-||collector-sbanking.shb-pelib.com^
 ||mcs.tiktokv.us^
 ||trace.free-reels.com^
 ||event-portal.dailyinnovation.biz^
