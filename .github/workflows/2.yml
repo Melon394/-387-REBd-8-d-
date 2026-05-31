@@ -77,14 +77,14 @@ jobs:
               if curl -sL "$URL" -o "temp_${NAME}.txt"; then
                 LINES=$(wc -l < "temp_${NAME}.txt" 2>/dev/null || echo 0)
                 
-                if [ "$LINES" -ge 50 ]; then
+                if [ "$LINES" -ge 40 ]; then
                   echo "Success: $NAME ($LINES lines)"
                   cat "temp_${NAME}.txt" >> final_result.txt
                   echo "" >> final_result.txt
                   rm -f "temp_${NAME}.txt"
                   return 0
                 else
-                  echo "Fail: $NAME (Only $LINES lines - expected at least 50)"
+                  echo "Fail: $NAME (Only $LINES lines - expected at least 40)"
                 fi
               else
                 echo "Fail: $NAME (Download error)"
@@ -115,7 +115,6 @@ jobs:
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt" "ag_mobile"
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile_allowlist.txt" "ag_mobile_allowlist"
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/specific.txt" "ag_specific"
-          download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MailTrackingFilter/sections/allowlist.txt" "ag_mail_allowlist"
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MailTrackingFilter/sections/general_url.txt" "ag_mail_general"
           download_filter "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MailTrackingFilter/sections/specific.txt" "ag_mail_specific"
           download_filter "https://raw.githubusercontent.com/Melon394/-387-REBd-8-d-/Isolate/DNS%20filtered.txt" "ag_DNS_filtered"
@@ -154,8 +153,8 @@ jobs:
           TOTAL_LINES=$(wc -l < final_result.txt)
           echo "Total lines in merged file: $TOTAL_LINES"
           
-          if [ "$TOTAL_LINES" -lt 25000 ]; then
-             echo "CRITICAL ERROR: File too small ($TOTAL_LINES lines). Expected at least 25000 lines."
+          if [ "$TOTAL_LINES" -lt 27000 ]; then
+             echo "CRITICAL ERROR: File too small ($TOTAL_LINES lines). Expected at least 27000 lines."
              echo "Aborting workflow. Will retry at next scheduled time."
              exit 1
           fi
