@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.05.31.1
+! Version: 26.05.31.2
 
 !! Merged rules
 
@@ -21454,6 +21454,7 @@ omni.soundestlink.com$image
 ||messenger.com/ajax/bnzai?
 ||metacrawler.com/pingback
 ||metis.truecaller.com^
+||metrics-a.wbx2.com^
 ||metrics.audius.co^
 ||metrics.bangbros.com^
 ||metrics.camsoda.com^
@@ -22298,6 +22299,7 @@ omni.soundestlink.com$image
 ||trx3.famousfix.com^
 ||try.elevenlabs.io/pr/js
 ||ts.delfi.lt^
+||tsa.webex.com^
 ||tsmate.com/api/metrics
 ||tubepornstars.com/js/analytics
 ||tubi.io/datascience/logging?
@@ -24941,6 +24943,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||682a5845.b-cdn.net^
 ||99widgets.com/counters/
 ||9w2zed1szg.execute-api.us-east-1.amazonaws.com^
+||a.cineflix.st^
 ||a.emea01.idio.episerver.net^
 ||a.getflowbox.com^
 ||a.hcaptcha.com^
@@ -26104,6 +26107,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||fst-ec.perimeterx.net^
 ||ftimg.net/js/log.js?
 ||ftm.fluencyinc.co^
+||fubuki-umami.space/api/script.js
 ||fudge.ai/metrics?
 ||future-fie-assets.co.uk^
 ||future-price.co.uk^
