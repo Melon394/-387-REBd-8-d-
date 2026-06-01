@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.01.1
+! Version: 26.06.01.2
 
 !! Merged rules
 
@@ -16628,6 +16628,7 @@ dlsdk.appsflyer.com^
 -ikln.
 -720x90-
 -728-x-90-
+-728-x-90.
 -728x90a.
 .1080.x.90.
 !@@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
@@ -25953,6 +25954,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.skyscanner.net^
 ||analytics.sleeknote.com^
 ||analytics.snidigital.com^
+||analytics.steast.io^
 ||analytics.strangeloopnetworks.com^
 ||analytics.superstructure.ai^
 ||analytics.supplyframe.com^
@@ -27875,6 +27877,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||rtxpx-a.akamaihd.net^
 ||rudder-server-prd.arena.im/v1/track
 ||rudder-tracking.rudderstack.com^
+||rudderstack.com/v1/track
 ||rum-collector.leaderint.workers.dev^
 ||rum.azion.com^
 ||rum.azioncdn.net^
