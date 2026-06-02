@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.02.2
+! Version: 26.06.02.3
 
 !! Merged rules
 
@@ -9556,6 +9556,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||ader.naver.com^$domain=~search.naver.com,xmlhttprequest
 ||songlyrics.com/js/um.js
 ||songlyrics.com/js/visits.js
 ||cdn.theconversation.com/static/tc/gtm_data_layer-*.js
@@ -17710,6 +17711,7 @@ analytics-*.aasaam.com
 &hitType=pageview&
 &http_referer=$script,xmlhttprequest,domain=~biletomat.pl|~facebook.com|~jobscore.com
 &refer=http$script
+&sst.gcsub=
 &t=pageview&
 -adobe-analytics/
 -adobeDatalayer_bridge.js
@@ -21230,6 +21232,7 @@ omni.soundestlink.com$image
 ||analytics.academy.com^
 ||analytics.ahrefs.dev^
 ||analytics.archive.org^
+||analytics.atom.com^
 ||analytics.bitchute.com^
 ||analytics.brave.com^
 ||analytics.chase.com^
@@ -26746,6 +26749,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||eventlog.chatlead.com^
 ||eventlog.inspsearchapi.com^
 ||events-endpoint.pointandplace.com^
+||events-ingestion-helpcenter.services.gorgias.help^
 ||events-ocu.zipify.com^
 ||events-proxy.mintlify.com
 ||events.air.tv^
@@ -31976,6 +31980,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||conductrics.com^$third-party
 ||conductrics.net^$third-party
 ||conduze.com^$third-party
+||confidence.dev^$third-party
 ||config.parsely.com^$third-party
 ||confirmational.com^$third-party
 ||connectif.cloud^$third-party
