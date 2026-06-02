@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.02.3
+! Version: 26.06.02.4
 
 !! Merged rules
 
@@ -7385,6 +7385,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 /com.snowplowanalytics.$domain=~snowplowanalytics.com
 .com.br/tracking.set^|
 .com.br/cliente/trackRemote^|
+! Geo Targetly
+.co/gr?id=
 ! Rybbit
 /api/site/tracking-config/*
 /api/track|$third-party,xmlhttprequest
@@ -9556,6 +9558,9 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||faro-sportybet.sportydog.net/collect|$xmlhttprequest,redirect=noopjson
+sporty.com#%#//scriptlet('prevent-fetch', 'faro-sportybet.sportydog.net/collect')
+/^https:\/\/robota\.ua\/[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]\/$/$script
 ||ader.naver.com^$domain=~search.naver.com,xmlhttprequest
 ||songlyrics.com/js/um.js
 ||songlyrics.com/js/visits.js
