@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.04.2
+! Version: 26.06.04.3
 
 !! Merged rules
 
@@ -9560,6 +9560,8 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+motortrend.com#%#//scriptlet('set-local-storage-item', 'mtid', '$remove$')
+digitalspy.com##.inline-content-module:has(.cx-flex-module)
 ||chibanippo.co.jp/api/page-tracker
 ||drive-igora.ru/netcat/modules/stats/
 ||acapellas.eu/proxy.php?path=stats
@@ -17639,6 +17641,7 @@ analytics-*.aasaam.com
 !---------- Russian ----------
 !
 @@||afisha.ru/proxy/videonetworkproxy.ashx?$xmlhttprequest
+@@||chat.dbo-dengi.online/*/track?event=$script,domain=online.mtsdengi.ru
 @@||criteo.net/js/ld/publishertag.js$domain=novayagazeta.ru
 @@||dict.rambler.ru/fcgi-bin/$xmlhttprequest,domain=rambler.ru
 @@||docs.rucml.ru/e.gif?$~third-party
@@ -21701,7 +21704,6 @@ omni.soundestlink.com$image
 ||dynatrace.att.com^
 ||e.quizlet.com^
 ||e.used.ca/event
-||e.zg-api.com/event$domain=zillow.com
 ||e2ma.net/track/
 ||ea.epochbase.com^
 ||ebay.com/delstats/
@@ -26328,7 +26330,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||cdn.tds.bid/bid.js
 ||cdn.tolt.io/tolt.js
 ||cdn.usefathom.com^
-||cdn.zg-api.com^*/analytics.js
+||cdn.zg-api.com/a/z/js/v1/analytics.js
 ||cdnjs.work/metrics.js
 ||cdnma.com/apps/capture.js
 ||cdnplanet.com/static/rum/rum.js
@@ -26698,6 +26700,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||e.ebidtech.com/cv/
 ||e.revenue.cat^
 ||e.usesneakpeek.com^
+||e.zg-api.com^
 ||e045f561.b-cdn.net^
 ||ea-mct-live.com/revsdk.kes.KinesisEvent/
 ||ea.youmaker.com^
@@ -27393,6 +27396,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||media-lab.ai/ana-sentry.js
 ||media-lab.ai/events
 ||media-platform.com/common/js/lib/cxense/
+||media.flixcar.com/log/
 ||mediabong.com/t/
 ||mediabong.net/t/
 ||mediadelivery.net/.metrics/
