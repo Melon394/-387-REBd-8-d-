@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.05.2
+! Version: 26.06.05.3
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/139956
+@@||smetrics.airmiles.ca/*identity/acquire?$domain=oauth.airmiles.ca
 ! https://aswbe.ana.co.jp/webapps/reservation/payment-input
 @@||mpsnare.iesnare.com/snare.js$domain=aswbe.ana.co.jp
 @@||mpsnare.iesnare.com/script/logo.js$domain=aswbe.ana.co.jp
@@ -9567,6 +9569,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||track.psatcrm.com/tracker.js
 dn.pt#%#//scriptlet('set-local-storage-item', 'aries__uuid', '$remove$')
 dn.pt#%#//scriptlet('set-local-storage-item', 'altair', '$remove$')
 ||dn.pt/scooby/api/v*/log/
@@ -17275,7 +17278,7 @@ analytics-*.aasaam.com
 !! omtrdc.net
 @@||omtrdc.net^*/mbox/json?$xmlhttprequest,domain=absa.co.za|att.com|pnc.com|vodafone.it
 !! tags.tiqcdn.com
-@@||tags.tiqcdn.com/utag/*/utag.sync.js$domain=bankofamerica.com|hsbc.co.uk|samsung.com|sony.jp|visible.com|vmware.com
+@@||tags.tiqcdn.com/utag/*/utag.sync.js$domain=10.com.au|bankofamerica.com|hsbc.co.uk|samsung.com|sony.jp|visible.com|vmware.com
 ! statcounter.com charts https://github.com/uBlockOrigin/uAssets/issues/11321
 @@||gs.statcounter.com/chart.php$script,third-party
 @@||statcounter.com/js//fusioncharts.charts.js
@@ -21519,6 +21522,7 @@ omni.soundestlink.com$image
 ||clickins.slixa.com^
 ||client-errors.rebble.io/log-client-error
 ||client-log.box.com^
+||client-logs-a.wbx2.com^
 ||client-metrics.chess.com^
 ||clk-m.joybuy.com^
 ||cloudconvert.com/build/assets/plausible-CoqwX5KR.js
