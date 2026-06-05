@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.05.1
+! Version: 26.06.05.2
 
 !! Merged rules
 
@@ -5901,6 +5901,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! rtl.hr
+||rtl.hr^$cookie=device-id
 ! ahaber.com.tr
 ||ahaber.com.tr^$cookie=VideoSessionId
 ! detector404.ru
@@ -9565,6 +9567,11 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+dn.pt#%#//scriptlet('set-local-storage-item', 'aries__uuid', '$remove$')
+dn.pt#%#//scriptlet('set-local-storage-item', 'altair', '$remove$')
+||dn.pt/scooby/api/v*/log/
+||sapo.pt/metrics
+||sapo.pt/assets/sapix.gif
 motortrend.com#%#//scriptlet('set-local-storage-item', 'mtid', '$remove$')
 digitalspy.com##.inline-content-module:has(.cx-flex-module)
 ||chibanippo.co.jp/api/page-tracker
@@ -23280,6 +23287,7 @@ omni.soundestlink.com$image
 ||x.com/i/csp_report
 ||x.com/i/jot
 ||x.com^*/log.json
+||x.designboom.com^
 ||xero.com/api/events/
 ||xfinity.com/event/
 ||xhamster.com/api/$ping
