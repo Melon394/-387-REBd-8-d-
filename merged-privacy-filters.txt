@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.05.3
+! Version: 26.06.06.1
 
 !! Merged rules
 
@@ -5023,6 +5023,8 @@ kizi.com#%#window.google_trackConversion = function() {};
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! Newspack
+$cookie=newspack-cid
 ! AppsFlyer
 $cookie=af_id
 $cookie=afUserId
@@ -9569,6 +9571,10 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||m365.cloud.microsoft/client_health_ping
+||m365.cloud.microsoft/events
+||substrate.office.com/search/api/v1/events
+||realmadryt.pl/api/v1/client-log|$important
 ||track.psatcrm.com/tracker.js
 dn.pt#%#//scriptlet('set-local-storage-item', 'aries__uuid', '$remove$')
 dn.pt#%#//scriptlet('set-local-storage-item', 'altair', '$remove$')
@@ -10005,7 +10011,6 @@ olympics.com##section[data-cy="story-parts-wrapper"] > div:not([data-cy]):has(re
 ||marketplace.anyclip.com/v*/lre-events
 /log/client/messages$domain=momondo.com|kayak.com
 /s/vestigo/measure$domain=momondo.com|kayak.com
-||ir.ebaystatic.com/*/s_1x2.gif
 gamespot.com#%#//scriptlet('set-local-storage-item', 'ppid', '$remove$')
 ||openway.deepseeksvc.com/v*/write/rum
 ||l.search.naver.com/n/responsive/*&no_qc=*&p=
@@ -21199,6 +21204,7 @@ omni.soundestlink.com$image
 ||adc-js.nine.com.au^
 ||adguard.com/-/event/
 ||adl.bankofthewest.com^
+||admin.microsoft.com/api/instrument/logclient
 ||adobe.io/system/log
 ||adobe.io/web/v1/metrics
 ||adtech-events.bookmyshow.com^
@@ -22221,6 +22227,7 @@ omni.soundestlink.com$image
 ||lyft.com/api/track
 ||lyngsat.com/system/loadclick.js
 ||m.facebook.com/ajax/weblite_resources_timing_logging/
+||m365.cloud.microsoft/events
 ||ma.redhat.com^
 ||macys.com/tag_path/
 ||mail.proton.me/api/data/v1/stats
@@ -22884,6 +22891,7 @@ omni.soundestlink.com$image
 ||stubhub.com/a/icph
 ||stytch.com/sdk/v1/events
 ||suaurl.com/adblock/js/smarttag.js
+||substrate.office.com/search/api/v1/events
 ||sudokupad.app/api/event
 ||sumsub.com/api/tunnel/
 ||sumsub.com/resources/fevents
