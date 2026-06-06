@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.06.3
+! Version: 26.06.07.1
 
 !! Merged rules
 
@@ -9756,6 +9756,7 @@ giga.chat#%#//scriptlet('set-local-storage-item', '/DEVICE_ID/', '$remove$')
 ||common-api.rozetka.*/collect/
 ||aizhantj.com*/tjpv/?cc=
 ||goto.startracking.ru/api/v1/impression?aff_id=
+||users.videasy.to/api/track
 ||users.videasy.net/api/track
 ||rs.kuper.ru/v*/track
 ||rs.kuper.ru/v*/batch|
@@ -24327,9 +24328,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||lecho.be/fb2?
 ||lecho.be/tag/tag-
 ||ledevoir.com/js/pianoAnalyticsTags.js
-||lemonde.fr/*.pa.js
-||lemonde.fr/bucket/*/tagistan.
-||lemonde.fr^$ping
+||lemonde.fr/b9d29410eafefd859fb36add0cb64f9b4ad2138b
 ||leparking-moto.fr/jsV155/Tracker.js
 ||leparking.fr/*/Tracker.js
 ||lepetitjournal.com/monitoring?
