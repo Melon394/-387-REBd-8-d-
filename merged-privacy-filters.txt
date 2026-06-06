@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.06.2
+! Version: 26.06.06.3
 
 !! Merged rules
 
@@ -17310,6 +17310,7 @@ analytics-*.aasaam.com
 @@||dd.blackhawknetwork.com.first-party-js.datadome.co^$domain=redeem.rewardlink.com
 @@||dd.qa.moneygram.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=moneygram.com
 @@||dd.wizzair.com.first-party-js.datadome.co^$domain=wizzair.com
+@@||dwt.soundcloud.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=soundcloud.com
 @@||gva.et-gv.fr^$script,domain=culture.gouv.fr
 @@||mycleverpush.com/iframe?$domain=bsdex.de
 @@||n8s.jp^$script,domain=nikkei.com
@@ -23380,6 +23381,10 @@ omni.soundestlink.com$image
 ||googleusercontent.com/*/wf/open?upn=$image
 ! OpenTable
 ://track.opentable.
+! https://github.com/uBlockOrigin/uAssets/issues/33186
+://tralut.*/collect/value?
+://tralut.*/js/script-dynamic.js
+://tralut.*/js/tracking.js
 ! Vinted
 ://www.vinted.*/relay/events
 ! akamaihd.net
