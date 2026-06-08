@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.08.1
+! Version: 26.06.08.2
 
 !! Merged rules
 
@@ -18064,6 +18064,7 @@ analytics-*.aasaam.com
 /analyticstrack.js
 /analyticstracking.js
 /analyticstrain.min.js
+/analytify-events-tracking.js
 /anametrix/cas.js
 /anclytic-ajax.html
 /anclytic.htm
@@ -20532,6 +20533,8 @@ analytics-*.aasaam.com
 /wmxtracker.js
 /woocommerce-google-adwords-conversion-tracking-tag/*
 /woopra.js
+/wp-analytify-forms/assets/js/tracking.js
+/wp-analytify/assets/js/scrolldepth.js
 /wp-coin-hive-util.js
 /wp-coin-hive.js
 /wp-content/plugins/confection/bridge.php
