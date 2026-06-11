@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.11.1
+! Version: 26.06.11.2
 
 !! Merged rules
 
@@ -15438,6 +15438,9 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! Bad: ||example.org^$script (treated it as regular analytics and block it in the Tracking Protection filter,
 !      if a script in not proxied)
 !
+! Temu
+api-euo.temu.com/callback/doha/open/track?
+api-euo.temu.com%2Fcallback%2Fdoha%2Fopen%2Ftrack%3F
 ! forbes.com
 image.read.forbes.com$image
 ! conquerclub.com subscriptions
@@ -15537,6 +15540,8 @@ i.groovehq.com%2F*%40groovehq.com.gif$image
 c.groovehq.com/*.gif$image
 c.groovehq.com%2F*.gif$image
 ! Yandex
+supersender.yandex.net/v1/$image
+supersender.yandex.net%2Fv1%2F$image
 click.sender.yandex.ru/px/$image
 click.sender.yandex.ru%2Fpx%2F$image
 feedback.send.yandex.ru/px/$image
@@ -33437,6 +33442,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||rumanalytics.com^$third-party
 ||rumpelstiltskinhead.com^$third-party
 ||runconverge.com^$third-party
+||rybbit.com^$third-party
 ||rztrkr.com^$third-party
 ||s3s-main.net^$third-party
 ||safe-click.net^$third-party
