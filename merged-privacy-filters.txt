@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.12.2
+! Version: 26.06.12.3
 
 !! Merged rules
 
@@ -5912,6 +5912,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! matchtv.ru
+||matchtv.ru^$cookie=spbc_uuid
 ! telefonnyjdovidnyk.com.ua
 ||telefonnyjdovidnyk.com.ua^$cookie=goog_ads
 ! rtl.hr
@@ -9585,6 +9587,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||deepsystems.com/wp-content/plugins/integrate-posthog-web-analytics/
 ||c-cmoa.akamaized.net/sol/c/js/common/gtm_ga_user_update.js
 ||gameinformer.com/modules/contrib/statistics/
 ||gameinformer.com/*/js/tracking/
@@ -23405,7 +23408,9 @@ omni.soundestlink.com$image
 ||youtube-nocookie.com/youtubei/v1/log_event?
 ||youtube.com/api/stats/ads?
 ||zed.dev/docs/theme/analytics.js
-||zoom.us/*/telemetry
+||zoom.us/*/app-telemetry.
+||zoom.us/*/fingerprintjs-
+||zoom.us/user/anonymous/telemetry
 !||youtube.com/api/stats/atr?ns=*&ver=2&cmt=1.*&fs=0&*&euri&lact=
 ||youtube.com/api/stats/qoe?*page&ns=yt&fexp=v1%*&event=streamingstats&
 ||youtube.com/get_video?
@@ -26046,6 +26051,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.pagefly.io^
 ||analytics.pangle-ads.com^
 ||analytics.piksel.com^
+||analytics.pingaja.com^
 ||analytics.pinterest.com^$third-party
 ||analytics.pixels.ai^
 ||analytics.plasmic.app^
