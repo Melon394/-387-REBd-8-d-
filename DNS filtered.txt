@@ -177,7 +177,6 @@ vkcdnservice.appspot.com^
 ||agatha-log-service-*.a.run.app^
 ||me9ddf.moebelix.
 ||spa-tracker*.spapi.io^
-||tracking.cds.dmm.
 ||htm*.hepsiburada.com^
 ||touch.yesim.
 ||data-track*.yingxiong.com^
