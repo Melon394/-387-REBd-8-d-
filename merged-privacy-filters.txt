@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.13.1
+! Version: 26.06.13.2
 
 !! Merged rules
 
@@ -16323,7 +16323,6 @@ vkcdnservice.appspot.com^
 ||agatha-log-service-*.a.run.app^
 ||me9ddf.moebelix.
 ||spa-tracker*.spapi.io^
-||tracking.cds.dmm.
 ||htm*.hepsiburada.com^
 ||touch.yesim.
 ||data-track*.yingxiong.com^
@@ -23329,6 +23328,7 @@ omni.soundestlink.com$image
 ||wellsfargo.com/dti_apg/
 ||wellsfargo.com/jenny/
 ||wellsfargo.com/tracking/
+||weworkremotely.com/listing_ads/8/impression?
 ||wfinterface.com/tracking/$domain=wellsfargo.com
 ||wh.ipaddress.com^
 ||whattomine.com/stats
