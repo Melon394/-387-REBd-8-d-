@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.15.2
+! Version: 26.06.16.1
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/233239
+@@||cdn.optimizely.com/datafiles/*.json$domain=bbc.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233440
 @@||app.lyrebirdhealth.com/_app/immutable/chunks/google-analytics*.js$domain=app.lyrebirdhealth.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233404
@@ -9587,6 +9589,12 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||senvio.ai/api/*/events/
+||health.ems.onet.pl/*/metric/collector
+||rent.com/api/analytics|
+||session-api.cloud.pji.nu/sessions/*/events
+||prisjakt.no/_next/monitoring
+||prisjakt.no/rbr9/
 ||hdrezka.ax/api/logs/event
 ||assets.poool.fr/engage.min.js
 ||usine-digitale.fr/pf/resources/newrelic.js
