@@ -245,6 +245,7 @@ prd.api.bleacherreport.com^
 ||analytics.*.sky.com^
 ||uts.auction.co.kr
 ||ad*.ettoday.net^
+||stw.zone-telechargement.
 ||stats.zone-telechargement.
 ||log*.vietnamplus.vn^
 ://r.i.ua^
