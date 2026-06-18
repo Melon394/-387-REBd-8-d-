@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.18.1
+! Version: 26.06.18.2
 
 !! Merged rules
 
@@ -7309,6 +7309,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/posthog-recorder.js
 .js?tg=$~third-party
 /advanced-ads-tracking/assets/dist/ga-tracking.js
 /hit-track.php
@@ -9596,6 +9597,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||ph.givebutter.com^$ping
 ||work.ua/api/v1/view-page/
 ||compo-de.frontnow.app/api/event|
 ||economx.hu/ident-fingerprint/
@@ -16413,6 +16415,7 @@ prd.api.bleacherreport.com^
 ||analytics.*.sky.com^
 ||uts.auction.co.kr
 ||ad*.ettoday.net^
+||stw.zone-telechargement.
 ||stats.zone-telechargement.
 ||log*.vietnamplus.vn^
 ://r.i.ua^
@@ -21436,6 +21439,7 @@ omni.soundestlink.com$image
 ||app.box.com/app-api/split-proxy/api/metrics
 ||app.box.com/gen204
 ||app.gnosispay.com/relay-gp-ph/
+||app.nicealts.com/user/referral/visit
 ||appanalysis.banggood.com^
 ||apple-mapkit.com/mw/v1/reportAnalytics
 ||aptoide-mmp.aptoide.com^
@@ -23330,6 +23334,7 @@ omni.soundestlink.com$image
 ||walmart.ca/api/landing-page/beacon-logger
 ||walmartimages.com/dfw/4ff9c6c9-d9a0/$domain=walmart.com
 ||wapn1.flosports.tv^
+||wart.val.town^
 ||watchadsontape.com/stat/
 ||wattpad.com/js/tracker/app.
 ||wc.yahoodns.net^$image
