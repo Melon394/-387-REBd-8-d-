@@ -103,6 +103,7 @@ vkcdnservice.appspot.com^
 ||mediate-ios-*.hyprmx.com^
 ||production-adserver-*.amazonaws.com^
 ||rtbimp-loadbalancer-*.amazonaws.com^
+||clickhouse-collector.*.prod.plat.agency^
 ||bapi-*.moengage.com^
 ||cdn-*.gravityfield.ai^
 ||powa-ingest-prod-*.video-player.arcpublishing.com^
@@ -165,6 +166,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||mcs-normal-*.capcutapi.com^
 ||eflbundles.*.com.tr^
 ||log.api-maps.yandex.
 ||ja*.apppure.net^
