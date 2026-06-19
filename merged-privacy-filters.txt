@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.19.1
+! Version: 26.06.19.2
 
 !! Merged rules
 
@@ -9598,6 +9598,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||vaughn.live/vsz/
 ||edit-api-*.capcut.com/lv/v1/event/
 ||api.anyembed.xyz/api/user/event|
 thestar.com.my#%#//scriptlet('set-local-storage-item', 'nx_anon_id_v1', '$remove$')
@@ -16278,6 +16279,7 @@ vkcdnservice.appspot.com^
 ||mediate-ios-*.hyprmx.com^
 ||production-adserver-*.amazonaws.com^
 ||rtbimp-loadbalancer-*.amazonaws.com^
+||clickhouse-collector.*.prod.plat.agency^
 ||bapi-*.moengage.com^
 ||cdn-*.gravityfield.ai^
 ||powa-ingest-prod-*.video-player.arcpublishing.com^
@@ -16340,6 +16342,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||mcs-normal-*.capcutapi.com^
 ||eflbundles.*.com.tr^
 ||log.api-maps.yandex.
 ||ja*.apppure.net^
@@ -25660,6 +25663,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ! Turkish
 ||a.n11.com^
 ||analytics.cosmopolitanmag.com.tr^
+||analytics.mgm.gov.tr^
 ||athena-event-provider.n11.com^
 ||c.gazetevatan.com^
 ||cimri.com/api/pixel
