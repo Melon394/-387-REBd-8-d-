@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.21.2
+! Version: 26.06.21.3
 
 !! Merged rules
 
@@ -21539,6 +21539,7 @@ omni.soundestlink.com$image
 ||blockworks.co/_vercel/insights/
 ||blue.nbc4i.com^
 ||bmoharris.com/www/assets/analytics/loader.js
+||boldin.com/rails/arrival
 ||bonprix.*/ajax/landmarks/
 ||bonprix.*/ajax/marketing-parameters/
 ||booking.com/c360/v1/track
@@ -26202,6 +26203,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||api.reo.dev^$third-party
 ||api.sardine.ai/assets/loader.min.js$third-party
 ||api.sovendus.com/js/landing.js
+||api.tally.so/forms/*/events
 ||api.visitorapi.com^$third-party
 ||api.wipmania.com^
 ||apibaza.com/pixel/
@@ -28455,6 +28457,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tags.pw.adn.cloud^
 ||tagservice.maximus.mobkoi.com^
 ||tagtracking.vibescm.com^
+||tally.so/api/forms/*/events
 ||target.mixi.media^
 ||tarteaucitron.io/log/
 ||tatadigital.com/analytics-engine/
