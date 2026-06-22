@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.22.2
+! Version: 26.06.22.3
 
 !! Merged rules
 
@@ -32,6 +32,9 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/234127
+! Creating an account problem
+@@||tesco.com/akam/13/$domain=tesco.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234019
 @@||tag.search.sensefuel.live/tag$domain=bricoman.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233239
@@ -9600,6 +9603,10 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||twinfinite.net/*/gamurs-group-analytics/
+||ledevoir.com/js/analytics/
+||ledevoir.com/js/pianoAnalyticsTags.js
+||naturallieplantbased.com/?*&ver=$script,~third-party
 ||caf.fr/*/stormcaster.js
 ||caf.fr/sites/default/files/smarttag/
 ||google.com/rmkt/collect/
