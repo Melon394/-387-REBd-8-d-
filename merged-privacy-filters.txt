@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.23.1
+! Version: 26.06.23.2
 
 !! Merged rules
 
@@ -9603,6 +9603,11 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||x.com/1.1/graphql/app_context.json
+||x.com/1.1/graphql/viewer_context.json
+||x.com/i/api/1.1/graphql/app_context.json
+||x.com/i/api/1.1/graphql/viewer_context.json
+ricardocuisine.com#%#//scriptlet('set-local-storage-item', '__anon_id', '$remove$')
 ||twinfinite.net/*/gamurs-group-analytics/
 ||ledevoir.com/js/analytics/
 ||ledevoir.com/js/pianoAnalyticsTags.js
@@ -21681,15 +21686,18 @@ omni.soundestlink.com$image
 ||collector-direct.xhamster.com^
 ||collector-px0py5pczn.octopart.com^
 ||collector.cint.com^
+||collector.feedzop.com^
 ||collector.fiverr.com^
 ||collector.github.com^
 ||collector.githubapp.com^
 ||collector.megaxh.com^
 ||collector.pi.spectrum.net^
 ||collector.quillbot.com^
+||collector.quizzop.com^
 ||collector.spankbang.party^
 ||collector.taoxh.life^
 ||collector.theconversation.com^
+||collector.umogames.com^
 ||collector.xhaccess.com^
 ||collector.xhamster.com^
 ||collector.xhamster.desi^
@@ -23412,12 +23420,16 @@ omni.soundestlink.com$image
 ||www-backend.strinova.com/api/common/uid
 ||www.ebay.*/gh/dfpsvc?
 ||x.com/1.1/attribution
+||x.com/1.1/graphql/app_context.json
 ||x.com/1.1/graphql/error_log.json
 ||x.com/1.1/graphql/user_flow.json
+||x.com/1.1/graphql/viewer_context.json
 ||x.com/1.1/jot
 ||x.com/9/measurement/
+||x.com/i/api/1.1/graphql/app_context.json
 ||x.com/i/api/1.1/graphql/error_log.json
 ||x.com/i/api/1.1/graphql/user_flow.json
+||x.com/i/api/1.1/graphql/viewer_context.json
 ||x.com/i/api/1.1/jot
 ||x.com/i/csp_report
 ||x.com/i/jot
@@ -26209,6 +26221,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||api.june.so^
 ||api.mambasms.com/monitorEvent/
 ||api.pcid.ca/v1/client/logs
+||api.pearcommerce.com/v1/client_request_log?
+||api.pearcommerce.com/v1/page_load?
 ||api.picox.bendingspoons.com/v1/events
 ||api.reo.dev^$third-party
 ||api.sardine.ai/assets/loader.min.js$third-party
