@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.25.2
+! Version: 26.06.25.3
 
 !! Merged rules
 
@@ -32,6 +32,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/234274
+@@||googletagmanager.com/gtm.js$domain=gocomics.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234202
 @@||cdn.clerk.io/clerk.js$domain=jaktdepotet.no
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234127
@@ -9605,6 +9607,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||liveball.sx/albert
 ||ext-api.perfluence.net/pixel?
 ||lighthouselabs.eu^$image
 ||dditsadn.com^$domain=livesex.com
@@ -22347,6 +22350,7 @@ omni.soundestlink.com$image
 ||log.klook.com^
 ||log.quora.com^
 ||log.snapdeal.com^
+||log.strawpoll.com^
 ||log.webnovel.com^
 ||logger.nerdwallet.com^
 ||logger007.cam4.com^
@@ -26803,6 +26807,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||d.lilstts.com^
 ||d.rcmd.jp^$image
 ||d.shareaholic.com^
+||d2gt2ux04o03l1.cloudfront.net^
 ||dadi.technology^$third-party
 ||dash.getsitecontrol.com^
 ||dashboard.nowdialogue.com/api/events/
@@ -27194,6 +27199,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||goadv.com^*/track.js
 ||goaffpro.com/track
 ||godaddy.com/js/gdwebbeacon.js
+||gollum.monotote.com^
 ||gomoxie.solutions^*/events
 ||google.com/analytics/$third-party
 ||google.com/ccm/
@@ -27451,6 +27457,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||lederer.nl/incl/stats.js.php?
 ||legacy.com/globalscripts/tracking/
 ||legacy.com^*/unicaclicktracking.js?
+||legolas.monotote.com^
 ||lemrock.com/v1/publishers/tracking/
 ||letv.com/cloud_pl/
 ||letv.com/env/
@@ -28451,6 +28458,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||t.mail.sony-europe.com/r/?
 ||t.menepe.com^
 ||t.metrilo.com^
+||t.mmganalytics.com^
 ||t.mydialoginsight.com^
 ||t.nc0.co^
 ||t.paypal.com/ts?
@@ -28512,6 +28520,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||techtarget.com^*/GetCookiesWithCallback?
 ||techweb.com/beacon/
 ||telemetrics.klaviyo.com^
+||telemetry.bydata.com^
 ||telemetry.goodlifefitness.com^
 ||telemetry.phenixrts.com^
 ||telemetry.reembed.com^
