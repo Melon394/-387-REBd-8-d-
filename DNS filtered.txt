@@ -35,6 +35,7 @@
 ||prebid-*.rubiconproject.com^
 ||pijama.*.elasticbeanstalk.com^
 ||pl.ua^$badfilter
+||fixtures.onet.pl^$badfilter
 wykop.pl$badfilter
 .n.2.1.js^
 .n.2.1.l60.js^
@@ -347,7 +348,6 @@ dlsdk.appsflyer.com^
 ||logs-*.rebxgame.com^
 -client-report.honkaiimpact3.com^
 ||*-datareceiver.aki-game.net^
-||mgbsdk*.matrix.easebar.com^
 ||applog*.matrix.easebar.com^
 ||tnc16-*.hypic.com^
 ||discovery-ios-*.ertelecom.ru^
@@ -580,6 +580,9 @@ dlsdk.appsflyer.com^
 .1080.x.90.
 !@@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 -bandarkiu.
+-cina777.
+-indo666.
+-pentaslot.
 -tototix.gif
 ||admicro*.vcmedia.vn^
 ||log-*.epicdn.me^
