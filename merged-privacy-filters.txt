@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.26.2
+! Version: 26.06.26.3
 
 !! Merged rules
 
@@ -8549,7 +8549,6 @@ dlsdk.appsflyer.com^
 -client-report.honkaiimpact3.com^
 ||*-datareceiver.aki-game.net^
 ||data-detect.nie.easebar.com^
-||mgbsdk*.matrix.easebar.com^
 ||applog*.matrix.easebar.com^
 ||tapi.axcadsf.cfd^$app=com.apkpure.aegon
 ||tr.acobt.tech^$app=com.apkpure.aegon
@@ -18020,6 +18019,7 @@ analytics-*.aasaam.com
 /fbevents.min.js
 /fbpix-events-
 /fbpixel.js
+/fcp/v1/i
 /fdmg-tag-manager/tags.js
 /fe_logger?
 /feature/metrics$xmlhttprequest
@@ -18227,6 +18227,7 @@ analytics-*.aasaam.com
 /GTag/general_tracker.js
 /gtag/js?
 /gtagv4.js
+/gtgcore/?id=
 /gtm-data-layer-$script
 /gtm-listeners.js
 /gtm-suite.js
@@ -22073,6 +22074,7 @@ omni.soundestlink.com$image
 ||sexu.com/api/ttrack
 ||sexybabepics.net/re/?ping
 ||sf-syn.com/conversion_outbound_tracker$subdocument,domain=sourceforge.net
+||share.9cdn.net/share/short_cache/js/tracking/$domain=nine.com.au
 ||sharechat.com/event-tracking-service/
 ||sharesies.com/v1/identify
 ||sharesies.com/v1/track
@@ -26463,6 +26465,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||hearstnp.com/log?
 ||heartbeat-pearl.vercel.app^
 ||heg-cp.com/upm/$third-party
+||heimdall.hearstapps.com^
 ||helix.bitformations.ca^
 ||hello.myfonts.net/count/
 ||hello.staticstuff.net^
@@ -26653,6 +26656,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||l-host.net/etn/omnilog?
 ||l.euronews.com/sdk.js
 ||l.fairblocker.com^$third-party
+||l.ffx.io^
 ||l.ooyala.com^
 ||l.player.ooyala.com^
 ||l.sharethis.com^
