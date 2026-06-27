@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.27.3
+! Version: 26.06.28.1
 
 !! Merged rules
 
@@ -31,7 +31,10 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
-!
+! https://github.com/easylist/easylist/issues/24516
+||directg.jp/js/fingerprint2.js$script,redirect=fingerprintjs2
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||directg.jp/js/fingerprint2.js$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234274
 @@||googletagmanager.com/gtm.js$domain=gocomics.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234202
@@ -16865,6 +16868,7 @@ analytics-*.aasaam.com
 !
 !---------- Japanese ----------
 !
+@@||a.run.app/api/stat?$domain=cocowa.app
 @@||allabout.co.jp/mtx_cnt.js$script,~third-party
 @@||analytics.digitalpfizer.com/js/prod/pcc/pf_appmeasurement.js$domain=pfizer-covid19-vaccine.jp
 @@||atwiki.jp/common/_img/spacer.gif?$image,domain=atwiki.jp
@@ -16883,6 +16887,7 @@ analytics-*.aasaam.com
 @@||datadoghq-browser-agent.com/*/datadog-logs.js$domain=crosset.onward.co.jp
 @@||delivery.satr.jp^$script,domain=mieru-ca.com
 @@||deteql.net/recommend/provision?$xmlhttprequest,domain=t-fashion.jp
+@@||directg.jp/js/fingerprint2.js$~third-party
 @@||disneyplus.disney.co.jp/view/vendor/analytics/$~third-party
 @@||dmp.im-apps.net/pms/*/pmt.js$domain=zakzak.co.jp
 @@||docodoco.jp^*/docodoco?key=$script,domain=jrtours.co.jp
@@ -21505,8 +21510,6 @@ omni.soundestlink.com$image
 ||keirin.netkeiba.com/ndtracker/
 ||kgoma.com/v1/stat/
 ||khanacademy.org/api/internal/_analytics/
-||kick.com/149e9513-01fa-4fb0-aad4-566afd725d1b/
-||kick.com/UcggFnr2hNhLCwLf/
 ||kinesis.us-east-1.analytics.edmentum.com^
 ||kio.ac/analytics/
 ||klm.us/CWZUvc/
@@ -25324,6 +25327,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.disney.go.com^
 ||analytics.disneyinternational.com^
 ||analytics.distributednews.com^
+||analytics.divulg.org^
 ||analytics.dv.socure.io^
 ||analytics.dvidshub.net^
 ||analytics.edgekey.net^
