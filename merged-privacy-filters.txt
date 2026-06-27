@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.27.1
+! Version: 26.06.27.2
 
 !! Merged rules
 
@@ -15463,6 +15463,7 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ||prebid-*.rubiconproject.com^
 ||pijama.*.elasticbeanstalk.com^
 ||pl.ua^$badfilter
+||fixtures.onet.pl^$badfilter
 wykop.pl$badfilter
 .n.2.1.js^
 .n.2.1.l60.js^
@@ -15775,7 +15776,6 @@ dlsdk.appsflyer.com^
 ||logs-*.rebxgame.com^
 -client-report.honkaiimpact3.com^
 ||*-datareceiver.aki-game.net^
-||mgbsdk*.matrix.easebar.com^
 ||applog*.matrix.easebar.com^
 ||tnc16-*.hypic.com^
 ||discovery-ios-*.ertelecom.ru^
@@ -16008,6 +16008,9 @@ dlsdk.appsflyer.com^
 .1080.x.90.
 !@@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 -bandarkiu.
+-cina777.
+-indo666.
+-pentaslot.
 -tototix.gif
 ||admicro*.vcmedia.vn^
 ||log-*.epicdn.me^
@@ -20780,6 +20783,7 @@ omni.soundestlink.com$image
 ||bio.to/~/tr/
 ||biomedcentral.com/track/
 ||biosolutions.tv/audience-proxy/
+||bis.org/metrics/web.gif?
 ||bitchute.com/data/script.js
 ||bitwarden.com/plsbl/
 ||blitz-analytics-batch-server.blitz.gg^
@@ -21684,6 +21688,7 @@ omni.soundestlink.com$image
 ||moneycontrol.com/news/services/get_comscore_pageview/
 ||monitor.channel4.com^
 ||monitor.lifemiles.com/collect
+||morningstar.com/api/v1/analytics
 ||motorsport.com/stat/
 ||mov.t-mobile.com/p/js/1.js
 ||movetv.com/sa-events
@@ -22067,6 +22072,7 @@ omni.soundestlink.com$image
 ||secure.tennis365.com/tag/
 ||seekingalpha.com/mone_event
 ||segapi.whop.com^
+||seismic.com/playerservice/api/v1/log?
 ||service.techzine.eu^
 ||services.haaretz.com/ds/impression
 ||services.haaretz.com/ms-gstat-campaign/
@@ -22490,6 +22496,7 @@ omni.soundestlink.com$image
 ||trx3.famousfix.com^
 ||try.elevenlabs.io/pr/js
 ||ts.delfi.lt^
+||tsa-f.webex.com^
 ||tsa.webex.com^
 ||tsmate.com/api/metrics
 ||tubepornstars.com/js/analytics
