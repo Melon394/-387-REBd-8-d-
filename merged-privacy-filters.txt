@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.28.2
+! Version: 26.06.28.3
 
 !! Merged rules
 
@@ -17613,6 +17613,7 @@ analytics-*.aasaam.com
 /busting/facebook-tracking/*
 /busting/google-tracking/*
 /bv-analytics.js
+/bydataAnalytics.js
 /c.gif?
 /c.wrating.com/*
 /c2_count.js
@@ -18044,6 +18045,7 @@ analytics-*.aasaam.com
 /fingerprint3.min.js
 /Fingerprintjs2/fpt2.js
 /firebase-performance-compat.js
+/firebase-performance-standalone-compat.js
 /firebase-performance-standalone.js
 /firestats/js/fs.js.php
 /firm_tracking.js
@@ -20602,6 +20604,7 @@ omni.soundestlink.com$image
 ||amazon.com/1/events/$domain=~aws.amazon.com
 ||amazon.com/e/xsp/imp?
 ||amazon.com/empty.gif?$image
+||amazonaws.com/telemetry.bydata/
 ||amboss.com/analytics/
 ||americanexpress.com/beacon
 ||amethyst.6pm.com^
@@ -25304,6 +25307,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.amakings.com^
 ||analytics.api.justeattakeaway.com^
 ||analytics.apnewsregistry.com^
+||analytics.atlas5.co^
 ||analytics.audioeye.com^
 ||analytics.avanser.com.au^
 ||analytics.aweber.com^
@@ -27228,6 +27232,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||public.fbot.me/track/
 ||public.profitwell.com^
 ||publicbroadcasting.net/analytics/
+||publisher-services.amazon.dev/v1/recordVendorsLoaded
 ||pulse.ecmapps.com^
 ||pulse.shopflo.com^
 ||purevideo.com^*/pvshim.gif?
@@ -32561,6 +32566,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||plausible.avris.it^$third-party
 ||plausible.io^$third-party
 ||plavxml.com^$third-party
+||playdigo.com^$third-party
 ||plecki.com^$third-party
 ||pleisty.com^$third-party
 ||plerdy.com^$third-party
@@ -33147,6 +33153,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||trackeame.com^$third-party
 ||trackedlink.net^$third-party
 ||trackedweb.net^$third-party
+||tracker-shr.ortb.net^
 ||trackertest.org^$third-party
 ||tracking202.com^$third-party
 ||trackingca.com^$third-party
