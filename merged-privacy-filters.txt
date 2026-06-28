@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.28.3
+! Version: 26.06.29.1
 
 !! Merged rules
 
@@ -23032,6 +23032,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||lokalwerben.t-online.de^
 ||lynx.gruender.de^
 ||mat.ukraine-nachrichten.de^
+||mengelke.de/Pub/img/ads/werbebanner/adserv.gif
 ||metrics.n-tv.de^
 ||metrik.freitag.de^
 ||moviepilot.de/assets/autotrack-
@@ -28919,6 +28920,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||da.netease.com^
 ||datacollector-dra.dt.hicloud.com^
 ||dcbpm.suning.cn^
+||dsp-track-global.zmaticoo.com^
 ||dt.xfyun.cn^
 ||dup.baidustatic.com^
 ||eclick.baidu.com^
