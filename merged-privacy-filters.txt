@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.29.2
+! Version: 26.06.29.3
 
 !! Merged rules
 
@@ -5982,8 +5982,6 @@ $cookie=bf_visit
 ||theculturetrip.com^$cookie=tct-real-user
 ! webmd.com
 ||webmd.com^$cookie=VisitorId
-! goodrx.com
-||goodrx.com^$cookie=grx_unique_id
 ! zvuk.com
 ||zvuk.com^$cookie=device_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224419
@@ -9609,6 +9607,14 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||nlab.itmedia.co.jp/scripts/cx.js
+||syndication.x.com/i/jot/
+||platform.grcv.io/json/rum
+||keyforsteam.de/analytics/script.js
+||i.hh.ru/js/External/TargetAds_WebSDK.js
+||hh.ru/shards/banner_real_view_analytics
+||app-web-server.imagen-ai-op.com/analytics/
+||myshows.me/v3/rpc/stat/
 ||pornhub.com/_i?
 ||phncdn.com/www-static/js/lib/user-clogs.js
 ||harant-test.ru/statistics.php
@@ -15278,6 +15284,11 @@ mediamarkt.de#%#//scriptlet('abort-on-property-write', 'ftr__startScriptLoad')
 /api/rest/analytics/page/rendered$domain=komonews.com|wjactv.com|upnorthlive.com|cnycentral.com|wpde.com|cbs6albany.com|kutv.com|wjla.com|news3lv.com|kmph.com|kfoxtv.com|fox17.com|foxbaltimore.com|foxchattanooga.com|foxillinois.com|foxnebraska.com|foxreno.com|foxrochester.com|foxsanantonio.com|nbcmontana.com|okcfox.com|siouxlandnews.com|wach.com|wchstv.com|wcyb.com|wfxl.com|wgxa.tv|wlos.com|wsbt.com|cbs2iowa.com|fox4beaumont.com|mycbs4.com|mynews4.com|news4sanantonio.com|abc6onyourside.com|wtov9.com|turnto10.com|fox11online.com|mynbc15.com|nbc16.com|fox23maine.com|nbc24.com|fox28savannah.com|myfox28columbus.com|fox42kptm.com|dayton247now.com|fox56.com|katu.com|local12.com|bakersfieldnow.com|ktul.com|22thepoint.com|abc3340.com|abc45.com|abc7amarillo.com|abcnews4.com|cbs12.com|cbs4local.com|cbsaustin.com|chattanoogacw.com|cw14online.com|cwomaha.tv|cw18milwaukee.com|cw23tv.com|cw34.com|cw35.com|cw9tv.com|cwcentralpa.com|cwcincinnati.com|cwcolumbus.com|cwlasvegas.com|cwtreasurevalley.com|fox38corpuschristi.com|fox47.com|fox49.tv|foxkansas.com|foxrichmond.com|idahonews.com|katv.com|kcby.com|kdsm17.com|keprtv.com|kfdm.com|khqa.com|kimatv.com|kmyu.tv|kocb.com|kpic.com|krcgtv.com|krcrtv.com|ktvl.com|ktvo.com|ktxs.com|kunptv.com|kunwtv.com|kval.com|local21news.com|midmichigannow.com|myrdctv.com|mytv30web.com|mytvbaltimore.com|mytvbuffalo.com|mytvcharleston.com|mytvdayton.com|mytvrichmond.com|mytvwichita.com|mytvz.com|nebraska.tv|nevadasportsnet.com|newschannel20.com|newschannel9.com|raleighcw.com|seattlerefined.com|southernoregoncw.com|star64.tv|telemundoaustin.com|thecw38.com|thecw46.com|thecwtc.com|thecwtv.tv|thenationaldesk.com|utv44.com|wabm68.com|watchdaytime.com|wcti12.com|weartv.com|wfgxtv.com|wgme.com|wpgh53.com|wset.com|wtwc40.com|wutv29.com|wwmt.com|13wham.com
 /admiral-script$xmlhttprequest,domain=wtwc40.com|wfgxtv.com|watchdaytime.com|wabm68.com|utv44.com|thenationaldesk.com|thecwtc.com|thecw46.com|thecw38.com|telemundoaustin.com|star64.tv|southernoregoncw.com|nevadasportsnet.com|mytvz.com|mytvwichita.com|mytvdayton.com|mytvcharleston.com|mytvbuffalo.com|mytvbaltimore.com|mytv30web.com|myrdctv.com|kunwtv.com|kunptv.com|ktvl.com|kocb.com|kmyu.tv|kdsm17.com|foxrichmond.com|foxkansas.com|fox49.tv|fox47.com|fox38corpuschristi.com|cwtreasurevalley.com|cwlasvegas.com|cwcolumbus.com|cwcincinnati.com|cwcentralpa.com|cwbaltimore.com|cwalbany.com|cw9tv.com|cw35.com|cw34.com|cwomaha.tv|cw14online.com|chattanoogacw.com|22thepoint.com|foxchattanooga.com|siouxlandnews.com|mycbs4.com|mynews4.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/234515
+! aglint-disable no-invalid-modifiers
+!+ NOT_VALIDATE PLATFORM(windows, mac, android, cli)
+||clk.tradedoubler.com/click?*url=$urltransform=pct|/^https?:\/\/(?:[a-z0-9-]+\.)*?.*\.tradedoubler\.com.*[?&]url=([^&]*).*/\$1/|pct
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216803
 ! aglint-disable no-invalid-modifiers
 !+ NOT_VALIDATE PLATFORM(windows, mac, android, cli)
@@ -16561,7 +16572,7 @@ analytics-*.aasaam.com
 !! google-analytics.com/analytics.js
 @@||google-analytics.com/analytics.js$domain=beinsports.com|brooklinen.com|carnesvizzera.ch|cmoa.jp|ecmweb.com|enmotive.com|healthrangerstore.com|hobbyhall.fi|infoconso-multimedia.fr|jackbox.tv|k2radio.com|koel.com|kowb1290.com|ligtv.com.tr|meritonsuites.com.au|nabortu.ru|news.gamme.com.tw|novatv.bg|papajohns.com|poiskstroek.ru|rzd.ru|saturn.at|schweizerfleisch.ch|skaties.lv|stressless.com|teddyfood.com|tracking.narvar.com|tradera.com|tribuna.com|truwin.com|tuasaude.com|unicef.de|viandesuisse.ch|vox.de|westernunion.com|worldsbiggestpacman.com|xxl.se
 !! googletagmanager.com/gtag/js
-@@||googletagmanager.com/gtag/js$domain=17track.net|9to5mac.com|academy.com|acornonline.com|aena.es|afisha.timepad.ru|aliexpress.com|app.joinhandshake.com|carhartt-wip.com|cbslocal.com|checkout.ao.com|cmoa.jp|cnet.com|cram.com|devclass.com|dholic.co.jp|docs.wps.com|ecmweb.com|ejgiftcards.com|enmotive.com|espressif.com|euronics.ee|factory.pixiv.net|fanpage.it|farmaciabolli1833.it|game.anymanager.io|globo.com|gmanetwork.com|herculesstands.com|homeinspector.org|honeystinger.com|hostingvergelijker.nl|huion.com|inforesist.org|kawasaki.com|kinepolis.be|kinepolis.ch|kinepolis.es|kinepolis.fr|kinepolis.lu|kinepolis.nl|liene-life.com|livongo.com|m.putlocker.how|malegislature.gov|mall.heiwa.jp|mirrativ.com|modehasen.de|mond.how|montcopa.org|mopar.com|nihontsushin.com|o2.co.uk|oko.sh|oxylabs.io|panflix.com.br|papajohns.com|plex.tv|pptvhd36.com|proxyorb.com|radiosarajevo.ba|redstoneonline.jp|rhbgroup.com|rintraccialamiaspedizione.it|royalcams.com|schwab.com|seatmaps.com|showroom-live.com|skylar.com|slink.ptit.edu.vn|sloways.eu|square-enix.com|starblast.io|supplementmart.com.au|ticketmaster.com|timparty.tim.it|toptal.com|trespa.info|truckspring.com|virginmedia.com|virginplus.ca|webstatus.dev|winefolly.com|winhappy.com|xl-bygg.no|zf1.tohoku-epco.co.jp|zipair.net
+@@||googletagmanager.com/gtag/js$domain=17track.net|9to5mac.com|academy.com|acornonline.com|aena.es|afisha.timepad.ru|aliexpress.com|app.joinhandshake.com|carhartt-wip.com|cbslocal.com|checkout.ao.com|cmoa.jp|cnet.com|cram.com|devclass.com|dholic.co.jp|ecmweb.com|ejgiftcards.com|enmotive.com|espressif.com|euronics.ee|factory.pixiv.net|fanpage.it|farmaciabolli1833.it|game.anymanager.io|globo.com|gmanetwork.com|herculesstands.com|homeinspector.org|honeystinger.com|hostingvergelijker.nl|huion.com|inforesist.org|kawasaki.com|kinepolis.be|kinepolis.ch|kinepolis.es|kinepolis.fr|kinepolis.lu|kinepolis.nl|liene-life.com|livongo.com|m.putlocker.how|malegislature.gov|mall.heiwa.jp|mirrativ.com|modehasen.de|mond.how|montcopa.org|mopar.com|nihontsushin.com|o2.co.uk|oko.sh|oxylabs.io|panflix.com.br|papajohns.com|plex.tv|pptvhd36.com|proxyorb.com|radiosarajevo.ba|redstoneonline.jp|rhbgroup.com|rintraccialamiaspedizione.it|royalcams.com|schwab.com|seatmaps.com|showroom-live.com|skylar.com|slink.ptit.edu.vn|sloways.eu|square-enix.com|starblast.io|supplementmart.com.au|ticketmaster.com|timparty.tim.it|toptal.com|trespa.info|truckspring.com|virginmedia.com|virginplus.ca|webstatus.dev|winefolly.com|winhappy.com|wps.com|xl-bygg.no|zf1.tohoku-epco.co.jp|zipair.net
 !! googletagmanager.com/gtag/destination?
 @@||googletagmanager.com/gtag/destination?$domain=sloways.eu
 !! googleoptimize.com/optimize.js
@@ -25286,6 +25297,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analyticcdn.globalmailer.com^
 ||analyticcdn.wlmediahub.com^
 ||analytics-1.cavai.com^
+||analytics-api-s.cloudinary.com^
 ||analytics-api.gemcommerce.com^
 ||analytics-api.klickly.com^
 ||analytics-cf.bigcrunch.com^
@@ -29307,6 +29319,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||monipla.com/launch.js
 ||moshimo.com^*/impression?
 ||navismithapis-cdn.com/js/tracking.js
+||nlab.itmedia.co.jp/scripts/cx.js
 ||ocn-tag.sienca.jp/api/v1/event/pv
 ||omt.shinobi.jp^
 ||otoshiana.com/ufo/
