@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.29.3
+! Version: 26.06.30.1
 
 !! Merged rules
 
@@ -5933,6 +5933,10 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/234433
+||ridibooks.com^$cookie=fingerprint
+||ridibooks.com^$cookie=attribution_tool_params
+||ridibooks.com^$cookie=pvid
 ! dugun.com
 ||dugun.com^$cookie=uniqueId
 ! matchtv.ru
@@ -9607,6 +9611,10 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||static.ridicdn.net/books-backend/*/tracking/ridi-tracking-sdk.js
+||ridibooks.com/_ext/g/js?id=
+mashable.com#%#//scriptlet('href-sanitizer', 'a[href^="https://zdcs.link/"]', '?u')
+mashable.com#%#//scriptlet('href-sanitizer', 'a[href^="https://cc.mashable.com/v1/otc/"]', '?url')
 ||nlab.itmedia.co.jp/scripts/cx.js
 ||syndication.x.com/i/jot/
 ||platform.grcv.io/json/rum
