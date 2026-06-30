@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.30.3
+! Version: 26.07.01.1
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! fix infinite scroll
+@@||st.top100.ru/top100/top100.js$domain=gazeta.ru|lenta.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234452
 @@||duckduckgo.com/local.js?tg=$~third-party
 ! https://github.com/easylist/easylist/issues/24516
@@ -9613,6 +9615,11 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||cdn.iz.ru/profiles/portal/themes/purple/js/statistics/custom_criteo*.js
+||news.gnezdo2.ru/gnezdo_news_tracker_new.js
+||cs.rambler.ru/api/v*/events
+||static.gazeta.ru/nm*/js/block_counter_v*.js
+||gazeta.ru/atlas/metrics/
 ||api.sales-ninja.me/*/events/
 ||static.ridicdn.net/books-backend/*/tracking/ridi-tracking-sdk.js
 ||ridibooks.com/_ext/g/js?id=
