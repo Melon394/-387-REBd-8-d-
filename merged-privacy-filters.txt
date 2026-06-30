@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.06.30.2
+! Version: 26.06.30.3
 
 !! Merged rules
 
@@ -10980,7 +10980,7 @@ boredpanda.*#%#//scriptlet('set-local-storage-item', 'bp-analytics', '$remove$')
 ||nhk.or.jp/mpulse/boomerang/
 ||fatosdesconhecidos.com.br/wp-content/cache/*/analytics/tag.js
 ||skyscanner.co.kr/g/aps/public/api/v1/pixel/
-||wcs.naver.net/wcslog.js^
+||wcs.naver.net/wcslog.js^$domain=~map.vworld.kr
 ||player.javboys.cam/cdn-cgi/trace
 ||gateway.us.zip.co/analytics^
 ||wzzm13.com/taboola_
@@ -26910,6 +26910,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sp.tinymce.com^
 ||spa-tracker.spapi.io^
 ||sparklit.com/counter/
+||spea.eko.com^
 ||speedtest.dailymotion.com/latencies.js
 ||speedtrap.shopdirect.com^
 ||spindl.link/events
@@ -27033,6 +27034,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||stg-data-collector.playbuzz.com^
 ||stg.truvidplayer.com/*/v.php?st=
 ||stileproject.com/vhtk/
+||storage.eko.com/efu/ekoanalytics/
 ||storage.googleapis.com/afs-prod/tags
 ||storage.googleapis.com/builder-preview/iframe/pixel.js
 ||storage.googleapis.com/nchq-dj-nid/prod/sp_v1.js
