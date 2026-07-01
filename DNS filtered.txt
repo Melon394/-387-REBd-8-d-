@@ -169,6 +169,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||stats.mapple.*^
 ||mcs-normal-*.capcutapi.com^
 ||eflbundles.*.com.tr^
 ||log.api-maps.yandex.
