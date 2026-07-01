@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.01.2
+! Version: 26.07.01.3
 
 !! Merged rules
 
@@ -9615,6 +9615,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||api.experte.com/t/
 ||esim.io/monitoring
 ||comfy.ua/api/analytics/
 ||comfy.ua/api/auth/v*/gtm/
@@ -20731,6 +20732,7 @@ omni.soundestlink.com$image
 ||api.channel.io/*/events
 ||api.doodle.com/data-layer/track
 ||api.ffm.to/sl/e/$image
+||api.headliner.link/api/v1/b/receive
 ||api.invideo.io/v3/send_analytics_event
 ||api.meetup.com/pico/v4/web-events
 ||api.narrativ.com/favicon.ico
@@ -22418,6 +22420,7 @@ omni.soundestlink.com$image
 ||thehackernews.com/ga4/c
 ||thehealthsite.com/apstag.js
 ||theladders.com/api/user-tracking/
+||thepoorswiss.com/tps/cfwa-collect
 ||thesun.co.uk/assets/client/analyticsListeners~
 ||thesun.co.uk/assets/client/newrelicExperimentTracking~
 ||thesun.ie/track?
