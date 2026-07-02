@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.02.2
+! Version: 26.07.02.3
 
 !! Merged rules
 
@@ -31,6 +31,9 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! kinopoisk.ru - high CPU usage
+!+ PLATFORM(ext_safari)
+@@||log.strm.yandex.ru/log?StreamPlayer=*&error=YASP_WORKER_UNHANDLED_REJECTION$domain=kinopoisk.ru
 ! fix infinite scroll
 @@||st.top100.ru/top100/top100.js$domain=gazeta.ru|lenta.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234452
@@ -9615,6 +9618,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+disqus.com#%#//scriptlet('set-cookie', 'disqus_tracking_optout', '1')
 ||clipro.tv/v*/events
 ||rbl.ms/spacer.gif?
 ||groupon.de/mobilenextapi/v*/logs
