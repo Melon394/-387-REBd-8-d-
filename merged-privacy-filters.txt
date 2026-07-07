@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.07.3
+! Version: 26.07.08.1
 
 !! Merged rules
 
@@ -5949,6 +5949,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! greatandhra.com
+||greatandhra.com^$cookie=uid-s
+||greatandhra.com^$cookie=vsid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234433
 ||ridibooks.com^$cookie=fingerprint
 ||ridibooks.com^$cookie=attribution_tool_params
