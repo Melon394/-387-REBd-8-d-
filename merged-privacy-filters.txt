@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.09.3
+! Version: 26.07.10.1
 
 !! Merged rules
 
@@ -8243,6 +8243,8 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||w.inmobi.com^
+||pbs.inmobi.com^
 ||stats-sdk.tange365.com^
 ||dc.oppomobile.com^
 ||aki-gb-sdklog.kurogames.net^
@@ -22098,6 +22100,8 @@ omni.soundestlink.com$image
 ||reelgood.com/v3.0/checkip
 ||rei.com/customer-analytics-attributes/
 ||reichelt.com/setsid.php?
+||relay-prod.typeracer.com/e/
+||relay-prod.typeracer.com/flags/
 ||relay.fiverr.com^
 ||remarkable.com/api/proxy/marker
 ||reports.tunein.com^
@@ -24339,6 +24343,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||staticasset.amarujala.com/handler/recomUserEvent.js
 ! Indonesian
 ||analytic20.detik.com^
+||api-rengine-stg.viva.id/hit
 ||bukalapak.com/banner-redirector/impression
 ||bukalapak.com/track-external-visit
 ||bukalapak.com/track_external.json
