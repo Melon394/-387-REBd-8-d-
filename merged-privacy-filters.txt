@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.11.3
+! Version: 26.07.12.1
 
 !! Merged rules
 
@@ -9640,7 +9640,8 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
-||x.com/i/api/1.1/flow/viewer.json
+x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.defaultConfig.rweb_home_jot_context_enabled.value', 'false')
+x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.user.config.rweb_home_jot_context_enabled.value', 'false')
 ||credistory.ru/api/Metrics/
 ||files.userlink.ai/public/tracking.js
 ||api.faphouse.com^$ping
@@ -15314,6 +15315,8 @@ dreamprogs.net##td[width="88"][height="31"]
 ||ztat.net/*/webtrekk.min.js^
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
+!+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
+||x.com/i/api/1.1/flow/viewer.json
 ! AdRiver
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231486
@@ -22791,7 +22794,7 @@ omni.soundestlink.com$image
 ||x.com/1.1/graphql/user_flow.json
 ||x.com/1.1/jot
 ||x.com/9/measurement/
-!||x.com/i/api/1.1/flow/viewer.json
+||x.com/i/api/1.1/flow/viewer.json
 ||x.com/i/api/1.1/graphql/app_context.json
 ||x.com/i/api/1.1/graphql/error_log.json
 ||x.com/i/api/1.1/graphql/user_flow.json
