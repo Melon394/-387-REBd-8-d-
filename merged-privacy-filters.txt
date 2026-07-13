@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.13.3
+! Version: 26.07.14.1
 
 !! Merged rules
 
@@ -9642,6 +9642,8 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||grafana-app-proxy.consumer.gopuff.com/collect
+||cchome.adobe.io/app/v*/logs^
 peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSessionId', '$remove$')
 ||czesciauto24.pl/securegtm/
 ||czesciauto24.pl/p/g^
