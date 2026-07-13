@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.13.1
+! Version: 26.07.13.2
 
 !! Merged rules
 
@@ -9640,6 +9640,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||bifrost-api.hotstar.com/v*/events
 ||linuxcommunity.io/assets/google-universal-analytics-*.js
 x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.defaultConfig.rweb_home_jot_context_enabled.value', 'false')
 x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.user.config.rweb_home_jot_context_enabled.value', 'false')
@@ -25604,6 +25605,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||api.croct.io^
 ||api.gist.ai/v1/analytics/track
 ||api.gleap.io/sessions/ping
+||api.intelligems.io/v3/track
 ||api.ipgeolocation.io/getip
 ||api.iris.tv/update
 ||api.june.so^
@@ -28130,6 +28132,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||trafficfuelpixel.s3-us-west-2.amazonaws.com^
 ||trafficmanager.net/uet/tracking_script?
 ||trakksocial.googlecode.com^$third-party
+||transcend.io/collect
 ||trap.skype.com^
 ||traq.li/tracker/
 ||travix.com/log
@@ -29184,6 +29187,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||amazonaws.com/prod/v1/track$domain=ixxi.com
 ||analytics.belgacom.be^
 ||analytics.hatech.dev^
+||analytics.infraloods.nl^
 ||analytics.newsifier.nl^
 ||apm.tnet.nl^
 ||bbvms.com/zone/js/zonestats.js
