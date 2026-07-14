@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.14.2
+! Version: 26.07.14.3
 
 !! Merged rules
 
@@ -32,7 +32,7 @@
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233479
-@@||trailblaze.my.salesforce-setup.com/_ui/common/config/field/*/d?id=*&type=
+@@.my.salesforce-setup.com/_ui/common/config/field/*/d?id=*&type=
 ! https://gall.dcinside.com/mgallery/board/view/?id=adguard&no=11021&page=1
 @@||static.cloudflareinsights.com^$domain=quasarzone.com,script
 ! https://github.com/AdguardTeam/AdguardFilters/issues/235154
@@ -9642,6 +9642,12 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+complex.com#%#//scriptlet('set-local-storage-item', 'poll_anonymous_id', '$remove$')
+||media.complex.com/common/catalyst.js
+||media-trend.mail.ru/pixel/
+||reklama.mail.ru/*.gif
+||r3.mail.ru/k?fver=
+||bissell.pl/datalayer/index/events
 ||grafana-app-proxy.consumer.gopuff.com/collect
 ||cchome.adobe.io/app/v*/logs^
 peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSessionId', '$remove$')
@@ -11643,7 +11649,6 @@ nanjpride.blog.jp##div[class^="article-outer"] > div.recommend:has(> div.ninja-r
 ||cdn.mrkhub.com/sks/js/sks_track.js
 ||edit-document.com/click-event/
 ||memonotepad.com/js/modules/google-analytics-bundle.js
-||support.microsoft.com/*/ms.analytics-web-*.min.js
 ||affine.pro/*/track-link.*.js
 ||s.smallpdf.com/static/track-js-*-entrypoint.js
 ||roomvo.com/services/event/
