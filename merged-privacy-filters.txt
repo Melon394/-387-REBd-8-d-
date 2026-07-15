@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.15.2
+! Version: 26.07.15.3
 
 !! Merged rules
 
@@ -9642,6 +9642,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||celebtattler.com/world/cache/analytics.js
 complex.com#%#//scriptlet('set-local-storage-item', 'poll_anonymous_id', '$remove$')
 ||media.complex.com/common/catalyst.js
 ||media-trend.mail.ru/pixel/
@@ -29428,10 +29429,12 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||docomo.ne.jp/scripts/retargeting/retargeting.js
 ||estore.jp/beacon/
 ||ev.tpocdm.com^
+||external-tag.mysquadbeyond.com^
 ||flux-cdn.com/client/ukiuki/flux_wikiwiki_AS_TM_AT.min.js
 ||future-shop.jp/rview.gif?
 ||gacraft.jp/publish/token.html
 ||hatmiso.net^$third-party
+||heatmap.support-inc.co.jp^
 ||insight-x.tech/trackerlog-publisher-service/tracker-logs
 ||ip2c.landscape.co.jp^
 ||ipcheck.blogsys.jp^
