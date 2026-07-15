@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.15.3
+! Version: 26.07.16.1
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/235718
+@@||techlab-cdn.com/e/$domain=sephora.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233479
 @@.my.salesforce-setup.com/_ui/common/config/field/*/d?id=*&type=
 ! https://gall.dcinside.com/mgallery/board/view/?id=adguard&no=11021&page=1
@@ -9642,6 +9644,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||sephora.com/js/ufe/isomorphic/thirdparty/fp.min.js
 ||celebtattler.com/world/cache/analytics.js
 complex.com#%#//scriptlet('set-local-storage-item', 'poll_anonymous_id', '$remove$')
 ||media.complex.com/common/catalyst.js
@@ -21644,6 +21647,7 @@ omni.soundestlink.com$image
 ||khanacademy.org/api/internal/_analytics/
 ||kinesis.us-east-1.analytics.edmentum.com^
 ||kio.ac/analytics/
+||kitces.com/wp-json/kwm/v1/track
 ||klm.us/CWZUvc/
 ||kloth.net/images/pixel.gif
 ||knewz.com/api/event
