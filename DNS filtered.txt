@@ -170,6 +170,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||mtag-*.wedevs.com^
 ||umami.vidfast.
 ||stats.mapple.*^
 ||mcs-normal-*.capcutapi.com^
