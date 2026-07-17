@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.17.2
+! Version: 26.07.17.3
 
 !! Merged rules
 
@@ -7364,7 +7364,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 /api/ads-bff-client/*
 /nelio-ab-testing/assets/dist/js/visitor-type.js
 /elastic-apm-rum.umd.min.js
-/sftouch?branchId=
 /digibox.gif?c=$image
 /wp-content/plugins/burst-statistics/*
 /wp-content/plugins/wp-analytify-pro/*
@@ -8926,7 +8925,6 @@ d4?appid*type*
 ||logs.gshopper.com^
 ||airlytics.airlock.twcmobile.weather.com^
 ||track.midway.run^
-||tdid.m.qq.com^
 ||d.reddit.com^
 ||splendapps.com/aid.php
 ||clog.mirrativ.com^
@@ -9644,7 +9642,9 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
-||lc-event.pixiv.net^
+||nettg.pl/store-view/api/track-page-view
+||grizly.*/metrics/
+||assets.mediadelivery.net/rum.js
 ipay.ztgame.com#%#//scriptlet('prevent-fetch', 'beacon.ztgame.com')
 ||sephora.com/js/ufe/isomorphic/thirdparty/fp.min.js
 ||celebtattler.com/world/cache/analytics.js
@@ -11965,8 +11965,8 @@ wanchan.jp##.recommend_header + div[style^="aspect-ratio:"]
 ||ir.ebaystatic.com/*/js/GlanceCobrowseLoader_
 ||sayurbox.com/v1/track.gif
 ||upstract.com/tokei/
-/AppMeasurement.min.js$domain=petco.com|tractorsupply.com
-/AppMeasurement_Module_ActivityMap.min.js$domain=petco.com
+/AppMeasurement.min.js$domain=petco.com|tractorsupply.com|eonline.com
+/AppMeasurement_Module_ActivityMap.min.js$domain=petco.com|eonline.com
 ||ancestrycdn.com/webui-unifiedtracking/
 ||csp.godaddy.com/eventbus
 ||webapi.wral.com/api/analytics/
