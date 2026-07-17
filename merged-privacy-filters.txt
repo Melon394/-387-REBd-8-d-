@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.17.3
+! Version: 26.07.18.1
 
 !! Merged rules
 
@@ -9642,6 +9642,9 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||na.web.skill.music.a2z.com/api/elementClicked
+||na.web.skill.music.a2z.com/api/audioAdStarted
+||moviebite.cc/api/trakt/
 ||nettg.pl/store-view/api/track-page-view
 ||grizly.*/metrics/
 ||assets.mediadelivery.net/rum.js
@@ -9665,8 +9668,7 @@ peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSession
 biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'gtm.start')
 ||bifrost-api.hotstar.com/v*/events
 ||linuxcommunity.io/assets/google-universal-analytics-*.js
-x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.defaultConfig.rweb_home_jot_context_enabled.value', 'false')
-x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.user.config.rweb_home_jot_context_enabled.value', 'false')
+x.com#%#//scriptlet('prevent-fetch', '/i/api/1.1/flow/viewer.json')
 ||credistory.ru/api/Metrics/
 ||files.userlink.ai/public/tracking.js
 ||api.faphouse.com^$ping
@@ -17579,6 +17581,7 @@ analytics-*.aasaam.com
 /api/reqAnalytic/*
 /api/sentry/tunnel$xmlhttprequest
 /api/stat?
+/api/stn/audience|$xmlhttprequest
 /api/track?guid
 /api/trk?
 /api/v1/EndpointTracker
@@ -24781,6 +24784,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||namnak.com/ga.js
 ! Polish
 |http://x.o2.pl^
+||ads.tvp.pl^
 ||analytics.gazeta.pl^
 ||app.mediaexpert.pl/spark-data/
 ||collect.state.centrum24.pl^
@@ -28776,6 +28780,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||bcs-computersysteme.com/cgi-local/hiddencounter/
 ||beagle.prod.tda.link^
 ||blacktri-a.akamaihd.net^
+||c.uniten.io^
 ||cdn.c-i.as^$script,third-party
 ||cesar-it.de/collect/
 ||cgicounter.onlinehome.de^
