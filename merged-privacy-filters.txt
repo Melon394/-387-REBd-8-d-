@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.19.3
+! Version: 26.07.20.1
 
 !! Merged rules
 
@@ -21682,6 +21682,7 @@ omni.soundestlink.com$image
 ||lastpass.com/lpapi/content/pixels
 ||lastpass.com/m.php/proxy_tracker
 ||lc-event.pixiv.net^
+||leadconnectorhq.com/stats/event
 ||lego.com/api/dl-event-ingest
 ||lendingtree.com/analytics/
 ||lendingtree.com/pixel/
@@ -22002,6 +22003,7 @@ omni.soundestlink.com$image
 ||performance-logger.minted.com^
 ||perplexity.ai/rest/event/analytics
 ||perr.hola.org^
+||personalize-edge.contentstack.com/events
 ||pf.newegg.com^
 ||pftk.temu.com^
 ||phonearena.com/_track.php
