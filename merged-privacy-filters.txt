@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.19.1
+! Version: 26.07.19.2
 
 !! Merged rules
 
@@ -9642,6 +9642,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||abs.twimg.com/responsive-web/client-web/main.$script,replace=/\,_\.send\(e\.data\)/\,_.send()/
 ||abs.twimg.com/responsive-web/client-web/loader.HomeTimelineAdblockNotice
 ||na.web.skill.music.a2z.com/api/elementClicked
 ||na.web.skill.music.a2z.com/api/audioAdStarted
@@ -9669,7 +9670,6 @@ peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSession
 biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'gtm.start')
 ||bifrost-api.hotstar.com/v*/events
 ||linuxcommunity.io/assets/google-universal-analytics-*.js
-x.com#%#//scriptlet('prevent-fetch', '/i/api/1.1/flow/viewer.json')
 ||credistory.ru/api/Metrics/
 ||files.userlink.ai/public/tracking.js
 ||api.faphouse.com^$ping
@@ -15348,8 +15348,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||ztat.net/*/webtrekk.min.js^
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
-!+ NOT_PLATFORM(ios, ext_android_cb)
-||x.com/i/api/1.1/flow/viewer.json
 ! AdRiver
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231486
@@ -22834,7 +22832,6 @@ omni.soundestlink.com$image
 ||x.com/1.1/graphql/user_flow.json
 ||x.com/1.1/jot
 ||x.com/9/measurement/
-||x.com/i/api/1.1/flow/viewer.json
 ||x.com/i/api/1.1/graphql/app_context.json
 ||x.com/i/api/1.1/graphql/error_log.json
 ||x.com/i/api/1.1/graphql/user_flow.json
@@ -32943,6 +32940,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||richard-group.com^$third-party
 ||richmetrics.com^$third-party
 ||rightmoveanalytics.co.uk^$third-party
+||ripples.sh^$third-party
 ||riskid.security^$third-party
 ||rivrai.com^$third-party
 ||rktch.com^$third-party
