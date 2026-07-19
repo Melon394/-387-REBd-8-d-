@@ -578,6 +578,8 @@ dlsdk.appsflyer.com^
 -iklan2.
 -iklan789-
 -ikln.
+-1080x140-
+-1080x140.
 -720x90-
 -728-x-90-
 -728-x-90.
