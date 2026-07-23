@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.23.2
+! Version: 26.07.23.3
 
 !! Merged rules
 
@@ -11302,7 +11302,6 @@ hindustantimes.com#%#//scriptlet('set-local-storage-item', 'ht_cdp', '$remove$')
 ||content.kaspersky-labs.com/public/analytics-scripts/analytical_functions.js
 ||pcgames.de/webservices/edash/
 ||ca.cafe24data.com/analytics.js
-||api.laftel.net/api/*/status/$xmlhttprequest,redirect=noopjs
 ||laftel.net/twitter-pixel.js
 ||capi.connatix.com/tr/$important
 ||g.alicdn.com/alilog/s/*/plugin/aplus_spmact.js
@@ -15439,16 +15438,7 @@ mediamarkt.de#%#//scriptlet('abort-on-property-write', 'ftr__startScriptLoad')
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197963
 ! aglint-disable no-invalid-modifiers
-!+ NOT_VALIDATE PLATFORM(windows, mac, android, cli)
-||digidip.net/visit?url=$urltransform=/%3A/:/
-!+ NOT_VALIDATE PLATFORM(windows, mac, android, cli)
-||digidip.net/visit?url=$urltransform=/%2F/\//
-!+ NOT_VALIDATE PLATFORM(windows, mac, android, cli)
-||digidip.net/visit?url=$urltransform=/%3F/?/
-!+ NOT_VALIDATE PLATFORM(windows, mac, android, cli)
-||digidip.net/visit?url=$urltransform=/%3D/=/
-!+ NOT_VALIDATE PLATFORM(windows, mac, android, cli)
-||digidip.net/visit?url=$urltransform=/^https?:\/\/(?:[a-z0-9-]+\.)*?.*\.digidip\.net.*url=([^&]*).*/\$1/
+||digidip.net/visit?url=$urltransform=/^https?:\/\/(?:[a-z0-9-]+\.)*?.*\.digidip\.net.*url=([^&]*)/\$1/|pct
 ! aglint-enable no-invalid-modifiers
 !
 ! dzen.ru
