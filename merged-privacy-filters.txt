@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.23.1
+! Version: 26.07.23.2
 
 !! Merged rules
 
@@ -16162,6 +16162,7 @@ dlsdk.appsflyer.com^
 -ikln.
 -1080x140-
 -1080x140.
+-1080x180-
 -720x90-
 -728-x-90-
 -728-x-90.
@@ -21038,6 +21039,8 @@ omni.soundestlink.com$image
 ||chewy.com/api/event/
 ||chickadvisor.com/js/detect.min.js
 ||chloro.trip.com^
+||choosefi.com/api/site/track
+||choosefi.com/block-event
 ||chronicle.medal.tv^
 ||cidrap.umn.edu/core/modules/statistics
 ||cisco.com/c/dam/cdc/j/at.js
@@ -25669,6 +25672,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||api.croct.io^
 ||api.gist.ai/v1/analytics/track
 ||api.gleap.io/sessions/ping
+||api.helloextend.com/mintsight
 ||api.intelligems.io/v3/track
 ||api.ipgeolocation.io/getip
 ||api.iris.tv/update
