@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.24.2
+! Version: 26.07.24.3
 
 !! Merged rules
 
@@ -31,6 +31,9 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/236387
+! aglint-disable-next-line no-invalid-modifiers
+@@||shopify.com/authentication/$permissions=private-state-token-redemption=()
 ! https://github.com/easylist/easylist/issues/24670
 ||online.spsglobal.com^$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/236255
@@ -7363,6 +7366,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/0.gif?
 /libtrc/tr5?type=*pixel*
 /code/e.js|$~third-party
 /posthog-recorder.js
@@ -9653,6 +9657,7 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||archive.org/includes/athena.js
 ||iportal.ru/static/mediadash/tracker.iife.min.js
 ||streamsports99.su/assets/trackingManager.*.js
 ||api.strem.io/api/events
