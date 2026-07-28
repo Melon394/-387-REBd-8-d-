@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.28.1
+! Version: 26.07.28.2
 
 !! Merged rules
 
@@ -3261,9 +3261,6 @@ demae-can.com#%#//scriptlet('remove-attr', 'data-trm-action|data-trm-category|da
 @@||google-analytics.com/analytics.js$domain=parzibyte.me
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57098
 @@||cdn.segment.com/analytics.js/v1/*/analytics.min.js$domain=shop.fender.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/56992
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
-@@||google-analytics.com/analytics.js$domain=freecoursesonline.me
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56955
 ||google-analytics.com/analytics.js$script,redirect=google-analytics,domain=4kdownload.com
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
@@ -21049,6 +21046,7 @@ omni.soundestlink.com$image
 ||change.org/api-proxy/-/et
 ||change.org/api-proxy/-/event_tracker
 ||channel.io/front/v*/channels/*/events
+||chase.com/apps/services/clientBeacon.html
 ||chat.groq.com/global_stats
 ||chatfuel.com/cf-analytics/
 ||chatroll.com/t.gif
@@ -22283,6 +22281,7 @@ omni.soundestlink.com$image
 ||sexu.com/api/ttrack
 ||sexybabepics.net/re/?ping
 ||sf-syn.com/conversion_outbound_tracker$subdocument,domain=sourceforge.net
+||sfgate.com/api/client-logs
 ||share.9cdn.net/share/short_cache/js/tracking/$domain=nine.com.au
 ||sharechat.com/event-tracking-service/
 ||sharesies.com/v1/identify
