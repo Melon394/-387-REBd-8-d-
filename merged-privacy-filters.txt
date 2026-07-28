@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.28.2
+! Version: 26.07.28.3
 
 !! Merged rules
 
@@ -31,6 +31,14 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/236828
+@@||rm.redbull.com/gtm.js$domain=redbull.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/236879
+@@||googletagmanager.com/gtm.js$domain=candy-home.com
+!+ NOT_OPTIMIZED
+||candy-home.com^$referrerpolicy=origin
+! https://github.com/AdguardTeam/AdguardFilters/issues/236875
+@@||googletagmanager.com/gtm.js$domain=brita.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/235752
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_app_cli)
 @@||xzeepb2clookuppsta001.blob.core.windows.net/bge/$content
@@ -9664,6 +9672,12 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||bnesim.com/js/trackers.js
+/e/*^ip=$domain=heygen.com
+||api2.heygen.com/v1/movio.batch_track
+||glutenfreeonashoestring.com/wp-content/*/analytics*.min.js
+||player.fabster.com/event/
+||spolshy.com.ua/js/data|
 ||wpastra.com/wp-content/plugins/cross-domain-tracker-for-affiliatewp/
 ||autoline.link/weblog
 ||karte.io/event
@@ -9710,8 +9724,9 @@ peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSession
 ||czesciauto24.pl/securegtm/
 ||czesciauto24.pl/p/g^
 ||hexa.su/script.js
+||candytm.pl/gtmgateway/
 /^https?:\/\/(android\.com\.pl|biznesenter\.pl)\/[a-z0-9]{1,4}\/$/$script,~third-party,domain=android.com.pl|biznesenter.pl
-biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'gtm.start')
+candytm.pl,biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', '/gtm\.start|dataLayer/')
 ||bifrost-api.hotstar.com/v*/events
 ||linuxcommunity.io/assets/google-universal-analytics-*.js
 ||credistory.ru/api/Metrics/
@@ -17067,6 +17082,7 @@ analytics-*.aasaam.com
 @@||f-gear.ec-optimizer.com/search4.do$script,domain=ec.f-gear.co.jp
 @@||f-gear.ec-optimizer.com/speights/searchresult2fgear.js$script,domain=ec.f-gear.co.jp
 @@||f-tra.com^$script,domain=pokemoncenter-online.com
+@@||fate-go.jp/anniv_11th_sns/assets/js/services/gtm.js$~third-party
 @@||friday.kodansha.co.jp/scripts/taboola.js$script,~third-party
 @@||gamerch.com/s3-assets/library/js/fingerprint2.min.js?$script,~third-party
 @@||get.s-onetag.com/*/tag.min.js$domain=zakzak.co.jp
@@ -21513,6 +21529,7 @@ omni.soundestlink.com$image
 ||go.pardot.com^
 ||go.thegrocer.co.uk^
 ||go.theregister.com^$image
+||goatcounter.ssp.sh^
 ||gobankingrates.com/fp/
 ||gofundme.com/track
 ||gog-statics.com/js/frontpagelogintracking-$script,domain=gog.com
