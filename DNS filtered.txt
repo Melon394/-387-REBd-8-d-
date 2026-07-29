@@ -172,6 +172,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||faro.civitai.
 ||mtag-*.wedevs.com^
 ||umami.vidfast.
 ||stats.mapple.*^
