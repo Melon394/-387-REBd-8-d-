@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.07.31.3
+! Version: 26.08.01.1
 
 !! Merged rules
 
@@ -7382,6 +7382,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/api-integration/ad-rotator/track/*
+/api-integration/ad-rotator/stats^
 &tag_exp=*&e=gtm.
 /0.gif?
 /internal-stats-lite/p.php?
@@ -9681,6 +9683,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||globes.co.il/news/scripts/fp2.min.js
 ||moika78.ru/wp-json/optimization-detective/v*/url-metrics
 theplayerstribune.com#%#//scriptlet('set-local-storage-item', 'userIdentifier', '$remove$')
 ||aladinia.app/tracking.js
