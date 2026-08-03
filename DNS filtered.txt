@@ -174,7 +174,6 @@ vkcdnservice.appspot.com^
 |piwik.
 ||faro.civitai.
 ||mtag-*.wedevs.com^
-||umami.vidfast.
 ||stats.mapple.*^
 ||mcs-normal-*.capcutapi.com^
 ||eflbundles.*.com.tr^
