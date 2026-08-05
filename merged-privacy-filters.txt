@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.05.3
+! Version: 26.08.06.1
 
 !! Merged rules
 
@@ -31,6 +31,11 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/237591
+@@||tag.perx.ru/js/container*.js$domain=geely-motors.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/237333
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||cdn.amplitude.com/libs/analytics-browser-*-min.js.gz$domain=parkedin.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/236928
 !+ PLATFORM(ios, ext_safari)
 @@||pub.doubleverify.com/dvtag/$domain=bbc.com
@@ -113,8 +118,6 @@
 @@||cdn.shopify.com/shopifycloud/arrive-server/pay/vite-pay/assets/AnalyticsProvider*.js$domain=shop.app
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231808
 @@||cdn.petametrics.com/*.js$domain=thestreet.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/231861
-@@||cnstrc.com/js/cust/indigo_pAkokG.js$domain=indigo.ca
 ! https://github.com/AdguardTeam/AdguardFilters/issues/232066
 @@||onlinestarten.net/assets/*sn1_dvt-prod.js$domain=247sports.com
 @@||onlinestarten.net^$xmlhttprequest,domain=247sports.com
@@ -670,8 +673,6 @@ dragonnest.com#%#//scriptlet('trusted-replace-node-text', 'script', 'SetGAOutbou
 pluto.tv#%#//scriptlet('abort-on-stack-trace', 'Date.prototype.getTime', 'startSessionHeartBeat')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202409
 item.gmarket.co.kr#%#//scriptlet('set-constant', 'pdsClickLog', 'noopFunc')
-! https://github.com/AdguardTeam/AdguardFilters/issues/202451
-@@||cnstrc.com/js/cust/swanson-health_*.js$domain=swansonvitamins.com
 ! https://github.com/easylist/easylist/commit/931ae28b792e55ca962789dba8158e5404a51d38
 @@||googletagmanager.com/gtm.js$domain=ybt.sapporobeer.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202492
@@ -6928,6 +6929,12 @@ traicy.com,hoyme.jp,collinsdictionary.com,pashplus.jp,freemcserver.net,oxfordlea
 traicy.com,hoyme.jp,collinsdictionary.com,pashplus.jp,freemcserver.net,oxfordlearnersdictionaries.com,nosv.org,niketalk.com,motor-talk.de,aucfree.com,muragon.com,373news.com,fxstreet.*,fxstreet-id.com,fxstreet.es,easyhindityping.com,relevantmagazine.com,dictionnaire.lerobert.com,footballtransfer.ru,thatgossip.com,donbalon.com,dropgame.jp,ufret.jp,gardeningsoul.com,si.com,niice-woker.com,blogmura.com,minkou.jp,lifehacker.jp,kinmaweb.jp,reptilesmagazine.com,buzzfeednews.com,lakeshowlife.com,thefreebieguy.com,autofrage.net,computerfrage.net,cocokara-next.com,cinetrafic.fr,malaymail.com,kyoteibiyori.com,chanto.jp.net,nana-press.com,kurashiru.com,samsungmagazine.eu,jablickar.cz,dailydot.com,watchdocumentaries.com,mariowiki.com,kompasiana.com,watchdocumentaries.com,j-cast.com,bg-mania.jp,j-town.net,ap7am.com,giornalone.it,convertcase.net,gloria.hr,slobodnadalmacija.hr,loawa.com,ygosu.com,sportalkorea.com,edaily.co.kr,economist.co.kr,etoday.co.kr,isplus.com,hometownstation.com,honkailab.com,genshinlab.com,thestockmarketwatch.com,thephoblographer.com,issuya.com,worldhistory.org,etnews.com,iusm.co.kr,dogdrip.net,etoland.co.kr,picrew.me,text-compare.com,fntimes.com,lamire.jp,bamgosu.site,etnewskorea.com,gadgets360.com,automobile-catalog.com,maketecheasier.com,thesaurus.net,wfmz.com,thestar.co.uk,yorkshirepost.co.uk,mydaily.co.kr,raenonx.cc,ndtvprofit.com,badmouth1.com,logicieleducatif.fr,taxguru.in,islamicfinder.org,aikatu.jp,secure-signup.net,globalrph.com,sportsrec.com,reportera.co.kr,carscoops.com,slobodnadalmacija.hr,flatpanelshd.com,videogamemods.com#%#//scriptlet('set-local-storage-item', '/_fa_Y2FjaGVfYWRibG9ja19jaXJjdW12ZW50X3Njb3Jl$/', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/237333
+! Fixes issue with website loading and some features not working properly
+! "cdn.amplitude.com" is blocked by DNS filter, so we need to fix it by using JS rule
+parkedin.com#%#(()=>{const e=Promise.resolve({code:200}),t=()=>{},s=()=>({promise:e}),n=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"],r=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],o=()=>{const e={};return n.forEach(t=>{e[t]=s}),r.forEach(s=>{e[s]=t}),e},i=function(){},c=function(){return this};["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"].forEach(e=>{i.prototype[e]=c}),i.prototype.getUserProperties=()=>({}),i.prototype.getEventProperties=()=>({});const d=(t,s=[])=>{s.forEach(t=>{t.resolve?.(e)})},p=window.amplitude||{};Object.assign(p,o(),{createInstance:e=>{const t=o();return e&&p._iq&&(p._iq[e]=t),t},runQueuedFunctions:d,Identify:i,Revenue:i}),window.amplitude=p,p.invoked&&(d(0,p._q),p._q=[],Object.keys(p._iq||{}).forEach(e=>{const t=Object.assign(p._iq[e],o());d(0,t._q),t._q=[]}))})();
+!+ PLATFORM(ext_ff)
+parkedin.com#%#//scriptlet('trusted-create-element', 'head', 'script', '', '(()=>{const e=Promise.resolve({code:200}),t=()=>{},s=()=>({promise:e}),n=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"],r=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],o=()=>{const e={};return n.forEach(t=>{e[t]=s}),r.forEach(s=>{e[s]=t}),e},i=function(){},c=function(){return this};["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"].forEach(e=>{i.prototype[e]=c}),i.prototype.getUserProperties=()=>({}),i.prototype.getEventProperties=()=>({});const d=(t,s=[])=>{s.forEach(t=>{t.resolve?.(e)})},p=window.amplitude||{};Object.assign(p,o(),{createInstance:e=>{const t=o();return e&&p._iq&&(p._iq[e]=t),t},runQueuedFunctions:d,Identify:i,Revenue:i}),window.amplitude=p,p.invoked&&(d(0,p._q),p._q=[],Object.keys(p._iq||{}).forEach(e=>{const t=Object.assign(p._iq[e],o());d(0,t._q),t._q=[]}))})();')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234964
 cdnperf.com#%#//scriptlet('prevent-element-src-loading', 'script', 'cdn.perfops.net/rom3/rom3.min.js')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231486
@@ -9686,6 +9693,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||deltaforcetools.gg/js/trackless-0.0.3.umd.min.js
+||ac.cnstrc.com/v2/behavioral_action/
 ||openart.ai/4vu8/
 ||stolicaonego.ru/ajax/stat/
 ||motoin.de/Scripts/emstrack.js
@@ -11302,7 +11311,6 @@ threads.net#%#//scriptlet('href-sanitizer', 'a[href*="?xmt="]', '[href]', 'remov
 ||m-chromadrone.prod.suno.com/metrics/
 ||cdn.surfside.io/sdk/*/wave.js
 ||edge.surfside.io/id/uid?
-://cnstrc.com/js/
 ||freyr.futurecdn.net/freyr.js
 ||meta.com/*/fl?*comet_req=*&__user=
 ||app.cybba.solutions/event/*/pageview?
@@ -16876,6 +16884,7 @@ analytics-*.aasaam.com
 @@||curiositystream.com.first-party-js.datadome.co^$script,domain=curiositystream.com
 @@||datadome.garena.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=auth.garena.com
 @@||dd.blackhawknetwork.com.first-party-js.datadome.co^$domain=redeem.rewardlink.com
+@@||dd.jaycar.com.au.first-party-js.datadome.co^$script,third-party,domain=jaycar.com.au
 @@||dd.qa.moneygram.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=moneygram.com
 @@||dd.wizzair.com.first-party-js.datadome.co^$domain=wizzair.com
 @@||dwt.soundcloud.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=soundcloud.com
@@ -26823,6 +26832,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||hydro-ma-proxy.akamaized.net^
 ||hypercomments.com/widget/*/analytics.html
 ||i.compendium.com^
+||i.posthog.com/*&ip=
 ||i.posthog.com/*/?ip=
 ||i.s-microsoft.com/wedcs/ms.js
 ||i.viafoura.co^
@@ -27361,6 +27371,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||p.typekit.net^
 ||p.yotpo.com^
 ||p0.com/1x1
+||pa.pinpoll.com^
 ||pac.talksport.com/track
 ||paddle.com^*/analytics.js
 ||page-events-ustats.udemy.com^
@@ -28942,6 +28953,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||eick.it/statistics/
 ||epoq.de/inbound-servletapi/event?
 ||et.twyn.com^
+||events.julephosting.de^
 ||events.onet.pl^
 ||export.newscube.de^$~subdocument
 ||fc.webmasterpro.de^$third-party
@@ -32874,7 +32886,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||pingmeter.com^$third-party
 ||pingomatic.com^$third-party
 ||pingometer.com^$third-party
-||pinpoll.com^$third-party
 ||piratepx.com^$third-party
 ||pirsch.io^$third-party
 ||piwik.pro^$third-party,domain=~clearcode.cc|~clearcode.pl|~piwikpro.de
