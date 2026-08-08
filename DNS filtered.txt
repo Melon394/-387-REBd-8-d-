@@ -591,6 +591,7 @@ dlsdk.appsflyer.com^
 -728-x-90-
 -728-x-90.
 -728x90a.
+-970x90-
 .1080.x.90.
 !@@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 -bandarkiu.
