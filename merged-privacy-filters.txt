@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.12.3
+! Version: 26.08.13.1
 
 !! Merged rules
 
@@ -16506,6 +16506,7 @@ analytics-*.aasaam.com
 @@||datadome.monster.com.first-party-js.datadome.co^$script,domain=monster.com
 @@||dc.services.visualstudio.com/v2/track$xmlhttprequest,domain=aiskillsnavigator.microsoft.com
 @@||dd.auspost.com.au/tags.js$script,~third-party
+@@||dekra-akademie.de/resource/*/eCom_FrontendV3/assets/js/gtm.js$~third-party
 @@||delta.com/dlhome/ruxitagentjs$~third-party
 @@||dishtv.in/scripts/adobeAnalytics.js$~third-party
 @@||docs.google.com/*/viewdata$~third-party
@@ -16915,6 +16916,7 @@ analytics-*.aasaam.com
 @@||dd.blackhawknetwork.com.first-party-js.datadome.co^$domain=redeem.rewardlink.com
 @@||dd.jaycar.com.au.first-party-js.datadome.co^$script,third-party,domain=jaycar.com.au
 @@||dd.qa.moneygram.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=moneygram.com
+@@||dd.thetrainline.com.first-party-js.datadome.co^$domain=thetrainline.com
 @@||dd.wizzair.com.first-party-js.datadome.co^$domain=wizzair.com
 @@||dwt.soundcloud.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=soundcloud.com
 @@||gva.et-gv.fr^$script,domain=culture.gouv.fr
@@ -21981,6 +21983,7 @@ omni.soundestlink.com$image
 ||midas.chase.com^
 ||military1st.com/datalayer/index/events?
 ||mis.ig.com/tracking/
+||mistral.ai/api/trpc/event.sendEventToDatalake?
 ||mixpanel-proxy.coingecko.com^
 ||mixpanel-proxy.ted.com^
 ||mixproxy.epoch.cloud^$domain=theepochtimes.com
@@ -26400,6 +26403,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||data.emb-api.com^
 ||data.embeddables.com^
 ||data.gosquared.com^
+||data.hailuo.ai^
 ||data.jaytuckwell.com^
 ||data.minute.ly^
 ||data.nexxt.com^
@@ -27708,6 +27712,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||rudder-tracking.rudderstack.com^
 ||rudderstack.com/v1/track
 ||rum-collector.leaderint.workers.dev^
+||rum-openway.guance.com^
 ||rum.aliyuncs.com^
 ||rum.azion.com^
 ||rum.azioncdn.net^
