@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.15.1
+! Version: 26.08.15.2
 
 !! Merged rules
 
@@ -23196,6 +23196,7 @@ omni.soundestlink.com$image
 ||bankofamerica.com/cookie-id.js
 ||bup.bankofamerica.com^
 ||cdn1.skrill.com^
+||check2.lloydsbank.co.uk^
 ||d276.ourmidland.com^
 ||d810.mysanantonio.com^
 ||dii.bankaust.com.au^
