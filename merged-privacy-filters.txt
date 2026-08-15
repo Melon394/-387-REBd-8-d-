@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.15.3
+! Version: 26.08.16.1
 
 !! Merged rules
 
@@ -9701,6 +9701,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||api.heikeji.me/api/logs/check
 ||statics.cedscdn.it/utils/src/js/shopalytics.js
 ||d26yk4zpyhjeeq.cloudfront.net/*/tracking/
 ||xullys.xyz/~api/analytics|
@@ -21165,6 +21166,7 @@ omni.soundestlink.com$image
 ||chase.com/apps/services/clientBeacon.html
 ||chat.groq.com/global_stats
 ||chatfuel.com/cf-analytics/
+||chatgpt.com/backend-api/sentinel/ping
 ||chatroll.com/t.gif
 ||chewy.com/api/event/
 ||chickadvisor.com/js/detect.min.js
@@ -27921,6 +27923,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||static.klaviyo.com/onsite/js/event_adapter.
 ||static.myshlf.us/Affiliates/sms_aff_clicktrack-deciem.js
 ||static.parsely.com^$third-party
+||static.rebelboost.com/tracking/
 ||static.shopmy.us/Affiliates/sms_aff_clicktrack.js
 ||staticmoly.me/metric.php
 ||statistics.tattermedia.com^
@@ -29630,6 +29633,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.partcommunity.com^
 ||analytics.spearly.com^
 ||api.all-internet.jp^$third-party
+||api.heikeji.me/api/logs/check
 ||api.popin.cc/conversion2.js
 ||api.quantumgraph.com/web/cm/
 ||app.tag-plus.com/ja/api/v1/unison_planet/heat_map
