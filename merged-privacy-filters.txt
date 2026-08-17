@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.17.1
+! Version: 26.08.17.2
 
 !! Merged rules
 
@@ -18039,6 +18039,8 @@ analytics-*.aasaam.com
 /collectsysteminfo?
 /com.snowplowanalytics.snowplow/*$domain=~7plus.com.au
 /com_joomlawatch/img.php
+/com_jrealtimeanalytics/js/heatmap.js
+/com_jrealtimeanalytics/js/stream.js
 /commerce-events-listener.js
 /common/analytics.js
 /common/ga.js
@@ -21087,6 +21089,7 @@ omni.soundestlink.com$image
 ||biosolutions.tv/audience-proxy/
 ||bis.org/metrics/web.gif?
 ||bitchute.com/data/script.js
+||bitdefender.com/geoip
 ||bitwarden.com/plsbl/
 ||blitz-analytics-batch-server.blitz.gg^
 ||blockworks.co/_vercel/insights/
@@ -22163,6 +22166,7 @@ omni.soundestlink.com$image
 ||pdffiller.com/funnel.php?
 ||pdffiller.com/mpages/track/
 ||pdfforge.org/api/kd-gdpr-cc
+||pearos.xyz/track.php
 ||pelisfree.site/cdn-cgi/trace
 ||pendo.scopus.com/data/ptm.gif
 ||pepin.padlet.com^
@@ -23959,6 +23963,9 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||bellesdemeures.com/Content/dist/js/libs/thor.js
 ||bmly.impots.gouv.fr^
 ||boingtv.fr/track_view
+||cdn.lesnumeriques.com/assets/*/js/eventsTracker-
+||cdn.lesnumeriques.com/assets/*/js/offer-tracking-
+||cdn.lesnumeriques.com/assets/*/js/tracking-
 ||cdtm.cdiscount.com^
 ||centerblog.net/a/in
 ||cesu.urssaf.fr/clm10
@@ -29426,6 +29433,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||dnt-userreport.com^
 ||er.sanoma-sndp.fi/stats/
 ||er.sanoma-sndp.fi/v2/stats/
+||handshake.gravito.net^
 ||nelonenmedia.fi/logger/
 ||tags.op-palvelut.fi^
 ||vine.eu/track/
