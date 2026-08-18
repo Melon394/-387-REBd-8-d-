@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.18.2
+! Version: 26.08.18.3
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/238355
+@@||googletagmanager.com/gtm.js$domain=magasiner.familiprix.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237441
 @@||vodafone.com.au/gtm.js$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237591
@@ -6918,7 +6920,6 @@ bilibili.com#%#//scriptlet('trusted-replace-argument', 'history.pushState', '2',
 bilibili.com#%#//scriptlet('trusted-replace-argument', 'history.replaceState', '2', 'replace:/(?<=[?&])(?:vd_source|trackid|spm_id_from)=[^&#]*&?//g')
 !
 ! Youtube
-!+ NOT_PLATFORM(ext_chromium_mv3)
 www.youtube.com#%#//scriptlet('prevent-xhr', '/\/api\/stats\/atr\?.+?&rt=\d+\.\d+.+?&volume=\d+&cbr=.+?&fexp=v1%[-%0-9C]{300,}&.+?&muted=\d(&vis=3)?&docid=/ method:POST')
 ! Ad-Shield
 ! Prevent Ad-Shield tracking script - Only tracking ad block traffic. NOT Ad-Shield advertisement or protection.
@@ -9701,6 +9702,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||cine.su/api/telemetry|
+||instyle.com/static/*/static/modules/js/AssertiveYield/
 nishispo.nishinippon.co.jp#?##access-ranking:contains(Recent Articles)
 ||theroot.com/wp-content/plugins/advanced-ads-tracking/
 ||api.redgifs.com/v*/events/
