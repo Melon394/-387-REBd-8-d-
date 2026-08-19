@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.19.3
+! Version: 26.08.20.1
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/238444
+@@||googletagmanager.com/gtm.js$domain=talent.lowes.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/238355
 @@||googletagmanager.com/gtm.js$domain=magasiner.familiprix.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237441
@@ -7542,6 +7544,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 /javascripts/browserfp.min.js?templateId=
 /sk-park.php?pid=
 ! zfgloadedpopup tracking
+&pload=*&eclog=
 /solid.gif?z=
 ! Shopify
 /web-pixel-*/pixel.modern.js
@@ -10647,7 +10650,7 @@ dominos.jp###_vis_opt_path_hides
 ||static.danawa.com/globaljs/static/bdl/dsac.min.js
 ||americantourister.co.kr/on/demandware.static/Sites-AmericanTouristerKR-Site/*/internal/jscript/dwac-*.js
 ||leboncoin.fr/piano-analytics/
-||softonic.jp/web-stats
+/web-stats$domain=softonic.com|softonic-ar.com|softonic-id.com|softonic-id.com|softonic.jp|softonic.kr|softonic.nl|softonic.pl|softonic.com.br|softonic.ru|softonic.se|softonic-th.com|softonic.com.tr|softonic.cn
 ||chatgpt.com/ces/v1/i^
 ||holistic.news/3unw/
 ||sp-cdn.linux-magazin.de/wrapper/metrics/
