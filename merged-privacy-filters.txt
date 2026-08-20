@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.20.3
+! Version: 26.08.21.1
 
 !! Merged rules
 
@@ -9707,6 +9707,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||reader.hqread.cc/online/heartbeat
 ||thehealthy.com/wp-content/plugins/tmbi-amazon-affiliate/
 ||thehealthy.com/wp-content/plugins/tmbi-permutive/
 ||thehealthy.com/wp-content/plugins/tmbi-data-analytics/
@@ -21328,6 +21329,7 @@ omni.soundestlink.com$image
 ||d401.dollartree.com^
 ||d712.theinformation.com^
 ||dabu.askmediagroup.com^
+||dailydevstatus.com/embed/script.js
 ||dailymail.co.uk/geo/
 ||dailymail.co.uk/rta2/
 ||dailymotion.com/logger/
@@ -24545,9 +24547,12 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||skroutza.skroutz.gr/skroutza.min.js
 ||vidads.gr/imp/
 ! Hebrew
+||0404.co.il^$ping
+||bhol.co.il/system/js/analytics.js
 ||bravo.israelweather.co.il^
 ||cellstats.mako.co.il^
 ||ds.haaretz.co.il^
+||ext.bhol.co.il^$ping
 ||inn.co.il/Controls/HPJS.ashx?act=log
 ||services.haaretz.co.il^$ping
 ||stats.mako.co.il^
@@ -26928,6 +26933,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||infusionsoft.com^*/getTrackingCode?
 ||ingest.in.signoz.cloud^
 ||ingest.make.rvapps.io^
+||ingest.promptwatch.com^
 ||ingesteer.services-prod.nsvcs.net^
 ||ingress.rebelboost.com/_ingest-rbst-stats?
 ||ingress.trendii.com^
@@ -27980,6 +27986,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||statsig.anthropic.com^
 ||statsjs.klevu.com^
 ||statt-collect.herokuapp.com^
+||statuspage.io/embed/frame
 ||stg-data-collector.playbuzz.com^
 ||stg.truvidplayer.com/*/v.php?st=
 ||stileproject.com/vhtk/
@@ -29463,9 +29470,14 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||metrics.find.gr^
 ||stats-real-clients.zentech.gr^
 ! Hebrew
+||api.whtvr.ai/api/sdk/analytics/
 ||callindex.co.il/campaign/send_analytics.js
+||colbass.com/Service/Analytics.asmx/
+||dxmcdn.com/dta/content-targeting.js
+||radar.wizzo.media^
 ||selectika.com/selectika-pixel.min.js
 ||tag.weezmo.com^
+||vi-serve.com/tagLoader.js
 ||walla.co.il/stats/
 ! Hungarian
 ||gpr.hu/pr.pr?
