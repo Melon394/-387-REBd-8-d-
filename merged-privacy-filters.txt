@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.21.2
+! Version: 26.08.21.3
 
 !! Merged rules
 
@@ -9707,6 +9707,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||meetingpoint-jl.de/api/*-track|
 ||reader.hqread.cc/online/heartbeat
 ||thehealthy.com/wp-content/plugins/tmbi-amazon-affiliate/
 ||thehealthy.com/wp-content/plugins/tmbi-permutive/
@@ -10656,7 +10657,7 @@ dominos.jp###_vis_opt_path_hides
 ||static.danawa.com/globaljs/static/bdl/dsac.min.js
 ||americantourister.co.kr/on/demandware.static/Sites-AmericanTouristerKR-Site/*/internal/jscript/dwac-*.js
 ||leboncoin.fr/piano-analytics/
-/web-stats$domain=softonic.com|softonic-ar.com|softonic-id.com|softonic-id.com|softonic.jp|softonic.kr|softonic.nl|softonic.pl|softonic.com.br|softonic.ru|softonic.se|softonic-th.com|softonic.com.tr|softonic.cn
+||softonic*/web-stats
 ||chatgpt.com/ces/v1/i^
 ||holistic.news/3unw/
 ||sp-cdn.linux-magazin.de/wrapper/metrics/
@@ -23069,6 +23070,7 @@ omni.soundestlink.com$image
 ||yahoo.com/beacon/
 ||yahoo.com/beacon?
 ||yahoo.com/pageview?
+||yahoo.com/xhr/beacon/batch/
 ||yahoo.net/pixel.gif
 ||yandex.*/clck/$~ping
 ||yandex.*/count/
