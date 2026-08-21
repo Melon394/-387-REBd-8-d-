@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.21.3
+! Version: 26.08.22.1
 
 !! Merged rules
 
@@ -309,8 +309,6 @@ felixmobile.com.au#$##__next [style*="filter:blur"] { filter: none !important; }
 @@||adobedc.demdex.net^$xmlhttprequest,domain=sc.com
 ! https://shoof.alkass.net/live?ch=six
 @@||src.litix.io/*/bitmovin-mux.js$domain=shoof.alkass.net
-! https://github.com/AdguardTeam/AdguardFilters/issues/223313
-@@||lptag.liveperson.net^$domain=yesstyle.com
 ! metro online shop - no search results
 @@||cdn.optimizely.com/datafiles/$domain=metro.at|metro.bg|metro-cc.hr|metro.fr|metro.it|metro-kz.com|metro.md|metro.pk|metro.ro|metro.rs|metro.sk|makro.es|metro-tr.com|metro.ua|makro.pt|metro.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222795
@@ -5993,6 +5991,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! hna.de
+||hna.de^$cookie=cua_uuid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237741
 ||premierzal.ru^$cookie=/^__ddg/
 ! itmedia.co.jp
@@ -9707,6 +9707,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||hna.de/fdn/
+||yandex.ru/appcry/event|
 ||meetingpoint-jl.de/api/*-track|
 ||reader.hqread.cc/online/heartbeat
 ||thehealthy.com/wp-content/plugins/tmbi-amazon-affiliate/
@@ -11130,7 +11132,6 @@ allrecipes.com#%#//scriptlet('set-local-storage-item', '/_fpi|_duid/', '$remove$
 ||banking.dkb.de/api/metrics/$xmlhttprequest
 ||cdn.dsmcdn.com/sfx/mergen/
 ||cdn.dsmcdn.com/sfint/production/demeter-prod-*.umd.js
-||ing.de/*/*ebtrekk*
 ||ingwb.com/*/ingwb-webtrekk
 ||derstandard.*/qpkdl/
 ||duckduckgo.com/t.js?q=
@@ -15501,6 +15502,15 @@ dreamprogs.net##td[width="88"][height="31"]
 ||ztat.net/*/webtrekk.min.js^
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/238893
+! https://github.com/AdguardTeam/AdguardFilters/issues/215044
+!#if (!adguard_app_ios && !adguard_ext_android_cb && !adguard_ext_safari)
+||ing.de/*/*ebtrekk*
+ing.de#%#//scriptlet('set-constant', 'wt', 'emptyObj')
+ing.de#%#//scriptlet('set-constant', 'wt.sendinfo', 'noopFunc')
+!#endif
+!
 ! AdRiver
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231486
