@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.24.2
+! Version: 26.08.24.3
 
 !! Merged rules
 
@@ -9707,6 +9707,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||leakgallery.com/api/lg/
 ||xn--pckua2a7gp15o89zb.com/api/am/v1/t?
 ||hna.de/fdn/
 ||yandex.ru/appcry/event|
@@ -18628,6 +18629,7 @@ analytics-*.aasaam.com
 /ibeat.min.js
 /icf-analytics.js
 /id?d_visid_
+/identity/token/verify?browser_id=
 /if/services/tdg?hs=
 /IIQUniversalID.min.js
 /image.ng/*
@@ -19212,6 +19214,7 @@ analytics-*.aasaam.com
 /pixel?tag=
 /pixel_identifier.js
 /pixel_iframe.php
+/pixel_taboola_events.js
 /pixel_tracking.js
 /pixel_tracking?
 /pixel_V2.js
@@ -19507,6 +19510,7 @@ analytics-*.aasaam.com
 /sensor/statistic?
 /sensorsdata-
 /sensorsdata.$domain=~sensorsdata.cn
+/sentinel-events-tracker.
 /sentry-browser.min.js
 /sentry-browser.tracing.es5.min.js
 /sentry-logger.js
@@ -23228,6 +23232,7 @@ omni.soundestlink.com$image
 ||idstatus.sky.com^
 ||img2021.navyfederal.org^
 ||imgs.signifyd.com^
+||kaspersky.com/assets/logSender.
 ||log-185a61e7.bendigobank.com.au^
 ||log-2ffe60ee.westpac.com.au^
 ||mfasa.chase.com/auth/js/jpmc_bb_check.js
@@ -24183,6 +24188,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||khamsat.com/ajax/account_stats?
 ||mosoah.com/analytics.js
 ||stats.panet.com^
+||strema.top/ping/?
 ||tags.aljazeera.net^
 ! Bosnian
 ||insight.olx.ba^
@@ -24578,6 +24584,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||inn.co.il/Controls/HPJS.ashx?act=log
 ||services.haaretz.co.il^$ping
 ||stats.mako.co.il^
+||track.wesell.co.il^
 ||walla.co.il/CountsHP.asp?
 ||walla.co.il/impression/
 ! Hungarian
@@ -25732,6 +25739,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.foresee.com^
 ||analytics.formstack.com^
 ||analytics.genial.ly^
+||analytics.getlimy.ai^
 ||analytics.getsnworks.com^
 ||analytics.gokwik.co^
 ||analytics.google.com^$third-party
@@ -25806,6 +25814,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.tout.com^
 ||analytics.unibuddy.co^
 ||analytics.unilogcorp.com^
+||analytics.upress.io^
 ||analytics.vanillaforums.com^
 ||analytics.vdo.ai^
 ||analytics.vendemore.com^
@@ -27808,6 +27817,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sdk-service.nsureapi.com/events
 ||sdk.51.la^$third-party
 ||sdk.appsflyer.com^
+||sdk.getlimy.ai/p/limy-analytics.min.js
 ||sdk.mrf.io/statics/marfeel-sdk.js
 ||sdrive.skoda-auto.com^
 ||sdtagging.azureedge.net^
@@ -30530,6 +30540,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||stats.fr^$third-party
 ||sync.tv^$third-party
 ||tget.me^$third-party
+||time1.me^$third-party
 ||tinyclues.com^$third-party
 ||titag.com^$third-party
 ||toc.io^$third-party
@@ -31428,6 +31439,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||adku.co^$third-party
 ||adku.com^$third-party
 ||admantx.com^$third-party
+||admaster.cc^$third-party
 ||admaster.com.cn^$third-party
 ||admetric.io^$third-party
 ||adobedtm.com^$third-party,domain=~adobe.com|~costco.com
