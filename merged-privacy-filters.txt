@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.25.1
+! Version: 26.08.25.2
 
 !! Merged rules
 
@@ -20922,6 +20922,7 @@ omni.soundestlink.com$image
 ||al.levels.fyi/api/event
 ||alb.reddit.com^
 ||alicdn.com/AWSC/et/
+||alicdn.com/AWSC/WebUMID/
 ||aliexpress.com/ts?
 ||alipay.com/web/bi.do?ref=
 ||aljazeera.com/thirdparty/nr.js
@@ -21069,6 +21070,7 @@ omni.soundestlink.com$image
 ||asset.d5techs.com/script/utm.min.js
 ||assets.aliexpress-media.com/g/AWSC/*/collina.js$script,domain=aliexpress.com|aliexpress.us
 ||assets.aliexpress-media.com/g/AWSC/*/fireyejs.js$script,domain=aliexpress.com|aliexpress.us
+||assets.aliexpress-media.com/g/awsc/webumid/
 ||assets.engoo-static.com/tracking.js
 ||assets.prod.abebookscdn.com/cdn/com/scripts/abepixel-$domain=abebooks.com
 ||assets.s-bol.com/AppMeasurement-
@@ -21626,6 +21628,7 @@ omni.soundestlink.com$image
 ||futureparty.com/nectar_analytics
 ||futureparty.com/page_view
 ||g-scale.org/scripts/EventLog.js
+||g.alicdn.com/AWSC/fireyejs/
 ||g.ign.com^
 ||g.mashable.com^
 ||g.newtimes.com^
