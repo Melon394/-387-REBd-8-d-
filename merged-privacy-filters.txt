@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.26.3
+! Version: 26.08.27.1
 
 !! Merged rules
 
@@ -31,6 +31,9 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/239341
+@@||download.amd.com/js/analytics/analyticsinit.js$domain=amdgaming.com
+@@||download.amd.com/js/analytics/analyticscore-min.js$domain=amdgaming.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/238999
 @@||js-cdn.dynatrace.com/jstag/$domain=fido.ca
 ! https://github.com/AdguardTeam/AdguardFilters/issues/238444
@@ -5993,6 +5996,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! 4media.com
+$cookie=tipssid,domain=krosno112.pl|zawszepomorze.pl|raportwarszawski.pl|nowinypolnocne.pl|cozadzien.pl|telewizjagorzow.pl|krosno112.pl|tvswietokrzyska.pl|przegladpiaseczynski.pl
 ! hna.de
 ||hna.de^$cookie=cua_uuid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237741
@@ -16789,6 +16794,7 @@ analytics-*.aasaam.com
 @@||sophos.com^*/tracking/gainjectmin.js$script,domain=community.sophos.com
 @@||soundcore.com/metrics/gtd?id=$script,~third-party
 @@||spark.co.nz/content/*/utag.sync.js$domain=skinny.co.nz
+@@||speed.cloudflare.com/__log$~third-party
 @@||src.fedoraproject.org/static/issues_stats.js?$~third-party
 @@||src.litix.io/shakaplayer/*/shakaplayer-mux.js
 @@||src.litix.io/videojs/*/videojs-mux.js
