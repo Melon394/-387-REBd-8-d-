@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.08.28.2
+! Version: 26.08.28.3
 
 !! Merged rules
 
@@ -9030,6 +9030,7 @@ d4?appid*type*
 ||vgs-collect-keeper.apps.verygood.systems^
 ||g.analytics.versa-ai.com^
 ||analytics.rayjump.com^
+||analytics-ios-tcp.rayjump.com^
 ||events.ifunny.co^
 ||imp-*.jampp.com^
 ||telemetry.navigatorapp.net^
@@ -9715,6 +9716,9 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||appli.mixh.jp/appli.mixh.jp/app/*-track.php
+||a.pixiv.org/yufulight-cdn/track.js
+bg-mania.jp##.section-pr-osusume
 ||rmc-cx.api.rakuten.co.jp/v3/web/events
 ||automaton-media.com/rw7f/
 ||kobe-np.co.jp/api/audience-data
@@ -11317,8 +11321,6 @@ hindustantimes.com#%#//scriptlet('set-local-storage-item', '/^_c(b|hartbeat)/', 
 ||optimizer.poxo.com/ca2/analytics.js
 canadiantire.ca#%#//scriptlet('set-local-storage-item', 'signifydSessionIdInfo', '$remove$')
 ||canadiantire.ca/aiq/analytics_ctr_prod.js
-||api.chzzk.naver.com/service/*/ad/display-status
-||api.chzzk.naver.com/ad-polling/*/lives/*/ad
 ||aiv-delivery.net/*/TrackingEvents?
 ||lespresso.it/js/gtm-helper.js
 ||lespresso.it/js/usercentrics-helper.js
@@ -12449,7 +12451,7 @@ device4game.ru##.tg-first-footer-widget
 ||urldefense.proofpoint.com^*analytics_insight.min.js
 ||uq.force.com/auraAnalytics^
 ||hurriyet.com.tr/banalytics.js
-lmaga.jp,lasisa.net,president.jp##.recommend
+news.ntv.co.jp,lmaga.jp,lasisa.net,president.jp##.recommend
 ||zatsubitown.com/mailfriend/kaiseki
 ||doda.jp/DodaCommon/Html/js/RtoasterTrack.js
 ||doda.jp/resources/dcfront/js/usrclkTracking.js
