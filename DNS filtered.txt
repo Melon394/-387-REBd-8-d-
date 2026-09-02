@@ -551,6 +551,7 @@ dlsdk.appsflyer.com^
 ||web-rotation.net
 ||web-visor.
 ||yottos.com
+/^2.59.219.121/
 /62.76.25.2(7|8)/
 /193.200.64.24:/
 ||dw-informer-*.newsru.com^
