@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.03.1
+! Version: 26.09.03.2
 
 !! Merged rules
 
@@ -9731,6 +9731,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||negocios.com/assets/js/onm/onm-stats.
+||sidecar.unext.jp/track/
 ||lightning.cnn.com/analytics/
 ||api-common.tinkoff.ru/front-logs/
 ||klad.klerk.ru/a/click?page-url=
@@ -16319,6 +16321,7 @@ dlsdk.appsflyer.com^
 ||web-rotation.net
 ||web-visor.
 ||yottos.com
+/^2.59.219.121/
 /62.76.25.2(7|8)/
 /193.200.64.24:/
 ||dw-informer-*.newsru.com^
@@ -23002,6 +23005,7 @@ omni.soundestlink.com$image
 ||umami.wakarimasen.moe^
 ||unity3d.com/v1/events
 ||unl1zvy2zuyn.franchiseplus.nl^
+||unleash.zenchef.com/api/frontend/client/metrics
 ||unsplash.com/nmetrics
 ||untappd.com/profile/impression?
 ||up4stream.com/js/anti.js
@@ -24959,6 +24963,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||shipping.jp/raa/rd.js
 ||shopch.jp/com/js/analytics.js
 ||shueisha.online/op/analytics.js
+||sidecar.unext.jp/track/
 ||so-zou.jp/js/ga.js
 ||socialxup.com/api/sale-accounts
 ||softonic.jp/web-stats
@@ -25753,6 +25758,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics-api-s.cloudinary.com^
 ||analytics-api.gemcommerce.com^
 ||analytics-api.klickly.com^
+||analytics-assets.tes.com^
 ||analytics-cf.bigcrunch.com^
 ||analytics-cms.whitebeard.me^
 ||analytics-fe.digital-cloud-prem.medallia.com^
@@ -29232,6 +29238,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tracking.rtl.de^
 ||tracking.s24.com^
 ||tracking.srv2.de^
+||tracking.vviinn.com^
 ||tracking.webtradecenter.com^
 ||traffic.askrella.de^
 ||trck.bdi-services.de^
