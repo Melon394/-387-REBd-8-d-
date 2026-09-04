@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.04.2
+! Version: 26.09.04.3
 
 !! Merged rules
 
@@ -9731,10 +9731,13 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+hokkaido-np.co.jp##.main > section:has(> #ai_recommend_section)
+||forums.digitalspy.com/api/v*/tick|
 ||journalreport.cn/mstatistics.js
 ||smartnews.com/*/monitoring?
 ||proson.gr/core/modules/statistics/
 ||pahe.plus/*/api/v1/event|
+||intercelestial.com/*/api/v1/event|
 ||samsungmagazine.eu/log_imps.php
 ||negocios.com/assets/js/onm/onm-stats.
 ||sidecar.unext.jp/track/
@@ -21544,6 +21547,7 @@ omni.soundestlink.com$image
 ||engagement.feedly.com^
 ||engine.traceparts.com^
 ||engineering.com/scripts/$script,domain=eng-tips.com
+||eporner.com/xhr/video-heatmap/
 ||eproof.drudgereport.com^
 ||equirodi.*/addstat.php
 ||ericdraken.com/a/$script
@@ -21814,6 +21818,7 @@ omni.soundestlink.com$image
 ||hn-ping*.hashnode.com^
 ||homedepot.ca/mr/thd-ca-prod.js
 ||homedepot.ca/webmetrics/collect
+||hometubeporn.com/js/feeder.min.js
 ||hoo.be/api/hoobe/analytics
 ||hopper.com/api/v0/tracking/event
 ||hostinger.com/api-proxy/api/sentry/
@@ -22352,6 +22357,7 @@ omni.soundestlink.com$image
 ||poki.com/observer/
 ||politico.com/resource/assets/js.min/video-tracking.
 ||poptropica.com/brain/track.php?
+||porn-plus.com/js/feeder.min.js
 ||pornbox.com/event/
 ||pornbox.com/stats/
 ||porzo.com/js/analytics
@@ -25986,7 +25992,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||app.octaneai.com/get_analytics_engine/
 ||app.opmnstr.com/v2/geolocate/
 ||app.optibase.io^
-||app.partnerboost.com^
+||app.partnerboost.com/brand/track.2.0.min.js
 ||app.pendo.io/data/$image
 ||app.posthog.com/e/?compression=
 ||app.posthog.com/e/?ip=
@@ -25996,6 +26002,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||app.qualified.com/*/visitor_events
 ||app.revenuehero.io/logs/ingest
 ||app.termly.io/api/*/statistics
+||app.thefrontrowhealth.com/api/tracking
 ||app.trytada.com/addImpression
 ||app.varify.io/varify.js
 ||app.yesware.com/t/$third-party
