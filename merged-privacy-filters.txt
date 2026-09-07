@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.07.2
+! Version: 26.09.08.1
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/240636
+@@||cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.umd.js$domain=archive.is
 ! https://jbbs.shitaraba.net/bbs/read.cgi/internet/25463/1618326670/308
 @@||cdn.cxense.com/cx.cce.js$domain=j-cast.com
 @@||cdn.cxense.com/cx.js$domain=j-cast.com
@@ -6002,6 +6004,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! experience.tripster.ru
+||experience.tripster.ru^$cookie=device_id
+||experience.tripster.ru^$cookie=gb_uid
 ! wildberries.ru
 ||wildberries.ru^$cookie=_wbauid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/239596
@@ -9735,6 +9740,10 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||otrium.*/static/newrelic.js
+||otrium.*/measure/
+tellows.jp/ping.php?p=
+||janitorai.com/jstats/
 .cineflix.st/api/script.js|
 ||yalispor.com.tr/u966/
 hokkaido-np.co.jp##.main > section:has(> #ai_recommend_section)
@@ -16975,11 +16984,11 @@ analytics-*.aasaam.com
 !! cxense.com/persisted/execute
 @@||cxense.com/persisted/execute$domain=nippon.com
 !! cxense.com/public/widget/
-@@||cxense.com/public/widget/$domain=bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cxpublic.com|cyclestyle.net|diamond.jp|friday.gold|friday.kodansha.co.jp|handelsblatt.com|hochi.news|inquirer.com|j-cast.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nikkansports.com|nippon.com|rikejo.jp|savonsanomat.fi|shueisha.co.jp|tn.com.ar|tvnet.lv|wsj.com
+@@||cxense.com/public/widget/$domain=bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cxpublic.com|cyclestyle.net|diamond.jp|friday.gold|friday.kodansha.co.jp|handelsblatt.com|harpersbazaar.com|hochi.news|inquirer.com|j-cast.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nikkansports.com|nippon.com|rikejo.jp|savonsanomat.fi|shueisha.co.jp|tn.com.ar|tvnet.lv|wsj.com
 !! cxense.com/cx.cce.js
-@@||cxense.com/cx.cce.js$domain=bizjournals.com|businessinsider.de|cxpublic.com|diamond.jp|handelsblatt.com|hochi.news|inquirer.com|j-cast.com|mainichi.jp|marketwatch.com|nikkansports.com|shueisha.co.jp|tarzanweb.jp|tn.com.ar|tvnet.lv|wsj.com
+@@||cxense.com/cx.cce.js$domain=bizjournals.com|businessinsider.de|cxpublic.com|diamond.jp|handelsblatt.com|harpersbazaar.com|hochi.news|inquirer.com|j-cast.com|mainichi.jp|marketwatch.com|nikkansports.com|shueisha.co.jp|tarzanweb.jp|tn.com.ar|tvnet.lv|wsj.com
 !! cxense.com/cx.js
-@@||cxense.com/cx.js$domain=13.cl|bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cyclestyle.net|diamond.jp|gizmodo.jp|handelsblatt.com|hochi.news|inquirer.com|j-cast.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nikkansports.com|nippon.com|savonsanomat.fi|shueisha.co.jp|str.toyokeizai.net|tarzanweb.jp|tn.com.ar|tv-tokyo.co.jp|tvnet.lv|wsj.com
+@@||cxense.com/cx.js$domain=13.cl|bizjournals.com|businessinsider.de|businessinsider.jp|computerbild.de|cyclestyle.net|diamond.jp|gizmodo.jp|handelsblatt.com|harpersbazaar.com|hochi.news|inquirer.com|j-cast.com|journaldequebec.com|ksml.fi|mainichi.jp|marketwatch.com|nikkansports.com|nippon.com|savonsanomat.fi|shueisha.co.jp|str.toyokeizai.net|tarzanweb.jp|tn.com.ar|tv-tokyo.co.jp|tvnet.lv|wsj.com
 !! collector.appconsent.io
 @@||collector.appconsent.io/hello$domain=lachainemeteo.com|lefigaro.fr
 !! imrworldwide.com/*ggc
@@ -25000,6 +25009,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||t.syosetu.org^
 ||tanweb.net/wordpress/?rest_route=/sng/v1/page-count
 ||tekoki-fuzoku-joho.com/js/ALinkPrepare_
+||tellows.jp/ping.php
 ||temp.twicomi.com^
 ||tower.jp/bundle/beacon
 ||track.buyma.com^
@@ -25043,7 +25053,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||cue.search.naver.com/api/*/log/
 ||data-logdelivery.wconcept.co.kr^
 ||daumcdn.net^*/awsa.js
-||dpg.danawa.com/*/rest/*getStampEvent
 ||gmarket.co.kr/js/common/uuid.js
 ||hits.zdnet.co.kr^
 ||jdsports.co.kr/collect.php
@@ -28924,7 +28933,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||danv01ao0kdr2.cloudfront.net^
 ||db7q4jg5rkhk8.cloudfront.net^
 ||dc8na2hxrj29i.cloudfront.net^
-||dc8xl0ndzn2cb.cloudfront.net^
 ||dcv4p460uqa46.cloudfront.net^
 ||dd6zx4ibq538k.cloudfront.net^
 ||de5zarwna0j2q.cloudfront.net^
@@ -29953,7 +29961,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||log.mofa.go.kr^
 ||log.pipeline.datarize.io^
 ||log.targetpush.co.kr^
-||logger.bzu.kr^
 ||logs-partners.coupang.com^
 ||megadata.co.kr^
 ||montelena.auction.co.kr^
@@ -31473,14 +31480,11 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||103bees.com^$third-party
 ||105app.com^$third-party
 ||10xlaunch.ai^$third-party
-||11nux.com^$third-party
 ||123count.com^$third-party
 ||123stat.com^$third-party
 ||15gifts.com^$third-party
 ||1freecounter.com^$third-party
 ||1pel.com^$third-party
-||200summit.com^$third-party
-||204st.us^$third-party
 ||206solutions.com^$third-party
 ||247-inc.com^$third-party
 ||247ilabs.com^$third-party
@@ -31489,7 +31493,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||2o7.net^$third-party
 ||2trk.info^$third-party
 ||360i.com^$third-party
-||360tag.com^$third-party
 ||360tag.net^$third-party
 ||3dlivestats.com^$third-party
 ||3dstats.com^$third-party
@@ -31499,8 +31502,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||55labs.com^$third-party
 ||6sc.co^$third-party
 ||720-trail.co.uk^$third-party
-||77tracking.com^$third-party
-||7bpeople.com^$third-party
 ||7eer.net^$third-party
 ||8020solutions.net^$third-party
 ||99counters.com^$third-party
@@ -31516,7 +31517,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||aaddzz.com^$third-party
 ||aamsitecertifier.com^$third-party
 ||aaxdetect.com^$third-party
-||abcstats.com^$third-party
 ||ablecdp.com^$third-party
 ||ablsrv.com^$third-party
 ||ablyft.com^$third-party
@@ -31525,10 +31525,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||abtshield.com^$third-party
 ||acc-hd.de^$third-party
 ||accdab.net^$third-party
-||access-analyze.org^$third-party
 ||accessintel.com^$third-party
 ||acecounter.com^$third-party
-||acetrk.com^$third-party
 ||acexedge.com^$third-party
 ||acint.net^$third-party
 ||acq.io^$third-party
@@ -31539,7 +31537,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||activemeter.com^$third-party
 ||activeprospects.com^$third-party
 ||actnx.com^$third-party
-||acxiom-online.com^$third-party
 ||acxiomapac.com^$third-party
 ||ad-srv-track.com^$third-party
 ||adabra.com^$third-party
@@ -33179,7 +33176,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||pubexchange.com^$third-party
 ||publicgood.com^$third-party
 ||publicidees.com^$third-party
-||publishflow.com^$third-party
 ||publytics.net^$third-party
 ||pubperf.com^$third-party
 ||pubplus.com^$third-party
@@ -33388,7 +33384,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sellpoint.net^$third-party
 ||sellpoints.com^$third-party
 ||sellsy.com^$third-party,domain=~sellsy.fr
-||semanticverses.com^$third-party
 ||semasio.net^$third-party
 ||sematext.com^$third-party
 ||sendtraffic.com^$third-party
@@ -33708,7 +33703,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||trackertest.org^$third-party
 ||tracking202.com^$third-party
 ||trackingca.com^$third-party
-||trackinglabs.com^$third-party
 ||trackingpro.pro^$third-party
 ||trackkas.com^$third-party
 ||trackmethod.com^$third-party
