@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.08.4
+! Version: 26.09.09.1
 
 !! Merged rules
 
@@ -34,8 +34,9 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240759
 ! Fixed bookmark button on Japanese version
 @@||assetsconfigcdn.org/v1/initialize?k=$domain=bloomberg.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/240349
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240636
-@@||cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.umd.js$domain=archive.is
+@@||cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.$domain=archive.is|archive.today|archive.ph
 ! https://jbbs.shitaraba.net/bbs/read.cgi/internet/25463/1618326670/308
 @@||cdn.cxense.com/cx.cce.js$domain=j-cast.com
 @@||cdn.cxense.com/cx.js$domain=j-cast.com
@@ -9834,7 +9835,6 @@ opstream.fun#%#//scriptlet('set-local-storage-item', 'opstream:device-id', '$rem
 ||ucuztap.az/api/ads/track
 ||emrldtp.com/collect
 ||fortune.com/api/recommendations/feedback/view/
-||gdebenz.ru/api/rum
 ||data.storyeditor.eu/se_analytics.js
 ||dragon.pdf2go.com/api/z|
 ||dragon.pdf2go.com/api/bat|
@@ -10061,7 +10061,7 @@ kio.ac#%#//scriptlet('set-local-storage-item', 'affiliate_advertiser_stats', '$r
 ||cdn.viberu.ru/dist/tracking.*.js
 ||rugbypass.com/api/tracking/
 ||static0.pocketlintimages.com/assets/sentinel-events-tracker.*.js
-||dulo.tv/api/ping
+||dulo.*/api/ping
 ||happycow.net/analytics_socket|
 ||operationsports.com/plow-lite-bundle
 ||shingakunet.com/rnet/dlpo/
