@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.08.3
+! Version: 26.09.08.4
 
 !! Merged rules
 
@@ -31,6 +31,9 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/240759
+! Fixed bookmark button on Japanese version
+@@||assetsconfigcdn.org/v1/initialize?k=$domain=bloomberg.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240636
 @@||cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.umd.js$domain=archive.is
 ! https://jbbs.shitaraba.net/bbs/read.cgi/internet/25463/1618326670/308
@@ -9740,6 +9743,10 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||bwapi.irunfar.com/log/
+||bwapi.irunfar.com/event/
+harpersbazaar.com##div[aria-labelledby="recirc-heading"]
+na2ka4.blog.fc2.com###inner2 > div.section2:has(> div.ninja-recommend-block)
 ||otrium.*/static/newrelic.js
 ||otrium.*/measure/
 ||tellows.jp/ping.php?p=
