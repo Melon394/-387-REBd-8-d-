@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.09.2
+! Version: 26.09.09.3
 
 !! Merged rules
 
@@ -33,6 +33,7 @@
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240759
 ! Fixed bookmark button on Japanese version
+@@||featureassets.org/v1/initialize?k=$domain=bloomberg.com
 @@||assetsconfigcdn.org/v1/initialize?k=$domain=bloomberg.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240349
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240636
@@ -6008,6 +6009,10 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! newsnow.com
+||newsnow.com^$cookie=nnusrst
+||newsnow.com^$cookie=nn_sid
+||newsnow.com^$cookie=nn_uid
 ! experience.tripster.ru
 ||experience.tripster.ru^$cookie=device_id
 ||experience.tripster.ru^$cookie=gb_uid
@@ -9744,6 +9749,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+newsnow.com#%#//scriptlet('set-session-storage-item', 'nfPageCount', '$remove$')
+newsnow.com#%#//scriptlet('set-session-storage-item', 'pageCount', '$remove$')
 ||bwapi.irunfar.com/log/
 ||bwapi.irunfar.com/event/
 harpersbazaar.com##div[aria-labelledby="recirc-heading"]
@@ -16635,7 +16642,7 @@ analytics-*.aasaam.com
 @@||d347cldnsmtg5x.cloudfront.net/util/1x1.gif$image,domain=aplaceforeverything.co.uk
 @@||d41.co/tags/ff-2.min.js$domain=ads.spotify.com
 @@||data.adxcel-ec2.com^$image,domain=laguardia.edu
-@@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|espn.com|goindigo.in|hungryroot.com|usa.experian.com
+@@||datadoghq-browser-agent.com^$script,domain=bbcgoodfood.com|cdn.spatialbuzz.com|dashboard.getdriven.app|espn.com|goindigo.in|hungryroot.com|usa.experian.com|wirecutterstore.nytimes.com
 @@||datadome.monster.com.first-party-js.datadome.co^$script,domain=monster.com
 @@||dc.services.visualstudio.com/v2/track$xmlhttprequest,domain=aiskillsnavigator.microsoft.com
 @@||dd.auspost.com.au/tags.js$script,~third-party
