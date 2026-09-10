@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.10.2
+! Version: 26.09.10.3
 
 !! Merged rules
 
@@ -6009,6 +6009,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/239398
+||gipfel.ru^$cookie=UniqAnalyticsId
 ! newsnow.com
 ||newsnow.com^$cookie=nnusrst
 ||newsnow.com^$cookie=nn_sid
@@ -6027,8 +6029,9 @@ $cookie=bf_visit
 $cookie=tipssid,domain=krosno112.pl|zawszepomorze.pl|raportwarszawski.pl|nowinypolnocne.pl|cozadzien.pl|telewizjagorzow.pl|krosno112.pl|tvswietokrzyska.pl|przegladpiaseczynski.pl
 ! hna.de
 ||hna.de^$cookie=cua_uuid
+! https://github.com/AdguardTeam/AdguardFilters/issues/239398
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237741
-||premierzal.ru^$cookie=/^__ddg/
+*$cookie=/^__ddg/,domain=premierzal.ru|gipfel.ru
 ! itmedia.co.jp
 ||itmedia.co.jp^$cookie=s_vid
 ||itmedia.co.jp^$cookie=s_ubid
@@ -9749,6 +9752,12 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||leolist.cc/static/min/js/modules/bam-impressions-
+||adverts.ie/5g8u/
+||api.mindbox.ru/*/customer/track-visit?
+||api.mindbox.ru/*/js/operations/async?*&trackerName
+roomie.jp##.r-article ~ .r-section:has(> div[id^="logly-lift-"])
+roomie.jp##.r-sidesection[data-google-interstitial]
 ||runtimewire.com/api/analytics/*/events|
 newsnow.com#%#//scriptlet('set-session-storage-item', 'nfPageCount', '$remove$')
 newsnow.com#%#//scriptlet('set-session-storage-item', 'pageCount', '$remove$')
@@ -9938,8 +9947,8 @@ peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSession
 ||czesciauto24.pl/p/g^
 ||hexa.su/script.js
 ||candytm.pl/gtmgateway/
-/^https?:\/\/(android\.com\.pl|biznesenter\.pl)\/[a-z0-9]{1,4}\/$/$script,~third-party,domain=android.com.pl|biznesenter.pl
-candytm.pl,biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', '/gtm\.start|dataLayer/')
+/^https?:\/\/(android\.com\.pl|biznesenter\.pl|invezz\.com)\/[a-z0-9]{1,4}\/$/$script,~third-party,domain=android.com.pl|biznesenter.pl|invezz.com
+invezz.com,candytm.pl,biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', '/gtm\.start|dataLayer/')
 ||bifrost-api.hotstar.com/v*/events
 ||linuxcommunity.io/assets/google-universal-analytics-*.js
 ||credistory.ru/api/Metrics/
