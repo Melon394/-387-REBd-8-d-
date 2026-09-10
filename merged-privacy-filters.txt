@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.10.3
+! Version: 26.09.11.1
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/240995
+@@||pub-static.fotor.com/static/web/lib/sensors/sensorsdata.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240759
 ! Fixed bookmark button on Japanese version
 @@||featureassets.org/v1/initialize?k=$domain=bloomberg.com
