@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.11.1
+! Version: 26.09.11.2
 
 !! Merged rules
 
@@ -7438,6 +7438,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/get/live/web/_/*$script,~third-party
 /wp-content/plugins/plausible-analytics/*
 /api-integration/ad-rotator/track/*
 /api-integration/ad-rotator/stats^
@@ -9754,11 +9755,16 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||independent.co.uk/Agent/GA/
+||independent.co.uk/_build/prebid_
+friday.kodansha.co.jp##div[class^="common_mobileInner"] > section:has(> div[style="margin-top:20px"] > #taboola-below-article-thumbnails-sp)
+donaukurier.de##.landing-page__block:has(> .container > div[id^="piano_"] > .tp-cxense-placeholder-inline)
+donaukurier.de#%#//scriptlet('set-local-storage-item', 'glomexUser', '$remove$')
 ||leolist.cc/static/min/js/modules/bam-impressions-
 ||adverts.ie/5g8u/
 ||api.mindbox.ru/*/customer/track-visit?
 ||api.mindbox.ru/*/js/operations/async?*&trackerName
-roomie.jp##.r-article ~ .r-section:has(> div[id^="logly-lift-"])
+roomie.jp##.r-section:has(> div[id^="logly-lift-"])
 roomie.jp##.r-sidesection[data-google-interstitial]
 ||runtimewire.com/api/analytics/*/events|
 newsnow.com#%#//scriptlet('set-session-storage-item', 'nfPageCount', '$remove$')
