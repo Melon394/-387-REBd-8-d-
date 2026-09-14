@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.14.2
+! Version: 26.09.15.1
 
 !! Merged rules
 
@@ -31,6 +31,10 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/241300
+@@||rj.com/layouts/system/VisitorIdentification.js$domain=rj.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/241161
+@@||sgtm.viking.de/gtm.js$domain=viking.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240995
 @@||pub-static.fotor.com/static/web/lib/sensors/sensorsdata.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240759
@@ -6011,6 +6015,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/241302
+||food.ru^$cookie=spid
+||food.ru^$cookie=foodrusid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/239398
 ||gipfel.ru^$cookie=UniqAnalyticsId
 ! newsnow.com
@@ -7438,6 +7445,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+.io/yndx^
 /jc/gtm.js
 /static/modules/js/AssertiveYield/*
 /get/live/web/_/*$script,~third-party
@@ -9759,10 +9767,15 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||app.easy.tools/api/stats
+||chatgpt.com/ces/v1/telemetry/
+||yandex.*/an/count/$ping
+ellegirl.jp##div[aria-label="Recommended articles carousel"]
 ||wargamings.net/track.js
 ||media-analytic.com/gtag.js
 na2ka4.blog.fc2.com###inner2 > div.section2:has(> div.ninja-recommend-block)
 ||pornhub.com/utils/reportTimeWatched
+||live.dealer-asset.co/globalscripts/analytics.min.js
 ||supportecom.ru/server.php?rqst=track
 ||independent.co.uk/Agent/GA/
 ||independent.co.uk/_build/prebid_
@@ -9780,6 +9793,7 @@ newsnow.com#%#//scriptlet('set-session-storage-item', 'nfPageCount', '$remove$')
 newsnow.com#%#//scriptlet('set-session-storage-item', 'pageCount', '$remove$')
 ||bwapi.irunfar.com/log/
 ||bwapi.irunfar.com/event/
+||animegratis.net/js/layout-signal.js
 harpersbazaar.com##div[aria-labelledby="recirc-heading"]
 na2ka4.blog.fc2.com###inner2 > div.section2:has(> div.ninja-recommend-block)
 ||otrium.*/static/newrelic.js
@@ -15721,9 +15735,6 @@ dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.feedData.adPixelsDat
 !
 !#if (!adguard_app_ios && !adguard_ext_android_cb)
 ||chat.deepseek.com/api/v0/events
-! https://github.com/AdguardTeam/AdguardFilters/issues/241127
-! chat.deepseek.com##.ds-modal-overlay
-! chat.deepseek.com#?#.ds-theme.ds-modal-wrapper:contains(AdGuard)
 !#endif
 !
 ! Netflix
@@ -21358,6 +21369,7 @@ omni.soundestlink.com$image
 ||chat.groq.com/global_stats
 ||chatfuel.com/cf-analytics/
 ||chatgpt.com/backend-api/sentinel/ping
+||chatgpt.com/ces/v1/telemetry/
 ||chatroll.com/t.gif
 ||chewy.com/api/event/
 ||chickadvisor.com/js/detect.min.js
@@ -23633,6 +23645,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sgtm.tennis-point.de^
 ||shoop.de/mgtrx/
 ||shop.rewe.de/api/xrd/web-vitals
+||smartbrokerplus.de/_ingenious-script.js
 ||sp.chip.de^
 ||sparkasse.de/frontend/setTrackingCookie.htm
 ||sportnews.bz/pcookie?
