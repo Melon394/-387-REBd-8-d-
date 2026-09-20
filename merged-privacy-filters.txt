@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.20.1
+! Version: 26.09.20.2
 
 !! Merged rules
 
@@ -24506,6 +24506,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||kn007.net/snmp.php
 ||l.web.huya.com^
 ||le.com/op/
+||lego-tech.zhuanzhuan.com^
+||lego.zhuanzhuan.com^
 ||log-h5.imdada.cn^
 ||log-upload-os.hoyolab.com^
 ||log-upload-os.hoyoverse.com^
@@ -28887,6 +28889,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||x.babe.today^
 ||x.disq.us^
 ||x.weather.com^
+||xp.atlassian.com^
 ||xp2023-pix.s3.amazonaws.com^
 ||yahoo.co.jp/js/s_retargeting.js
 ||yahoo.com/sync/casale/
