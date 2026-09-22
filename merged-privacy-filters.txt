@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.22.4
+! Version: 26.09.23.1
 
 !! Merged rules
 
@@ -5131,6 +5131,9 @@ kizi.com#%#window.google_trackConversion = function() {};
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! OpenAI
+! https://developers.openai.com/ads/conversions-api
+$cookie=__obref
 ! tags.creativecdn.com
 $cookie=__rtbh.lid
 $cookie=__rtbh.uid
@@ -6025,6 +6028,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! OpenAI
+$cookie=__oailb,domain=chatgpt.com|openai.com
 ! oita-press.co.jp
 ||oita-press.co.jp^$cookie=guid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/241391
@@ -9786,6 +9791,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||im.np-payment-gateway.com/bff/atone/event/tracking
 ||storage.googleapis.com/*/js/comscore.js
 ||eurozpravy.cz/js/matomo-events.js
 ||footmercato.net/lib/prebid$script
@@ -29407,6 +29413,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||statistics.klicktel.de^
 ||statistik.motorpresse.de^$third-party
 ||statistik.simaja.de^
+||stats.betternet.de^
 ||stats.blogoscoop.net^
 ||stats.clickforknowledge.com^
 ||stats.digital-natives.de^
