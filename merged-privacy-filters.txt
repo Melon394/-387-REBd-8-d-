@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.22.2
+! Version: 26.09.22.3
 
 !! Merged rules
 
@@ -31,6 +31,10 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/242142
+comed.com#%#//scriptlet('set-constant', 'setupGoogleAnalytics', 'noopFunc')
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||blob.core.windows.net/comed/src/js/google-analytics.js$domain=comed.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242086
 @@||integrations.fitanalytics.com/shop/bergfreunde/pdp.js$domain=bergfreunde.de|berg-freunde.at|berg-freunde.ch|bergfreunde.nl|bergfreunde.be|bergfreunde.it|bergfreunde.es|bergfreunde.eu|bergfreunde.dk|bergfreunde.se|bergfreunde.no|bergfreunde.fi|alpinetrek.co.uk|alpiniste.fr|campz.ie
 @@||widget.fitanalytics.com/widget_zepto.js$domain=bergfreunde.de|berg-freunde.at|berg-freunde.ch|bergfreunde.nl|bergfreunde.be|bergfreunde.it|bergfreunde.es|bergfreunde.eu|bergfreunde.dk|bergfreunde.se|bergfreunde.no|bergfreunde.fi|alpinetrek.co.uk|alpiniste.fr|campz.ie
@@ -16055,6 +16059,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||e.missav.
 ||stats.dulo.
 ||tag-v*.kuzen.io^
 ||faro.civitai.
@@ -17448,6 +17453,7 @@ analytics-*.aasaam.com
 !
 !---------- Norwegian ----------
 !
+@@/ga-tracking.min.js$script,domain=boots.no|checkout.platekompaniet.no
 @@||cat.telia.no/gtm.js$script,domain=telia.no
 @@||hvemder.no/js/hitcount.min.js$~third-party
 @@||komplett.no/gtm.js$script,~third-party
@@ -19164,6 +19170,7 @@ analytics-*.aasaam.com
 /monitor?rtype=
 /monitor_analytic.js
 /monitor_browser/collect/*
+/monitor_web/settings/browser-settings?
 /monitoring?o=$xmlhttprequest
 /monitus.js
 /monsido.js
@@ -21411,7 +21418,6 @@ omni.soundestlink.com$image
 ||chatgpt.com/awe/api/v2/rum^$ping,xmlhttprequest
 ||chatgpt.com/backend-api/beacons/
 ||chatgpt.com/backend-api/codex/app-download-signal^$xmlhttprequest
-||chatgpt.com/backend-api/sentinel/ping
 ||chatgpt.com/ces/v1/telemetry/intake^$ping,xmlhttprequest
 ||chatgpt.com/unauth-mweb/events/$ping,xmlhttprequest
 ||chatroll.com/t.gif
@@ -24491,7 +24497,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||ftwo-receiver.autohome.com.cn^
 ||gentian-frd.hjapi.com^
 ||gia.jd.com^
-||gias.jd.com/js/pc-tk.js
 ||gk.sina.cn^
 ||h5.analytics.126.net^
 ||h5log.zongheng.com^
@@ -24602,6 +24607,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||s.pixfs.net/js/pixlogger.min.js
 ||s.pixfs.net/visitor.pixplug.in/
 ||sbeacon.sina.com.cn^
+||sdata.chatglm.cn^
 ||sentry.music.163.com^
 ||sfp.safe.baidu.com^
 ||shopee.tw/__t__
@@ -24648,6 +24654,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||titan24.com/scripts/stats.js
 ||tj.img4399.com^
 ||tk.d.mi.com^
+||tongji.duote.com^
 ||tongji.mafengwo.cn^
 ||tongji.techweb.com.cn^
 ||tongji.xinmin.cn^
@@ -26821,6 +26828,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||emarketeer.com/tracker/
 ||enc-90128738.b-cdn.net^
 ||endorsal.io/check/
+||engagelab.com/ma-report/
 ||engageplatform.com/api/trace/d/record?
 ||ensighten.com/error/e.php?
 ||envato.market/i/
@@ -27196,6 +27204,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||iadvize.com/collector/
 ||ibmcloud.com/collector/
 ||icbdr.com/images/pixel.gif
+||ichnaea-web.netflix.com^
 ||icontact.com/icp/core/signup/tracking.gif?
 ||icu.newsroom.bi/ingest.php
 ||id.a-mx.com^
@@ -27549,6 +27558,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||mochiads.com/clk/
 ||moderate.cleantalk.org/ct-bot-detector-wrapper.js
 ||modules.ooyala.com^*/analytics-
+||mon-sg.byteintlapi.com^
 ||mon.domdog.io^
 ||monitor-api.blackcrow.ai^
 ||monitor-frontend-collector.a.bybit-aws.com^
@@ -28122,6 +28132,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sharethis.com/increment_clicks?
 ||sharethis.com/pageviews?
 ||shop.app/pay/hop?analytics_trace_id=
+||shoperatech.com/s/collect?
 ||shopflo.com/api/v1/spark
 ||shopify-gtm-suite.getelevar.com/getelevar/*/dl-web-pixel-lax-custom.js
 ||shopify-webhooks.sailthru.com^
@@ -28210,6 +28221,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||statdb.pressflex.com^
 ||static-tracking.klaviyo.com^
 ||static.fengkongcloud.com^
+||static.guance.com/browser-sdk/
 ||static.klaviyo.com/onsite/js/event_adapter.
 ||static.myshlf.us/Affiliates/sms_aff_clicktrack-deciem.js
 ||static.parsely.com^$third-party
@@ -28503,6 +28515,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||traccoon.intellectsoft.net^
 ||trace.swaven.com^
 ||track-dark-bz.b-cdn.net^
+||track-na2.hubspot.com^
 ||track.360playvid.info^
 ||track.91app.io^
 ||track.addevent.com^
@@ -28837,6 +28850,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||webeyo.com/ipinfo
 ||webgames.io/imp/
 ||webmasters.ksalsocial.online/pixel/
+||webpushstat-sgp.engagelab.com^
 ||websdk.appsflyer.com^
 ||websdk.appsflyersdk.com^
 ||webservices.websitepros.com^
@@ -29558,6 +29572,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||163.com/sn.gif?
 ||3.cn/cesu/r?
 ||360.cn/mapping_service?
+||4399logs.4399doc.com^
 ||4gtv.tv/js/ga_
 ||66hao.cc^
 ||adv-sv-stat.focus.cn^
@@ -29635,11 +29650,14 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||mcs.zijieapi.com^
 ||miao.baidu.com/abdr?
 ||mon.zijieapi.com^
+||ms.xunyou.com^
 ||msg.71.am^
 ||netease.com/track/
 ||netease.com/web/performance?
 ||nos.netease.com/udc-web/*.log.js
 ||oocommapi2.aswatson.com/kf/*/tracking/
+||opt.doubao.com^
+||oss.weread.qq.com^
 ||p.aty.sohu.com^
 ||p.tencentmind.com^
 ||pos.baidu.com^
@@ -29683,6 +29701,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tracklog.58.com^
 ||trail.71baomu.com^
 ||ts-analysis.shoalter.com^
+||umini.shujupie.com^
 ||videostats.kakao.com^
 ||w3t.cn^*/fx.js
 ||web-trace.ksapisrv.com^
@@ -30336,6 +30355,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||statistics.fppressa.ru^
 ||stats-*.p2pnow.ru^
 ||stats.tazeros.com^
+||stats.temptcdn.com^
 ||stats2.videonow.ru^
 ||subscribe.ru/1.gif/$image
 ||t1.trex.media^
