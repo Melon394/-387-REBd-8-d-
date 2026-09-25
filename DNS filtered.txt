@@ -159,10 +159,10 @@ vkcdnservice.appspot.com^
 ||h3v9p8x2q1r7-agckaeh6g2ehcaes.*.azurewebsites.net^
 *ad.durasite.net^
 ||bar*.shinobi.jp^
-||*.libaishuo.com^
 ||adv0*.msa.cdn.mediaset.net^
 /^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
 /^(a|c)\.[0-9a-f]{56}\.com$/
+||*.libaishuo.com^
 ||adapi*.boomplaymusic.com^
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^
 ||ads*-normal*.zijieapi.com^
