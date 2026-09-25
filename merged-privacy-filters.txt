@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.09.25.2
+! Version: 26.09.25.3
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/242223
+@@||static.criteo.net/js/ld/publishertag.prebid.js$domain=powerwatch.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242234
 @@||bookshop.org/astro-assets/google-analytics.*.js$domain=bookshop.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242142
@@ -8392,6 +8394,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||metrics.li^
 ||bid.ctv.house^
 ||log.calomeal.com^
 ||visit-server.inmobi-choice.io^
@@ -27468,6 +27471,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||loggingapi.spingo.com^
 ||loglady.skypicker.com^
 ||logs-api.shoprunner.com^
+||logs-ingester.prod.zuddl.com^
 ||logs.animaapp.com^
 ||logs.betterstack.com^
 ||logs.datadoghq.com^$third-party
