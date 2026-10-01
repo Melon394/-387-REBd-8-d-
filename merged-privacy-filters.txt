@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.01.3
+! Version: 26.10.02.1
 
 !! Merged rules
 
@@ -2389,9 +2389,11 @@ extrahop.com#%#//scriptlet('prevent-setTimeout', 'ad blocker')
 @@||mpsnare.iesnare.com/snare.js$domain=rossmann.de
 ! freundin.de - back button produces unknown error
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=freundin.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/242699
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106875
 @@||googletagmanager.com/gtag/js$script,domain=www3.nissan.co.jp
 @@||googletagmanager.com/gtm.js$domain=www3.nissan.co.jp
+www3.nissan.co.jp#%#//scriptlet('prevent-element-src-loading', 'script', 'uncn.jp')
 ||as.uncn.jp/uwt/$script,redirect=noopjs,domain=nissan.co.jp
 ||b90.yahoo.co.jp/conv.js$script,redirect=noopjs,domain=nissan.co.jp
 ||b92.yahoo.co.jp/js/s_retargeting.js$script,redirect=noopjs,domain=nissan.co.jp
@@ -8399,6 +8401,11 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||api-sdk.beaconbank.jp^
+||stream-log.profilepassport.jp^
+|||nt-stream-log.profilepassport.jp^
+|||pp3-sdk-api.profilepassport.jp^
+|||pp3-sdkdata-v2-ut.profilepassport.jp^
 ||metrics.li^
 ||bid.ctv.house^
 ||log.calomeal.com^
@@ -9800,6 +9807,9 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||api.github.com/_private/browser/rum?
+||workers.dev/ripa/event|
+||autodoc.dk/securegtm/
 ||thecrossnet.io/av^
 ||net.hr/static/required/js/se_ads.js
 bunshun.jp##.recommend:has(> #taboola-below-article-thumbnails-desktop)
