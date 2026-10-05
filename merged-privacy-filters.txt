@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.05.2
+! Version: 26.10.06.1
 
 !! Merged rules
 
@@ -31,6 +31,14 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243386
+@@||cmp.optimizely.com/assets/$image,domain=roadscholar.org
+! https://github.com/AdguardTeam/AdguardFilters/issues/243436
+@@||googletagmanager.com/gtm.js$domain=news-postseven.com
+! https://github.com/AdguardTeam/AdguardFilters/pull/243384
+@@||googletagmanager.com/gtm.js$domain=mizuhobank.co.jp
+! https://github.com/AdguardTeam/AdguardFilters/issues/243416
+@@||googletagmanager.com/gtm.js$domain=unicef.or.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242943
 @@||priem.menu^$cookie=_ga
 ! https://github.com/AdguardTeam/AdguardFilters/issues/241876
@@ -9802,6 +9810,13 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||api.cdnlivetv.tv/p2p-stats
+||media.flixcar.com/log/
+||independentaustralia.net/_js/realtrack.js
+||mizuhobank.co.jp/bk-common/pc/js/rt_track_event.js
+||mizuhobank.co.jp/common/js/rt_track.js
+||lf3-data.volccdn.com/obj/data-static/log-sdk/
+||news-postseven.com/wp-content/common/visitdata.js
 /vite/assets/Viafoura/Core/Events.*.js$domain=imore.com|coachweb.com
 /.events-handler/*$domain=imore.com|coachweb.com
 ||coachweb.com/vite/assets/JwPlayer/Shared/TrackingEvents.*.js
