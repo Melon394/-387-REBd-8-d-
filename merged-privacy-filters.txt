@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.07.1
+! Version: 26.10.07.2
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243514
+@@||liveapi.yext.com^$domain=answers.business.lloydsbank.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243470
 @@||power.mhi.com/modules/contrib/google_tag/js/gtm.js$domain=power.mhi.com
 @@||googletagmanager.com/gtm.js$domain=power.mhi.com
@@ -8420,9 +8422,9 @@ dlsdk.appsflyer.com^
 !
 ||api-sdk.beaconbank.jp^
 ||stream-log.profilepassport.jp^
-|||nt-stream-log.profilepassport.jp^
-|||pp3-sdk-api.profilepassport.jp^
-|||pp3-sdkdata-v2-ut.profilepassport.jp^
+||nt-stream-log.profilepassport.jp^
+||pp3-sdk-api.profilepassport.jp^
+||pp3-sdkdata-v2-ut.profilepassport.jp^
 ||metrics.li^
 ||bid.ctv.house^
 ||log.calomeal.com^
