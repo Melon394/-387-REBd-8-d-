@@ -385,6 +385,7 @@ dlsdk.appsflyer.com^
 -datareceiver.aki-game.net^
 ||trace-*.free-reels.com^
 ||clarity.ms^|
+||report.*.gbqofs.io^
 ||gbxreport-*.wf.com^
 ||logreport-global-dual.cool*cloud.com^
 ||wslog-global-dual.cool*cloud.com^
@@ -432,7 +433,6 @@ dlsdk.appsflyer.com^
 ||sonar*.xy.fbcdn.net^
 ||admob-app-id-*.firebaseio.com^
 ||analytics-*-nfl.yinzcam.com^
-||report.*.gbqofs.io^
 ||logservice-*.platform.dbankcloud.cn^
 ||ubacollect-*.cloud.dbankcloud.cn^
 ||datacollector-*.dt.dbankcloud.cn^
