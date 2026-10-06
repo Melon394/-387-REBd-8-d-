@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.06.2
+! Version: 26.10.06.3
 
 !! Merged rules
 
@@ -31,6 +31,9 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243470
+@@||power.mhi.com/modules/contrib/google_tag/js/gtm.js$domain=power.mhi.com
+@@||googletagmanager.com/gtm.js$domain=power.mhi.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243386
 @@||cmp.optimizely.com/assets/$image,domain=roadscholar.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243436
@@ -39,6 +42,7 @@
 @@||googletagmanager.com/gtm.js$domain=mizuhobank.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243416
 @@||googletagmanager.com/gtm.js$domain=unicef.or.jp
+@@||googletagmanager.com/gtag/js$domain=unicef.or.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242943
 @@||priem.menu^$cookie=_ga
 ! https://github.com/AdguardTeam/AdguardFilters/issues/241876
@@ -6047,6 +6051,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! v-1.co.il
+||v-1.co.il^$cookie=visit_id
 ! yanolja.com
 ||yanolja.com^$cookie=nol_device_id
 ! OpenAI
@@ -9810,6 +9816,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+v-1.co.il#%#//scriptlet('set-local-storage-item', 'v1_device_id', '$remove$')
 ||api.cdnlivetv.tv/p2p-stats
 ||media.flixcar.com/log/
 ||independentaustralia.net/_js/realtrack.js
@@ -10163,7 +10170,7 @@ mego.travel#%#//scriptlet('set-local-storage-item', '/^snowplowOutQueue_/', '$re
 ||ledevoir.com/js/analytics/
 ||ledevoir.com/js/pianoAnalyticsTags.js
 ||naturallieplantbased.com/?*&ver=$script,~third-party
-||caf.fr/*/stormcaster.js
+/stormcaster.js$domain=caf.fr|v-1.co.il
 ||caf.fr/sites/default/files/smarttag/
 ||google.com/rmkt/collect/
 ||google.com/pagead/
@@ -16322,6 +16329,7 @@ dlsdk.appsflyer.com^
 -datareceiver.aki-game.net^
 ||trace-*.free-reels.com^
 ||clarity.ms^|
+||report.*.gbqofs.io^
 ||gbxreport-*.wf.com^
 ||logreport-global-dual.cool*cloud.com^
 ||wslog-global-dual.cool*cloud.com^
@@ -16369,7 +16377,6 @@ dlsdk.appsflyer.com^
 ||sonar*.xy.fbcdn.net^
 ||admob-app-id-*.firebaseio.com^
 ||analytics-*-nfl.yinzcam.com^
-||report.*.gbqofs.io^
 ||logservice-*.platform.dbankcloud.cn^
 ||ubacollect-*.cloud.dbankcloud.cn^
 ||datacollector-*.dt.dbankcloud.cn^
@@ -22859,6 +22866,7 @@ omni.soundestlink.com$image
 ||stats.codeur.com^
 ||stats.darkreader.app^
 ||stats.davidickedelivery.com^
+||stats.flixcloud.cc^
 ||stats.gateio.ch^
 ||stats.habr.com^
 ||stats.hexa.watch^
