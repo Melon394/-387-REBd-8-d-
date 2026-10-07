@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.08.1
+! Version: 26.10.08.2
 
 !! Merged rules
 
@@ -9828,6 +9828,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||jakoscobslugi.pl/js/jo-analytics.js
 ||emrld.cc^$script
 ||u.stmedia.click/script.js
 elektromobilni.pl#%#//scriptlet('set-constant', 'advadsTracking', 'emptyObj')
@@ -17564,6 +17565,7 @@ analytics-*.aasaam.com
 @@||d.tailtarget.com/profiles.js$domain=superesportes.com.br
 @@||google-analytics.com/urchin.js$domain=record.xl.pt
 @@||players.fichub.com/plugins/adobe/$domain=24kitchen.pt
+@@||sdk-analytics-web.cloud.itau.com.br/index.js$script,domain=meu.userede.com.br
 @@||serasaexperian.com.br/dist/scripts/fingerprint2.js$~third-party
 @@||sibs.com/fingerprint/sfp2/fp2.min.js$script,domain=net24.bancomontepio.pt
 @@||siteapps.com^$script,domain=netcombo.com.br
