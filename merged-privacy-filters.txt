@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.07.3
+! Version: 26.10.08.1
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/34756
+@@||rtoaster.jp^$script,domain=nitori-net.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243528
 @@||rtl.nl/_astro/snowplow.*.js$domain=rtl.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243533
@@ -7498,6 +7500,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/wp-content/plugins/advanced-ads-tracking/*
 /static/js/tracker.js^
 /api/eventTracking/batchReport.json
 /api/videos/*/embed/view|$xmlhttprequest
@@ -8424,6 +8427,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||api-sdk-tracking.beaconbank.jp^
 ||api-sdk.beaconbank.jp^
 ||stream-log.profilepassport.jp^
 ||nt-stream-log.profilepassport.jp^
@@ -9824,6 +9828,13 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||emrld.cc^$script
+||u.stmedia.click/script.js
+elektromobilni.pl#%#//scriptlet('set-constant', 'advadsTracking', 'emptyObj')
+||niketalk.com/gtag/
+||ground.news/monitoring
+||ground.news/api/posthog/
+ground.news#%#//scriptlet('set-local-storage-item', 'anon-user-info', '$remove$')
 ||collector-pxebumdlwe.px-cloud.net/b/s/beacon
 ||isratrip.net/platform/api/pub_funnel.php
 ||a.nel.cloudflare.com/report/
@@ -17492,7 +17503,7 @@ analytics-*.aasaam.com
 @@||realestate.yahoo.co.jp/buy/assets/pages/shared/services/LoggingService.js$~third-party
 @@||rt.rtoaster.jp^$image,domain=ec-store.net
 @@||rtoaster.jp/Rtoaster.js$domain=peachjohn.co.jp|satofull.jp
-@@||rtoaster.jp^$script,domain=cecile.co.jp|ec-store.net|jreastmall.com|lexus.jp|melonbooks.co.jp
+@@||rtoaster.jp^$script,domain=cecile.co.jp|ec-store.net|jreastmall.com|lexus.jp|melonbooks.co.jp|nitori-net.jp
 @@||s.yimg.jp/images/listing/tool/cv/ytag.js$domain=redstoneonline.jp|store-jp.nintendo.com
 @@||s.yjtag.jp/tag.js$script,domain=baseball.yahoo.co.jp|bousai.yahoo.co.jp|soccer.yahoo.co.jp|www.epson.jp
 @@||sail-horizon.com/spm/spm.v1.min.js$script,domain=voguegirl.jp
@@ -22252,6 +22263,7 @@ omni.soundestlink.com$image
 ||lowes.com/gauge/
 ||lowes.com/pharos/api/webTelemetry?
 ||lucida.su/api/event
+||lycos.com/analytics.js
 ||lyft.com/api/track
 ||lyngsat.com/system/loadclick.js
 ||m.facebook.com/ajax/weblite_resources_timing_logging/
@@ -26924,6 +26936,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||egmontpublishing.dk/tracking/
 ||elpais.com/t.gif
 ||emarketeer.com/tracker/
+||emrld.cc^$script
 ||enc-90128738.b-cdn.net^
 ||endorsal.io/check/
 ||engagelab.com/ma-report/
