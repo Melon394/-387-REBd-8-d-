@@ -217,6 +217,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||anonymous.qub.ca
 ||e.missav.
 ||stats.dulo.
 ||tag-v*.kuzen.io^
@@ -576,12 +577,12 @@ dlsdk.appsflyer.com^
 -728x90a.
 -970x90-
 .1080.x.90.
-!@@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 -bandarkiu.
 -cina777.
 -indo666.
 -pentaslot.
 -tototix.gif
+!@@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 ||daleelerah.info
 ||get-me-wow.
 /(https?:\/\/)213\.32\.115\..{100,}/
