@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.10.2
+! Version: 26.10.10.3
 
 !! Merged rules
 
@@ -9836,6 +9836,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||a.wing.st/js/pa-
+||a.wing.st/api/event
 ||kilo.ai/monitoring?
 ||ekitan.com/*-analytics.js
 ||ekitan.com/common/ek-tracker/
@@ -16569,16 +16571,7 @@ dlsdk.appsflyer.com^
 /(https?:\/\/)217\.182\.11\..{100,}/
 /(https?:\/\/)51\.195\.31\..{100,}/
 ||allsportsflix.
-||asd8900.oss-*.aliyuncs.com^
-||ky891.oss-*.aliyuncs.com^
-||tupian888.*.bcebos.com^
-||vns86.oss-*.aliyuncs.com^
 ||zhizhizhizhi.oss-*.aliyuncs.com^
-||107.167.16.*.gif
-||107.167.22.*.gif
-||121.204.246.*.gif
-||38.33.15.*.gif
-||67.21.92.*.gif
 ||1024wanzhai.
 ||adi*.cnool.net^
 ||ax.*.ifeng.com^
@@ -28261,6 +28254,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||segments.adap.tv^$third-party
 ||sendtonews.com/stn_trk.gif?
 ||sermoncloud.com/logger/
+||session.bugsnag.kindle.amazon.dev^
 ||session.timecommerce.net^
 ||sessions.embeddables.com^
 ||sexhd.pics/x/x.js
