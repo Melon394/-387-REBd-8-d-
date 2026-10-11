@@ -217,7 +217,6 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
-||anonymous.qub.ca
 ||e.missav.
 ||stats.dulo.
 ||tag-v*.kuzen.io^
