@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.14.3
+! Version: 26.10.14.4
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/244350#issuecomment-6168435553
+@@||load.g.essanelle-friseur.de/*.js?$domain=essanelle-friseur.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243894
 @@||googletagmanager.com/gtm.js$domain=nove.tv
 @@||googletagmanager.com/gtag/$domain=nove.tv
@@ -9845,6 +9847,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||alloha.yani.tv/errors
+||alloha.yani.tv/events
 ||hsmoa.com/media/buzzni_rt.min.js
 ||mall.hanssem.com/resources/js/log/
 ||tcafe21.com/plugin/perf/
@@ -18930,6 +18934,7 @@ analytics-*.aasaam.com
 /i.gif?
 /i.php?i=
 /i.png?id=
+/i/api/kn/afterclick/*$~third-party,xmlhttprequest
 /i2a.js
 /i2yesCounter.js
 /i?e=pv&url=
