@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.15.2
+! Version: 26.10.15.3
 
 !! Merged rules
 
@@ -8446,6 +8446,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||gpskeeper.popinfo.jp^
 ||api-sdk-tracking.beaconbank.jp^
 ||api-sdk.beaconbank.jp^
 ||stream-log.profilepassport.jp^
@@ -9847,6 +9848,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||7movies.ac/api/analytics/event|
 ||catch.dmm.co.jp/newrelic.js
 ||video.dmm.co.jp/js/tracking.min.js
 ||cloudfunctions.net/goose-track-pageview-prd
@@ -17275,6 +17277,7 @@ analytics-*.aasaam.com
 @@||p11.techlab-cdn.com^$domain=wizzair.com
 @@||paypal.com.first-party-js.datadome.co^$domain=paypal.com
 @@||sc.omtrdc.net^$domain=cibc.com
+@@||sphinx.tongdun.net^$domain=hainanairlines.com
 @@||team-rec.jp^$domain=search-voi.0101.co.jp|voi.0101.co.jp
 @@||ubisoft.com.first-party-js.datadome.co^$script,domain=connect.ubisoft.com
 @@||wwwimage-tve.cbsstatic.com^
