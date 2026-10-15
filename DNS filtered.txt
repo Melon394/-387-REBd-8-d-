@@ -613,7 +613,6 @@ dlsdk.appsflyer.com^
 ||dm*.yxlady.com^
 ||dn*.ixinwei.com^
 ||fanpingbi*.gaokao.com^
-||fpb*.51edu.com^
 ||fpb1.chinacar.
 ||gcw*.2liang.cn^
 ||qpb*.sohu.com^
