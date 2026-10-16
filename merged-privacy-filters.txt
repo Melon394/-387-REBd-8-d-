@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.16.1
+! Version: 26.10.16.2
 
 !! Merged rules
 
@@ -6076,6 +6076,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! ixbt.com
+||ixbt.com^$cookie=__eventn_id
 ! rtvi.com
 ||rtvi.com^$cookie=install_id
 ! v-1.co.il
@@ -9848,6 +9850,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||faz.net/api/fpid/
 ||plapi.cdnvideohub.com/*/events
 ||edge.fedy.io^$domain=ensonhaber.com
 ||7movies.ac/api/analytics/event|
@@ -16631,7 +16634,6 @@ dlsdk.appsflyer.com^
 ||dm*.yxlady.com^
 ||dn*.ixinwei.com^
 ||fanpingbi*.gaokao.com^
-||fpb*.51edu.com^
 ||fpb1.chinacar.
 ||gcw*.2liang.cn^
 ||qpb*.sohu.com^
