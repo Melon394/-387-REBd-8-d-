@@ -153,7 +153,6 @@ vkcdnservice.appspot.com^
 ||web-rotation.net
 ||web-visor.
 ||yottos.com
-/^2.59.219.121/
 /62.76.25.2(7|8)/
 /193.200.64.24:/
 ||h3v9p8x2q1r7-agckaeh6g2ehcaes.*.azurewebsites.net^
