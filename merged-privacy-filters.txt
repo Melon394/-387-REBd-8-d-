@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.17.3
+! Version: 26.10.18.1
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/244502
+@@||googletagmanager.com/gtm.js$script,domain=aeon.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/244350#issuecomment-6168435553
 @@||load.g.essanelle-friseur.de/*.js?$domain=essanelle-friseur.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243894
@@ -17093,7 +17095,6 @@ analytics-*.aasaam.com
 @@||static.amazon.jobs/assets/analytics-$script,domain=amazon.jobs
 @@||static.cloud.coveo.com/coveo.analytics.js/$domain=cabelas.com
 @@||static.foxnews.com^*/VisitorAPI.js$domain=foxbusiness.com|foxnews.com
-@@||static.klaviyo.com/onsite/js/event_adapter.$domain=gear.blizzard.com
 @@||static.knowledgehub.com/global/images/ping.gif?$~third-party
 @@||static.myfinance.com/widget/$domain=savingspro.org
 @@||static.pinpoll.com^$subdocument,domain=iframely.net
@@ -28422,7 +28423,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||static-tracking.klaviyo.com^
 ||static.fengkongcloud.com^
 ||static.guance.com/browser-sdk/
-||static.klaviyo.com/onsite/js/event_adapter.
 ||static.myshlf.us/Affiliates/sms_aff_clicktrack-deciem.js
 ||static.parsely.com^$third-party
 ||static.rebelboost.com/tracking/
