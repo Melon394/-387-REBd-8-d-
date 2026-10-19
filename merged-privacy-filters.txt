@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.19.1
+! Version: 26.10.19.2
 
 !! Merged rules
 
@@ -9852,6 +9852,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||fenixplay.xyz/api/stats/
 ||bookbear.kr/js/site_log.js
 ||yimg.com/*/ymanalytics-core.js
 ||faz.net/api/fpid/
@@ -20356,6 +20357,8 @@ analytics-*.aasaam.com
 /twiga.js
 /tynt.js
 /u.gif?
+/ua/Optin?
+/ua/TrailEvent?
 /ucount.php?
 /udp-analytics.js
 /uds/stats?
