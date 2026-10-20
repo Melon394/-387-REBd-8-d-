@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.20.3
+! Version: 26.10.20.4
 
 !! Merged rules
 
@@ -675,10 +675,11 @@ bilibili.com#%#//scriptlet('set-constant', '__MIRROR_REPORT__.customPerformanceQ
 !#endif
 ! Fixing the last step of signing a document on acrobat.adobe.com
 @@||prod.adobeccstatic.com/unav/*/AnalyticsProvider.*.bundle.js$domain=acrobat.adobe.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/242315#issuecomment-6287072936
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208857
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208739
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207423
-@@||s.yimg.com/ss/analytics3.js$domain=tw.news.yahoo.com|tw.yahoo.com|tw.stock.yahoo.com|hk.news.yahoo.com|hk.yahoo.com|hk.stock.yahoo.com
+@@||s.yimg.com/ss/analytics3.js$domain=tw.news.yahoo.com|tw.yahoo.com|tw.stock.yahoo.com|hk.news.yahoo.com|hk.yahoo.com|hk.stock.yahoo.com|help.yahoo.com
 ! https://www.wired.com/auth/initiate?redirectURL=%2F&source=VERSO_NAVIGATION - sign-in breakage
 id.condenast.com#%#//scriptlet('set-constant', 'appInfo.snowplow.trackSelfDescribingEvent', 'noopFunc')
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -9857,6 +9858,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||koin.com/wp-content/plugins/chartbeat/build/chartbeat-user-tracking.*.js
 ||cdn.vector.co/pixel.js
 ||external.citynews.it/~shared/do/api/plausible/
 ||partner-events.favicdn.net/*/partnerEventsTracking.js
@@ -21394,6 +21396,7 @@ omni.soundestlink.com$image
 ||api.samsungfind.com/log-collector
 ||api.streamelements.com/science/
 ||api.takealot.com^$ping
+||api.tempmailvip.io.vn/api/track
 ||api.thefantazy.com/web-vitals
 ||api.tsc.ca/Tracking/v1/events/
 ||api.vk.com/method/statEvents.
@@ -21981,6 +21984,7 @@ omni.soundestlink.com$image
 ||foxsports.com.au/akam/
 ||fp.bizjournals.com^
 ||fp.measure.office.com^
+||fp.uncensored.com^
 ||fpa-cdn.adweek.com^
 ||fpa-cdn.arstechnica.com^
 ||fpc.fingerprint.com^
@@ -22760,6 +22764,7 @@ omni.soundestlink.com$image
 ||relay-prod.typeracer.com/flags/
 ||relay.fiverr.com^
 ||remarkable.com/api/proxy/marker
+||report.senzia.cc^
 ||reports.tunein.com^
 ||researchgate.net/beacon/
 ||researchgate.net/track/
@@ -23084,6 +23089,7 @@ omni.soundestlink.com$image
 ||t.prageru.com^
 ||t.producthunt.com^
 ||t.regionsjob.com^
+||t.venice.ai^
 ||t.wayfair.ca^
 ||t.wayfair.co.uk^
 ||t.wayfair.com^
@@ -23330,6 +23336,7 @@ omni.soundestlink.com$image
 ||umami.spencerdevs.xyz^
 ||umami.vidfast.pro^
 ||umami.wakarimasen.moe^
+||uncensored.ai/*/trackevents
 ||unity3d.com/v1/events
 ||unl1zvy2zuyn.franchiseplus.nl^
 ||unleash.zenchef.com/api/frontend/client/metrics
@@ -27809,6 +27816,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||museter.com/track.php?
 ||musvc2.net/e/c?
 ||mv.treehousei.com^
+||mxanalytics.youruncensoredai.workers.dev^
 ||mxmfb.com/rsps/img/
 ||myblueday.com^*/count.asp?
 ||myfinance.com/widget/
@@ -28556,6 +28564,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sulia.com/papi/sulia_partner.js/$third-party
 ||sunlightmetrics.b-cdn.net^
 ||sunset.com/tia/
+||supabase.co/*/track-visitor
 ||surfshark.events^
 ||surfside.io/event/
 ||survey.interquest.com^
