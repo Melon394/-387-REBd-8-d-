@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.20.2
+! Version: 26.10.20.3
 
 !! Merged rules
 
@@ -261,6 +261,8 @@ goldmansachs.com#%#//scriptlet('prevent-fetch', 'edge.adobedc.net')
 @@||nodestatic.fbstatic.cn/weblts_spa_online/page/assets/files/sensorsdata.min.js
 ! https://github.com/uBlockOrigin/uAssets/issues/32857
 @@||dd.subito.it.first-party-js.datadome.co^$script,xmlhttprequest,domain=areariservata.subito.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/244884
+@@||g.alicdn.com/alilog/mlog/aplus_$script,domain=youku.tv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/229453
 @@||g.alicdn.com/alilog/mlog/aplus_o.js$domain=v.youku.com
 @@||log.mmstat.com/eg.js$domain=v.youku.com
@@ -9106,7 +9108,6 @@ d4?appid*type*
 ||h-adashx4ae.ut.taobao.com^
 ||audid-api.taobao.com^
 ||analytics.ff.avast.com^
-||node.aibeacon.jp^
 ||wsmetrics.batch.com^
 ||log.isnssdk.com^
 ||log-tb.isnssdk.com^
@@ -9856,6 +9857,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||cdn.vector.co/pixel.js
+||external.citynews.it/~shared/do/api/plausible/
 ||partner-events.favicdn.net/*/partnerEventsTracking.js
 ||diablochairs.com/static/*/RedChamps_OrderAnalyticalInfo/js/referral.min.js
 ||diablochairs.com/datalayer/index/events?
@@ -17346,7 +17349,6 @@ analytics-*.aasaam.com
 @@||script-at.iocnt.net/iam.js$domain=oe24.at
 @@||showheroes.com/publishertag.js$domain=rollingstone.de
 @@||showheroes.com/pubtag.js$domain=rollingstone.de
-@@||siteintercept.qualtrics.com/$domain=idealo.de
 @@||sophi.io/assets/demeter/$script,domain=faz.net
 @@||spezialklinik-neukirchen.de/matomo/$~third-party
 @@||spiegel.de/layout/js/http/netmind-$script
@@ -28154,10 +28156,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||qq.com/stats?
 ||quadpay.com/analytics/
 ||qualifioapp.com/egw/events
-||qualtrics.com/jfe/$script,third-party
-||qualtrics.com/sie/$script,third-party
-||qualtrics.com/WRSiteInterceptEngine/$third-party
-||qualtrics.com^*/metrics
+||qualtrics.com/WRSiteInterceptEngine/?Q_Impress=
 ||quantcast.com/?log
 ||quantcast.mgr.consensu.org/?log
 ||qubitanalytics.appspot.com^
