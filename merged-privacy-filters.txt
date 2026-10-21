@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.21.2
+! Version: 26.10.21.3
 
 !! Merged rules
 
@@ -31,6 +31,8 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/244949
+@@||googletagmanager.com/gtm.js$domain=support.brother.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/244502
 @@||googletagmanager.com/gtm.js$script,domain=aeon.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/244350#issuecomment-6168435553
@@ -7666,7 +7668,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 /impr-trck?
 /prgr-trk?
 ! Umami
-||umami.$domain=~umami.is
+||umami.$domain=~umami.is|~umami.recipes
 ! Geo Targetly
 .co/gr?id=
 ! Rybbit
@@ -9858,6 +9860,10 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+/ces/v1/telemetry/$app=chatgpt.exe
+||bangbrosnetwork.com/_i?
+||brazzersnetwork.com/_ats/eta/events
+||join.project1service.com/client-logs
 ||koin.com/wp-content/plugins/chartbeat/build/chartbeat-user-tracking.*.js
 ||cdn.vector.co/pixel.js
 ||external.citynews.it/~shared/do/api/plausible/
@@ -9871,7 +9877,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 ||faz.net/api/fpid/
 ||plapi.cdnvideohub.com/*/events
 ||edge.fedy.io^$domain=ensonhaber.com
-||7movies.ac/api/analytics/event|
+||7movies.*/api/analytics/event|
 ||catch.dmm.co.jp/newrelic.js
 ||video.dmm.co.jp/js/tracking.min.js
 ||cloudfunctions.net/goose-track-pageview-prd
@@ -22535,6 +22541,7 @@ omni.soundestlink.com$image
 ||nzpages.co.nz/modules/common/track.js
 ||observe.metarouter.io^
 ||ocular.hotukdeals.com^
+||ocular.pepperdeals.com^
 ||odysee.com/reports/
 ||ohm-dot-hackster-io.appspot.com^
 ||oklink.com/jsstat/
@@ -23646,6 +23653,7 @@ omni.soundestlink.com$image
 ||log-185a61e7.bendigobank.com.au^
 ||log-2ffe60ee.westpac.com.au^
 ||mfasa.chase.com/auth/js/jpmc_bb_check.js
+||o-api.hotukdeals.com^
 ||olacontent.schwab.com^$script
 ||perplexity.ai/unifyintent.js
 ||qfp.intuit.com^
@@ -23856,6 +23864,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||newsdeutschland.com/RPC.php
 ||nickles.de/ivw/
 ||nius.de/monitoring
+||ocular.mydealz.de^
+||ocular.preisjaeger.at^
 ||ostjob.ch/public/statistic/teaser/hit/
 ||otto.de/error-logging/
 ||otto.de/pass/scale-beacon-service/
@@ -25492,6 +25502,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||mklik.gazeta.pl^
 ||mr.allegro.
 ||nasza-klasa.pl^*/pp_gemius
+||ocular.pepper.pl^
 ||p.gazeta.pl^
 ||pb.siepomaga.pl^
 ||pixel.wp.pl^
@@ -25763,6 +25774,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||mega.promodescuentos.com^
 ||mercadolibre.com/tracks^
 ||mundodesconocido.com/tracker/
+||ocular.chollometro.com^
 ||ocular.promodescuentos.com^
 ||pccomponentes.*/api/users/tracking/
 ||pixel.europapress.net^
@@ -25801,6 +25813,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||fotbollskanalen.se^$ping
 ||fusion.bonniertidskrifter.se^
 ||gx.idg.se^
+||ocular.pepperdeals.se^
 ||prisjakt.nu/js.php?p=trafikfonden
 ||stat.nyheter24.se^
 ! Thai
