@@ -161,7 +161,7 @@ vkcdnservice.appspot.com^
 ||adv0*.msa.cdn.mediaset.net^
 /^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
 /^(a|c)\.[0-9a-f]{56}\.com$/
-||*.libaishuo.com^
+.libaishuo.com^
 ||adapi*.boomplaymusic.com^
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^
 ||ads*-normal*.zijieapi.com^
