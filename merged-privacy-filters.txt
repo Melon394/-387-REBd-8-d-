@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.26.2
+! Version: 26.10.27.1
 
 !! Merged rules
 
@@ -9860,6 +9860,15 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||haberturk.com/cdn/player/released/plugins/analytics.min.js
+||socialcrosspromo.com/track|
+||virality.social-api.me/v2/events/
+||facebook.com/adnw_logging
+||assets.011st.com/js/analytics/$script
+||c.m.011st.com/MW/js/statistics/$script
+||m.11st.co.kr/MW/js/statistics/$script
+||search.11st.co.kr/js/searchWebFront/search/public/rakeLog-mobile-search.js
+||gleams.dev/api/customers/usage-beacon
 ||offer-link.com/collect-click.php
 ||nijiurachan.net/analytics/
 ||electroverse.com/view/insights/script.js
@@ -20396,6 +20405,7 @@ analytics-*.aasaam.com
 /uem-ep.js
 /uisprime/track
 /umami.js
+/umami/script.js
 /umg-analytics.min.js
 /umg-analytics/umgaal.min.js
 /umt.gif?
