@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.28.1
+! Version: 26.10.28.2
 
 !! Merged rules
 
@@ -9860,6 +9860,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||data.dailyhunt.in/topics/analytics-events
 ||iceporn.net/ajax/log/
 ||bloxd.io/social/analytics/
 ||antigravity.google/_astro/AnalyticsBootstrap.*.js
@@ -9873,6 +9874,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 ||search.11st.co.kr/js/searchWebFront/search/public/rakeLog-mobile-search.js
 ||gleams.dev/api/customers/usage-beacon
 ||offer-link.com/collect-click.php
+||tokenpost.kr/tracking/ajax/$xmlhttprequest
 ||nijiurachan.net/analytics/
 ||electroverse.com/view/insights/script.js
 ||miniwebtool.com/js/mwt-analytics.
@@ -28019,6 +28021,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||paramount.tech/lookup/
 ||parkwhiz.com/events/
 ||parsely.com/keys/$script,third-party
+||parsely.com/plogger/
 ||partner.awscconsumerinfo.autotrader.com/accdab/beacon/
 ||partners.etoro.com^$script
 ||patreon.com/api/tracking
