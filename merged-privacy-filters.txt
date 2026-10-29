@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.10.29.3
+! Version: 26.10.30.1
 
 !! Merged rules
 
@@ -9862,6 +9862,11 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||hepsiburada.com/metrics/
+||matomo.cloud/apmginternational.matomo.cloud/
+||mautic.apmg-international.com/mtc.js
+||stats.thuisarts.nl/plugins/HeatmapSessionRecording/
+||stats.thuisarts.nl/piwik.php
 ||backenmachtgluecklich.de/__bmg-edge/
 ||live-xo.lovable.app/~api/analytics
 ||live-xo.lovable.app/*/trackevents
@@ -23019,6 +23024,7 @@ omni.soundestlink.com$image
 ||stats.hexa.watch^
 ||stats.ibtimes.co.in^
 ||stats.ibtimes.sg^
+||stats.jiosaavn.com^
 ||stats.justpaste.it^
 ||stats.lrb.co.uk^
 ||stats.mempool.space^
@@ -27119,6 +27125,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||etl.springbot.com^
 ||etoro.com/tradesmonitor/
 ||eu-mobile.events.data.microsoft.com^
+||eu-office.events.data.microsoft.com^
 ||ev.mmin.io/ping
 ||ev.moneymade.io^
 ||ev.stellarlabs.ai^
@@ -28773,6 +28780,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tm.vendemore.com^
 ||tmp.argusplatform.com/js/wid.tracker.js
 ||tms.fmm.io^
+||tms.wape.autodesk.com^
 ||tmssl.akamaized.net/js/news-viewport-tracking.js
 ||tmtarget.com/tracking/
 ||to.getnitropack.com^
