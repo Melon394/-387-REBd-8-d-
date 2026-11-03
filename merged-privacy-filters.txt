@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.11.03.2
+! Version: 26.11.03.3
 
 !! Merged rules
 
@@ -6084,6 +6084,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! dennikn.sk
+||dennikn.sk^$cookie=browser_id
 ! ggmax.com.br
 ||ggmax.com.br^$cookie=gg-ads-session
 ||ggmax.com.br^$cookie=device
@@ -9864,6 +9866,9 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||cum.st/js/*.js|$script
+||obilet.com/event|
+||tatilbudur.com/Q8RLK3/
 ||aftersell.app/api/public/metrics/
 ||aftersell.app/api/*/visibilityEvents
 news.jp##div.recommend > h2.recommend__title
@@ -16986,6 +16991,7 @@ analytics-*.aasaam.com
 @@||hello.myfonts.net/count/$stylesheet,domain=cfr.org|condor.com|corsair.com|furniturevillage.co.uk|luggagehero.com
 @@||hobbyking.com^*/gtm.js$script,~third-party
 @@||hotstarext.com/web-messages/core/error/v52.json$xmlhttprequest,domain=hotstar.com
+@@||hyundaicanada.com/scripts/analytics/analytics.js$script,~third-party
 @@||identity.mparticle.com^$xmlhttprequest
 @@||ignitetv.rogers.com/js/api/fingerprint.js$script,~third-party
 @@||ignitetv.shaw.ca/js/api/fingerprint.js$~third-party
