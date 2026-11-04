@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.11.04.2
+! Version: 26.11.04.3
 
 !! Merged rules
 
@@ -9866,6 +9866,9 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||chat.deepseek.com/api/*/client/settings/report
+||rome2rio.com/api/json/LogCoreWebVitals
+||bus.tickets.ua/c7e5/
 ||aptabase.com/api/*/event
 ||catalogueau.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-*.js
 ||chat.deepseek.com/api/*/telemetry
@@ -21449,6 +21452,7 @@ omni.soundestlink.com$image
 ||api-visitor-analytics.intercom.com^
 ||api.audio.com/analytics/event
 ||api.channel.io/*/events
+||api.community.fox.com/*/metrics
 ||api.deepai.org/log_stat
 ||api.doodle.com/data-layer/track
 ||api.ffm.to/sl/e/$image
@@ -22402,6 +22406,7 @@ omni.soundestlink.com$image
 ||logs.netflix.com^
 ||logx-experimentation.iherb.com^
 ||logx.optimizely.com^
+||loki-ingest.fox.com^
 ||lolwot.com/B5xaqzSGvMTM.js
 ||lookawoman.com/t/
 ||lookfantastic.ie/track
@@ -22756,6 +22761,7 @@ omni.soundestlink.com$image
 ||privacypolicies.com/track/
 ||private.wccftech.com^
 ||prod-events.nykaa.com^
+||prod-foxkit.kts.fox^
 ||progressive.com/Log/
 ||projectmultatuli.org/analytics/
 ||promos.investing.com/*/digibox.gif?
@@ -25003,6 +25009,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.rambla.be^
 ||api.beleggersbelangen.nl//api/statistics/
 ||api.rtl.nl/monitoring/
+||araba.nl/__l5e/events.$script
+||araba.nl/~api/analytics
 ||azerty.nl/ambannerslider/analytic/
 ||bc34.wijnvoordeel.nl^
 ||bol.com/tracking/
@@ -25946,6 +25954,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||log.ttbc-hcm.gov.vn^
 ||logsbin.dantri.com.vn^
 ||pixel.coccoc.com^
+||rivo.vin/rivo-stealer/
 ||tka.tiki.vn/pixel/
 ||track-srv.vietnamnet.vn^
 ||w-api.baomoi.com^$image
@@ -33207,7 +33216,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||leadintel.io^$third-party
 ||leadintelligence.co.uk^$third-party
 ||leadlab.click^$third-party
-||leadlife.com^$third-party
 ||leadmanagerfx.com^$third-party
 ||leadpipe.com^$third-party
 ||leadsius.com^$third-party
