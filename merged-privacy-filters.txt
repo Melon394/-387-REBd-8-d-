@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.11.04.3
+! Version: 26.11.05.1
 
 !! Merged rules
 
@@ -9866,6 +9866,10 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||api.biggo.com/api/v*/view-attest?
+||by0e87-resources.by/analytics/
+||cdn.saracoglumedya.com/private/panel/api/olcum.php
+||cdn.saracoglumedya.com/private/panel/api/collect.php
 ||chat.deepseek.com/api/*/client/settings/report
 ||rome2rio.com/api/json/LogCoreWebVitals
 ||bus.tickets.ua/c7e5/
@@ -18814,6 +18818,7 @@ analytics-*.aasaam.com
 /fsrscripts/triggerParams.js
 /funnel-builder/assets/live/js/tracks.min.js
 /fusion/lucid/data/*
+/g/collect?
 /g_track.php?
 /ga-audiences?
 /ga-events.js
@@ -21286,7 +21291,6 @@ omni.soundestlink.com$image
 ||abysscdn.com/cdn-cgi/trace
 ||academia.edu/record_hit?
 ||acast.com/api/stats
-||accor.com/g/collect?
 ||accuterm.com/data/stat.js
 ||acjs.aliyun.com^
 ||acronymfinder.com/~/tr.ashx
@@ -22431,7 +22435,6 @@ omni.soundestlink.com$image
 ||mangakoma.net/ajax/manga/view
 ||manomano.*/api/v1/sp-tracking/
 ||manscaped.com/rud-dataplane/
-||manua.ls/g/collect?
 ||manua.ls/gtag
 ||mapcarta.com/logs
 ||mapquest.com/logger
@@ -22691,7 +22694,6 @@ omni.soundestlink.com$image
 ||phonearena.com/_track.php
 ||pi.ai/proxy/api/event
 ||pics-view.com/ad-track
-||pie.org/g/collect?
 ||pie.org/v1/experiments/view
 ||pikbest.com/?m=Stats&
 ||ping.anizm.net^
@@ -23187,6 +23189,7 @@ omni.soundestlink.com$image
 ||tags.news.com.au^$script
 ||tags.stepstone.com^
 ||tahoe.com/imp
+||tailscale.com/api/rudderstack-proxy/
 ||taiwanplus.com/api/video/startVideo
 ||talkingpointsmemo.com/whoami
 ||tao.barstoolsports.com^
@@ -27855,6 +27858,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||metrics.doppiostreams.com^
 ||metrics.futureplc.engineering^
 ||metrics.gs-chat.com^
+||metrics.kapa.ai^
 ||metrics.kmsmep.com^
 ||metrics.mdstrm.com^
 ||metrics.nsureapi.com^
@@ -28264,6 +28268,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||qq.com/ping.js?
 ||qq.com/stats?
 ||quadpay.com/analytics/
+||qualified.com/packs/js/analytics-
 ||qualifioapp.com/egw/events
 ||qualtrics.com/WRSiteInterceptEngine/?Q_Impress=
 ||quantcast.com/?log
