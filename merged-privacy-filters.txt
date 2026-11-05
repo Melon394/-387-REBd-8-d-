@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.11.05.3
+! Version: 26.11.06.1
 
 !! Merged rules
 
@@ -9866,6 +9866,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||tools.finanztip.de/track/
 ||kitco.com/api/cms-proxy?
 ||api.biggo.com/api/v*/view-attest?
 ||by0e87-resources.by/analytics/
@@ -15892,6 +15893,12 @@ dreamprogs.net##td[width="88"][height="31"]
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
 !
+! uTorria installer
+!#if (adguard_app_windows)
+||api.utorria.ru/api/v1/installer/integrator/cancel
+||api.utorria.ru/api/v1/installer/offers/$xmlhttprequest,redirect=nooptext
+!#endif
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/241118
 ! https://github.com/AdguardTeam/AdguardFilters/issues/245483
 !#if (!adguard_app_ios && !adguard_ext_android_cb && !adguard_ext_safari)
@@ -17867,6 +17874,8 @@ analytics-*.aasaam.com
 .tagged-events.outbound-links.js
 .tagged-events.revenue.js
 .v4.analytics.
+/.bootscripts/analytics.min.js
+/.bootscripts/hubPagesViewDurationTracker.min.js
 /.webscale/rum?
 /.well-known/shopify/monorail
 /0.gif?
@@ -21855,8 +21864,6 @@ omni.soundestlink.com$image
 ||diabrowser.com/js/arcnet-script.js
 ||digital.flytedesk.com/js/head.js
 ||discover-metrics.cloud.seek.com.au^
-||discover.hubpages.com/.bootscripts/analytics.min.js
-||discover.hubpages.com/.bootscripts/hubPagesViewDurationTracker.min.js
 ||dls-account.di.atlas.samsung.com^
 ||dmt.fidelity.com/prod/meas/
 ||dmtgvn.com/wrapper/js/common-engine.js$domain=rt.com
@@ -22469,7 +22476,6 @@ omni.soundestlink.com$image
 ||meduza.io/stat/
 ||megaplay.cc/cdn-cgi/trace
 ||megatron.igraal.com^
-||mensjournal.com/.bootscripts/analytics.min.js
 ||mentimeter.com/performance-metrics
 ||mercdn.net/assets/scripts/raphaelp
 ||mercedes-benz.com/datadog-
