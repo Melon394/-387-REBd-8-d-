@@ -597,7 +597,6 @@ dlsdk.appsflyer.com^
 ||impservice*.youdao.com^
 ||itv.hexun.com
 ||ja*.gamersky.com^
-||js*.abolezi.com^
 ||sam*.baby-kingdom.com^
 ||same*.stockstar.com^
 ||sax*.sina.
