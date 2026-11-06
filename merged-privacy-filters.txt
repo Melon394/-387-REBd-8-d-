@@ -7,7 +7,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy (Optimized)
 ! Description: Merged AdGuard Tracking Protection + EasyPrivacy. Optimized by excluding simple first-party/third-party rules.
 ! Expires: 8 hours
-! Version: 26.11.06.3
+! Version: 26.11.07.1
 
 !! Merged rules
 
@@ -9866,6 +9866,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+/api/track|$domain=turizmguncel.com|brutto-netto-rechner.digital
+||winfuture.de/wfk/?id=GTM-
 ||tools.finanztip.de/track/
 ||kitco.com/api/cms-proxy?
 ||api.biggo.com/api/v*/view-attest?
@@ -9959,7 +9961,6 @@ news.jp##div.recommend > h2.recommend__title
 ||mall.hanssem.com/resources/js/log/
 ||tcafe21.com/plugin/perf/
 ||vdrama.fans/js/vd-analytics.js
-||turizmguncel.com/api/track|
 ||pixhost.to/m7v2q9/
 ||d.linker-network.me/viewable|
 rtvi.com#%#//scriptlet('set-local-storage-item', 'viewer-id', '$remove$')
@@ -23049,6 +23050,7 @@ omni.soundestlink.com$image
 ||stat.tildacdn.com^
 ||stat.turb.pw^
 ||stat.vulkanvegas.com^
+||static.foxnews.com/static/leap/sites/fnc/metrics.js
 ||statista.com/data/ptm.gif
 ||statistics.darkreader.app^
 ||statistics.streamdav.com^
@@ -31553,7 +31555,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||adpick.co.kr^$third-party
 ||adtive.com^$third-party
 ||aicontents.net^$third-party
-||alphwidget.com^$third-party
 ||contentsfeed.com^$third-party
 ||dawin.tv^$third-party
 ||logger.co.kr^$third-party
@@ -32232,7 +32233,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||aptrinsic.com^$third-party
 ||aqtracker.com^$third-party
 ||aralego.net^$third-party
-||arc.io^$third-party
+||arc.io/widget.min.js
 ||arcadeweb.com^$third-party
 ||ardalio.com^$third-party
 ||arena-quantum.co.uk^$third-party
